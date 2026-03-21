@@ -1,0 +1,19 @@
+[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Cc][Oo][Rr][Ee][ll][Oo][Gg]*
+/[Mm]emoryCaptures/
+
+# Archivos de Visual Studio
+.vs/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
