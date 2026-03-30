@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -17,6 +18,15 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump Buffer & Coyote Time")]
     [SerializeField] private float jumpBufferTime = 0.1f;
     [SerializeField] private float coyoteTime = 0.15f;
+
+    [Header("Grapping Hook")]
+    [SerializeField] private float grappleMaxDistance = 10f;
+    [SerializeField] private float grappleSpeed = 20f;
+    [SerializeField] private LayerMask grappleLayer;
+    [SerializeField] private LineRenderer grappleline;
+   
+    private Vector2 grapplePoint;
+    private bool isGrappling = false;
 
     private float jumpBufferCounter;
     private float coyoteTimeCounter;
@@ -163,16 +173,50 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
+        // ---- GUADAÑA ----
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartGrapple();
+        }
+
+           if (Input.GetMouseButtonUp(1))
+            {
+                StopGrapple();
+            }
+        if (isGrappling)
+        {
+            // Forzamos el dibujo de la línea convirtiendo a Vector3
+            grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
+            grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
+
+            // IMPORTANTE: Cambiado de > a < 
+            // Si la distancia es menor a 0.5 unidades, soltamos el gancho
+            if (Vector2.Distance(transform.position, grapplePoint) < 0.5f)
+            {
+                StopGrapple();
+            }
+        }
+
     }
 
     private void FixedUpdate()
     {
+        if (isDashing) return;
 
-
-        if (!isDashing)
+        if (isGrappling)
         {
+            Vector2 direction = (grapplePoint - (Vector2)transform.position).normalized;
+
+            rb.linearVelocity = direction * grappleSpeed;
+        }
+        else 
+        { 
             rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
         }
+        
+
     }
 
     private void Flip()
@@ -189,6 +233,27 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.AddForce(direction * jumpForce, ForceMode2D.Impulse);
         //anim.SetBool("IsJump", true);
+    }
+
+    private void StartGrapple() 
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
+        if (hit.collider != null)
+        {
+            grapplePoint = hit.point;
+            isGrappling = true;
+            grappleline.enabled = true;
+        }
+    }
+
+    private void StopGrapple()
+    {
+        isGrappling = false;
+        grappleline.enabled = false;
+        rb.gravityScale = 1;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
