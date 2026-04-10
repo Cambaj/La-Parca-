@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool facingRight = true;
 
-    // ---- WALL JUMP ----
     [Header("Wall Slide")]
     [SerializeField] private float wallSlideSpeed = 10f;
     private bool isTouchingWall;
@@ -48,10 +47,18 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash")]
     [SerializeField] private float dashForce = 15f;
     [SerializeField] private float dashDuration = 0.2f;
-
     private bool canDash = true;
     private bool isDashing = false;
     private float dashTime;
+
+    [Header("Grapple Dash")]
+    [SerializeField] private float grappleDashForce = 18f;
+    [SerializeField] private float grappleDashDuration = 0.15f;
+
+    private bool canGrapple = true;
+    private bool isGrappleDashing = false;
+    private float grappleDashTime;
+
 
     [Header("Audio")]
     [SerializeField] private AudioClip JumpSound;
@@ -80,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = coyoteTime;
             wallSlideTime = 3f;
             canDash = true;
+            canGrapple = true;
             //anim.SetBool("IsJump", false);
         }
         else
@@ -153,6 +161,16 @@ public class PlayerMovement : MonoBehaviour
                 rb.gravityScale = 1;
             }
         }
+        if (isGrappleDashing)
+        {
+            grappleDashTime -= Time.deltaTime;
+
+            if (grappleDashTime <= 0)
+            {
+                isGrappleDashing = false;
+                rb.gravityScale = 1;
+            }
+        }
 
         // ---- SALTO VARIABLE ----
         if (rb.linearVelocity.y < 0)
@@ -176,12 +194,13 @@ public class PlayerMovement : MonoBehaviour
 
         // ---- GUADAÑA ----
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && canGrapple && !grounded)
         {
             StartGrapple();
+            canGrapple = false;
         }
 
-           if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(1))
             {
                 StopGrapple();
             }
@@ -235,17 +254,26 @@ public class PlayerMovement : MonoBehaviour
         //anim.SetBool("IsJump", true);
     }
 
-    private void StartGrapple() 
+    private void StartGrapple()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
+
         if (hit.collider != null)
         {
             grapplePoint = hit.point;
             isGrappling = true;
             grappleline.enabled = true;
+        }
+        else
+        {
+            isGrappleDashing = true;
+            grappleDashTime = grappleDashDuration;
+
+            rb.gravityScale = 0;
+            rb.linearVelocity = direction * grappleDashForce;
         }
     }
 
