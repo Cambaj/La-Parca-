@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ---- WALL SLIDE ----
-        if (isTouchingWall && !grounded && rb.linearVelocity.y < 0 && wallSlideTime > 0)
+        if (isTouchingWall && !grounded && wallSlideTime > 0)
         {
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed);
@@ -230,11 +230,18 @@ public class PlayerMovement : MonoBehaviour
 
             rb.linearVelocity = direction * grappleSpeed;
         }
-        else 
-        { 
-            rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+        else
+        {
+            if (isWallSliding)
+            {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+            }
         }
-        
+
 
     }
 
