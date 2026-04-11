@@ -222,7 +222,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing) return;
+        if (isDashing || isGrappleDashing) return;
 
         if (isGrappling)
         {
@@ -298,6 +298,15 @@ public class PlayerMovement : MonoBehaviour
                     return;
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Entity"))
+        {
+            canDash = true;
+            canGrapple = true;
         }
     }
 
