@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d19ef83eb7934a46b10dc546dfcf8ac
+guid: d8ae0856f7ebaed4f893754431676a8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4723107735738678597
-    second: Idle_0
+      213: 1605670752444153957
+    second: "Idle Parca con guada\xF1a_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: "Idle Parca con guada\xF1a_0"
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 23
-        height: 32
+        width: 636
+        height: 654
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d7a982679db8140800000000000000
-      internalID: 4723107735738678597
+      spriteID: 5600ba9ca0d784610800000000000000
+      internalID: 1605670752444153957
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_0: 4723107735738678597
+      "Idle Parca con guada\xF1a_0": 1605670752444153957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

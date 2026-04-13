@@ -63,13 +63,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip JumpSound;
 
-    //Animator anim;
+    Animator anim;
     AudioSource audio;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
     }
 
@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        anim.SetBool("IsMovement",true);
 
         // Detección de suelo
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
@@ -88,12 +89,12 @@ public class PlayerMovement : MonoBehaviour
             wallSlideTime = 3f;
             canDash = true;
             canGrapple = true;
-            //anim.SetBool("IsJump", false);
+            anim.SetBool("IsJump", false); //"IsJump es el nombre de la variable "
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
-            //anim.SetBool("IsJump", true);
+            anim.SetBool("IsJump", true);
         }
         // Jump buffer
         if (Input.GetKeyDown(KeyCode.Space))
@@ -229,6 +230,8 @@ public class PlayerMovement : MonoBehaviour
             Vector2 direction = (grapplePoint - (Vector2)transform.position).normalized;
 
             rb.linearVelocity = direction * grappleSpeed;
+
+            anim.SetBool("IsDahing", true);
         }
         else
         {
@@ -240,6 +243,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
             }
+            anim.SetBool("IsDahing", false); //Ver que hace esto con el codigo 
         }
 
 
