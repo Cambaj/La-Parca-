@@ -195,7 +195,7 @@ public class PlayerMovement : MonoBehaviour
 
         // ---- GUADAÑA ----
 
-        if (Input.GetMouseButtonDown(1) && canGrapple && !grounded)
+        if (Input.GetMouseButtonDown(1) && canGrapple)
         {
             StartGrapple();
             canGrapple = false;
@@ -268,7 +268,14 @@ public class PlayerMovement : MonoBehaviour
     private void StartGrapple()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+        Vector2 rawDirection = (mousePos - (Vector2)transform.position).normalized;
+
+        float angle = Mathf.Atan2(rawDirection.y, rawDirection.x) * Mathf.Rad2Deg;
+
+        float snappedAngle = Mathf.Round(angle / 45f) * 45f;
+
+        float rad = snappedAngle * Mathf.Deg2Rad;
+        Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
 
@@ -287,7 +294,6 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = direction * grappleDashForce;
         }
     }
-
     private void StopGrapple()
     {
         isGrappling = false;
