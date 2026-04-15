@@ -277,9 +277,6 @@ public class PlayerMovement : MonoBehaviour
         float rad = snappedAngle * Mathf.Deg2Rad;
         Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
 
-        rb.gravityScale = 0;
-        rb.linearVelocity = Vector2.zero;
-
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
 
         if (hit.collider != null)
