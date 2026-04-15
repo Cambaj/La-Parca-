@@ -231,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
 
             rb.linearVelocity = direction * grappleSpeed;
 
-            anim.SetBool("IsDahing", true);
+            anim.SetBool("IsDashing", true);
         }
         else
         {
@@ -243,7 +243,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
             }
-            anim.SetBool("IsDahing", false); //Ver que hace esto con el codigo 
+            anim.SetBool("IsDashing", false); //Ver que hace esto con el codigo 
         }
 
 
@@ -277,6 +277,9 @@ public class PlayerMovement : MonoBehaviour
         float rad = snappedAngle * Mathf.Deg2Rad;
         Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
 
+        rb.gravityScale = 0;
+        rb.linearVelocity = Vector2.zero;
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
 
         if (hit.collider != null)
@@ -290,7 +293,6 @@ public class PlayerMovement : MonoBehaviour
             isGrappleDashing = true;
             grappleDashTime = grappleDashDuration;
 
-            rb.gravityScale = 0;
             rb.linearVelocity = direction * grappleDashForce;
         }
     }
@@ -324,6 +326,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = true;
             canGrapple = true;
+            Destroy(collision.gameObject);
         }
     }
 
