@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 104430000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8, y: 1.12, z: 0}
+  m_LocalPosition: {x: -7.36, y: 1.12, z: 0}
   m_LocalScale: {x: 1.3650738, y: 1.2204837, z: 0.3732}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2168,7 +2168,7 @@ GameObject:
   - component: {fileID: 1951203076}
   - component: {fileID: 1951203077}
   m_Layer: 0
-  m_Name: "Guada\xF1a_0"
+  m_Name: Grapple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2254,9 +2254,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 378276175}
   - {fileID: 802029669}
-  - {fileID: 975289026}
   - {fileID: 1900224359}
   - {fileID: 1363802084}
+  - {fileID: 975289026}
   - {fileID: 934791875}
   - {fileID: 1169606118}
   - {fileID: 104430003}

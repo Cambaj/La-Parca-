@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Entity
+  - Damage
   layers:
   - Default
   - TransparentFX
