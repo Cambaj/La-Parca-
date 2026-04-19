@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -300,13 +301,20 @@ public class PlayerMovement : MonoBehaviour
         isGrappling = false;
         grappleline.enabled = false;
         rb.gravityScale = 1;
-        canGrapple = false;
     }
     void ToggleChildren(bool state)
     {
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(state);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Damage"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
