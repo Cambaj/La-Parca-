@@ -52,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private float dashTime;
 
+
+
     [Header("Grapple Dash")]
     [SerializeField] private float grappleDashForce = 18f;
     [SerializeField] private float grappleDashDuration = 0.15f;
@@ -113,30 +115,45 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ---- WALL SLIDE ----
-        if (isTouchingWall && !grounded && wallSlideTime > 0)
+        bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
+
+        if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
         {
             isWallSliding = true;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed);
 
-            if (Input.GetKeyDown(KeyCode.Space) || vertical > 0)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, +wallSlideSpeed);
+                float pushDirection = facingRight ? -1f : 1f;
+                rb.linearVelocity = new Vector2(pushDirection * speed, jumpForce);
+                isWallSliding = false;
+                wallSlideTime = 0;
+                return;
             }
-
-            if (vertical < 0)
+            // ----Subir o Bajar (Escalado)
+            if (vertical > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, speed * 0.01f);
+            }
+            else if (vertical < 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed * 2);
             }
-            wallSlideTime -= Time.deltaTime;
+            else 
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed);
+            }
+           wallSlideTime -= Time.deltaTime;
         }
         else
         {
             isWallSliding = false;
         }
-        if (isWallSliding == true && Input.GetKeyDown(KeyCode.Space))
+        
+        if (isDashing)
         {
-            wallSlideTime = 0;
+            isWallSliding = false;
         }
+        
         // ---- DASH ----
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !grounded)
         {
