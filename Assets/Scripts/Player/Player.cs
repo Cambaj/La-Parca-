@@ -132,7 +132,10 @@ public class PlayerMovement : MonoBehaviour
         {
             isWallSliding = false;
         }
-
+        if (isWallSliding == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            wallSlideTime = 0;
+        }
         // ---- DASH ----
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !grounded)
         {
@@ -198,7 +201,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && canGrapple)
         {
             StartGrapple();
-            canGrapple = false;
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -218,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
                 StopGrapple();
             }
         }
-
+        ToggleChildren(canGrapple);
     }
 
     private void FixedUpdate()
@@ -245,7 +247,6 @@ public class PlayerMovement : MonoBehaviour
             }
             anim.SetBool("IsDashing", false); //Ver que hace esto con el codigo 
         }
-
 
     }
 
@@ -292,12 +293,21 @@ public class PlayerMovement : MonoBehaviour
 
             rb.linearVelocity = direction * grappleDashForce;
         }
+        canGrapple = false;
     }
     private void StopGrapple()
     {
         isGrappling = false;
         grappleline.enabled = false;
         rb.gravityScale = 1;
+        canGrapple = false;
+    }
+    void ToggleChildren(bool state)
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(state);
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
