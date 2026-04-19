@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallSlideSpeed = 10f;
     private bool isTouchingWall;
     private bool isWallSliding;
-    [SerializeField] private float wallSlideTime = 3f;
+    private float wallSlideTime;
+    [SerializeField] private float wallSlideTimeMax;
 
     [Header("Dash")]
     [SerializeField] private float dashForce = 15f;
@@ -89,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             coyoteTimeCounter = coyoteTime;
-            wallSlideTime = 3f;
+            wallSlideTime = wallSlideTimeMax;
             canDash = true;
             canGrapple = true;
             anim.SetBool("IsJump", false); //"IsJump es el nombre de la variable "
@@ -132,15 +133,15 @@ public class PlayerMovement : MonoBehaviour
             // ----Subir o Bajar (Escalado)
             if (vertical > 0)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, speed * 0.01f);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, wallSlideSpeed);
             }
             else if (vertical < 0)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed * 2);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed);
             }
             else 
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed * 0);
             }
            wallSlideTime -= Time.deltaTime;
         }
