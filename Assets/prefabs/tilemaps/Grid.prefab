@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6436730876514874234}
   - component: {fileID: 752109923769825016}
   - component: {fileID: 4669389248163501368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pinchos
   m_TagString: Damage
   m_Icon: {fileID: 0}

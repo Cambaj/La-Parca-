@@ -187,7 +187,7 @@ MonoBehaviour:
   groundCheckDistance: 0.77
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 9
   lowJumpMultiplier: 3
   fallMultiplier: 2.5
   jumpBufferTime: 0.1
@@ -196,7 +196,7 @@ MonoBehaviour:
   grappleSpeed: 20
   grappleLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   grappleline: {fileID: 3464255328292084296}
   wallSlideSpeed: 3
   wallSlideTimeMax: 7
