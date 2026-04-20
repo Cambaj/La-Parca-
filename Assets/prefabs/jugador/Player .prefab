@@ -198,8 +198,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   grappleline: {fileID: 3464255328292084296}
-  wallSlideSpeed: 2
-  wallSlideTime: 7
+  wallSlideSpeed: 3
+  wallSlideTimeMax: 7
   dashForce: 15
   dashDuration: 0.2
   grappleDashForce: 18
