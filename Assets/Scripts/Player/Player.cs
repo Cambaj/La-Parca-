@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         anim.SetBool("IsMovement",true);
 
-        // Detección de suelo
+        // Ground Detection
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
 
         // Coyote time
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
             wallSlideTime = wallSlideTimeMax;
             canDash = true;
             canGrapple = true;
-            anim.SetBool("IsJump", false); //"IsJump es el nombre de la variable "
+            anim.SetBool("IsJump", false);
         }
         else
         {
@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         else
             jumpBufferCounter -= Time.deltaTime;
 
-        // ---- SALTO NORMAL ----
+        // ---- Normal Jump ----
         if (jumpBufferCounter > 0 && coyoteTimeCounter > 0 && Time.timeScale == 1f)
         {
             DoJump(Vector2.up);
@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
                 wallSlideTime = 0;
                 return;
             }
-            // ----Subir o Bajar (Escalado)
+            // ---- Go Up or down while wall sliding ----
             if (vertical > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, wallSlideSpeed);
@@ -210,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        // ---- SALTO VARIABLE ----
+        // ---- VARIABLE JUMP ----
         if (rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -220,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        // ---- FLIP DEL PLAYER ----
+        // ---- FLIP PLAYER ----
         if (horizontal < 0 && !facingRight && Time.timeScale != 0)
         {
             Flip();
@@ -230,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        // ---- GUADAÑA ----
+        
 
         if (Input.GetMouseButtonDown(1) && canGrapple)
         {
@@ -243,12 +243,10 @@ public class PlayerMovement : MonoBehaviour
             }
         if (isGrappling)
         {
-            // Forzamos el dibujo de la línea convirtiendo a Vector3
+           
             grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
             grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
 
-            // IMPORTANTE: Cambiado de > a < 
-            // Si la distancia es menor a 0.5 unidades, soltamos el gancho
             if (Vector2.Distance(transform.position, grapplePoint) < 0.5f)
             {
                 StopGrapple();
@@ -279,7 +277,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
             }
-            anim.SetBool("IsDashing", false); //Ver que hace esto con el codigo 
+            anim.SetBool("IsDashing", false); 
         }
 
     }
@@ -288,7 +286,7 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight;
 
-        // Volteamos al Player
+        // Flip of the player
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
@@ -359,7 +357,7 @@ public class PlayerMovement : MonoBehaviour
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                // Si el contacto es lateral (pared)
+               
                 if (Mathf.Abs(contact.normal.x) > 0.5f)
                 {
                     isTouchingWall = true;
