@@ -70,11 +70,14 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     AudioSource audio;
 
+    public Transform spawnPoint;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        spawnPoint = GameObject.Find("SpawnPoint").transform;
     }
 
     void Update()
@@ -332,7 +335,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = spawnPoint.position;
+        }
+
+        if (collision.gameObject.CompareTag("Estancia"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
