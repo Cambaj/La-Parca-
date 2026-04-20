@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool facingRight = true;
 
+    private Vector2 wallNormal;
+
     [Header("Wall Slide")]
     [SerializeField] private float wallSlideSpeed = 10f;
     private bool isTouchingWall;
@@ -52,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool isDashing = false;
     private float dashTime;
-
 
 
     [Header("Grapple Dash")]
@@ -120,6 +121,10 @@ public class PlayerMovement : MonoBehaviour
 
         // ---- WALL SLIDE ----
         bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
+        
+        if (wallNormal.x > 0 && horizontal < 0) isHoldingGrab = true;
+        if (wallNormal.x < -0 && horizontal > 0) isHoldingGrab = true;
+        
 
         if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
         {
@@ -127,8 +132,13 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                float pushDirection = facingRight ? -1f : 1f;
-                rb.linearVelocity = new Vector2(pushDirection * speed, jumpForce);
+                float jumpDirectionX= wallNormal.x;
+                rb.linearVelocity = new Vector2(jumpDirectionX * speed, jumpForce);
+
+                if ((jumpDirectionX > 0 && !facingRight) || (jumpDirectionX < 0 && facingRight))
+                {
+                    Flip();
+                }
                 isWallSliding = false;
                 wallSlideTime = 0;
                 return;
@@ -164,6 +174,8 @@ public class PlayerMovement : MonoBehaviour
             canDash = false;
             isDashing = true;
             dashTime = dashDuration;
+
+            rb.linearVelocity = Vector2.zero;
 
             Vector2 dashDirection = new Vector2(horizontal, vertical);
 
@@ -351,6 +363,7 @@ public class PlayerMovement : MonoBehaviour
                 if (Mathf.Abs(contact.normal.x) > 0.5f)
                 {
                     isTouchingWall = true;
+                    wallNormal = contact.normal;
                     canDash = true;
                     return;
                 }
