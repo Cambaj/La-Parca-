@@ -331,17 +331,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
             transform.position = spawnPoint.position;
         }
 
-        if (collision.gameObject.CompareTag("Estancia"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -368,6 +365,10 @@ public class PlayerMovement : MonoBehaviour
             canDash = true;
             canGrapple = true;
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Estancia"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
