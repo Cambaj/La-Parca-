@@ -70,14 +70,14 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     AudioSource audio;
 
-    public Transform spawnPoint;
+    //public Transform spawnPoint;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
-        spawnPoint = GameObject.Find("SpawnPoint").transform;
+        //spawnPoint = GameObject.Find("SpawnPoint").transform;
     }
 
     void Update()
@@ -335,7 +335,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-            transform.position = spawnPoint.position;
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         
