@@ -304,10 +304,9 @@ public class PlayerMovement : MonoBehaviour
         Vector2 rawDirection = (mousePos - (Vector2)transform.position).normalized;
 
         float angle = Mathf.Atan2(rawDirection.y, rawDirection.x) * Mathf.Rad2Deg;
-
         float snappedAngle = Mathf.Round(angle / 45f) * 45f;
-
         float rad = snappedAngle * Mathf.Deg2Rad;
+
         Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
@@ -315,18 +314,17 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider != null)
         {
             grapplePoint = hit.point;
-            isGrappling = true;
-            grappleline.enabled = true;
         }
         else
         {
-            isGrappleDashing = true;
-            grappleDashTime = grappleDashDuration;
-
-            rb.linearVelocity = direction * grappleDashForce;
+            grapplePoint = (Vector2)transform.position + direction * grappleMaxDistance;
         }
+
+        isGrappling = true;
+        grappleline.enabled = true;
         canGrapple = false;
     }
+
     private void StopGrapple()
     {
         isGrappling = false;
