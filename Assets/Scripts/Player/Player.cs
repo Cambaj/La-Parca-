@@ -237,17 +237,14 @@ public class PlayerMovement : MonoBehaviour
             StartGrapple();
         }
 
-        if (Input.GetMouseButtonUp(1))
-            {
-                StopGrapple();
-            }
+
         if (isGrappling)
         {
            
             grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
             grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
 
-            if (Vector2.Distance(transform.position, grapplePoint) < 0.5f)
+            if (Vector2.Distance(transform.position, grapplePoint) < 1f)
             {
                 StopGrapple();
             }
