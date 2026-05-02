@@ -336,6 +336,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void DestroyBoneWall(GameObject bone)
+    {
+        if (bone == null || !bone.CompareTag("Bone"))
+            return;
+
+        Collider2D boneCollider = bone.GetComponent<Collider2D>();
+
+        if (boneCollider == null)
+            return;
+
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+
+        Collider2D[] results = new Collider2D[20];
+
+        int count = boneCollider.Overlap(filter, results);
+
+        Destroy(bone);
+
+        for (int i = 0; i < count; i++)
+        {
+            if (results[i] != null &&
+                results[i].CompareTag("Bone") &&
+                results[i].gameObject != bone)
+            {
+                DestroyBoneWall(results[i].gameObject);
+            }
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Damage"))
@@ -345,24 +375,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((isDashing || isGrappling || isGrappleDashing) && collision.gameObject.CompareTag("Bone"))
         {
-            Collider2D boneCollider = collision.collider;
-
-            ContactFilter2D filter = new ContactFilter2D();
-            filter.NoFilter();
-
-            Collider2D[] results = new Collider2D[20];
-
-            int count = boneCollider.Overlap(filter, results);
-
-            for (int i = 0; i < count; i++)
-            {
-                if (results[i] != null && results[i].CompareTag("Bone"))
-                {
-                    Destroy(results[i].gameObject);
-                }
-            }
-
-            Destroy(collision.gameObject);
+            DestroyBoneWall(collision.gameObject);
         }
 
     }
