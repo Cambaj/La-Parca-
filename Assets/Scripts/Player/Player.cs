@@ -343,12 +343,33 @@ public class PlayerMovement : MonoBehaviour
            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        
+        if ((isDashing || isGrappling || isGrappleDashing) && collision.gameObject.CompareTag("Bone"))
+        {
+            Collider2D boneCollider = collision.collider;
+
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.NoFilter();
+
+            Collider2D[] results = new Collider2D[20];
+
+            int count = boneCollider.Overlap(filter, results);
+
+            for (int i = 0; i < count; i++)
+            {
+                if (results[i] != null && results[i].CompareTag("Bone"))
+                {
+                    Destroy(results[i].gameObject);
+                }
+            }
+
+            Destroy(collision.gameObject);
+        }
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bone"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
@@ -380,7 +401,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bone"))
         {
             isTouchingWall = false;
         }

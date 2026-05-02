@@ -8,6 +8,7 @@ TagManager:
   - Entity
   - Damage
   - Estancia
+  - Bone
   layers:
   - Default
   - TransparentFX
