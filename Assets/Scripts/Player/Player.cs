@@ -272,7 +272,8 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+                float airMultiplier = grounded ? 1f : 0.45f;
+                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime * airMultiplier, rb.linearVelocity.y);
             }
             anim.SetBool("IsDashing", false); 
         }
