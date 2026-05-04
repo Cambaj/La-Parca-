@@ -1,19 +1,43 @@
 fileFormatVersion: 2
-guid: 690478b317629174bb9bb1f86421013e
+guid: db0e657abc4095043bf11887321afb5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7050993540882883828
-    second: Idle 1_0
+      213: -8125774475627718875
+    second: Revive_0
   - first:
-      213: 760058600049143939
-    second: Idle 1_1
+      213: 3907637768866723211
+    second: Revive_1
   - first:
-      213: 794771719245926436
-    second: Idle 1_2
+      213: -1337629366075783680
+    second: Revive_2
   - first:
-      213: 1063925711475361242
-    second: Idle 1_3
+      213: 5540629322450169332
+    second: Revive_3
+  - first:
+      213: 1341426027440299867
+    second: Revive_4
+  - first:
+      213: -3985315229728037973
+    second: Revive_5
+  - first:
+      213: -2912763215628044861
+    second: Revive_6
+  - first:
+      213: 275921651594056496
+    second: Revive_7
+  - first:
+      213: -9178446083897153853
+    second: Revive_8
+  - first:
+      213: -1398970021105142725
+    second: Revive_9
+  - first:
+      213: 4830664516576952752
+    second: Revive_10
+  - first:
+      213: 4573999995823464262
+    second: Revive_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +133,117 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle 1_0
+      name: Revive_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5271647aa237b3f80800000000000000
+      internalID: -8125774475627718875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b857334e8d7ba3630800000000000000
+      internalID: 3907637768866723211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0060ce9bd29cf6de0800000000000000
+      internalID: -1337629366075783680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd61c4630544ec40800000000000000
+      internalID: 5540629322450169332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5fda026dd3bd9210800000000000000
+      internalID: 1341426027440299867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive_5
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0b1a1a7bb6d52e90800000000000000
-      internalID: -7050993540882883828
+      spriteID: ba32b16e9e051b8c0800000000000000
+      internalID: -3985315229728037973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_1
+      name: Revive_6
       rect:
         serializedVersion: 2
         x: 0
@@ -146,14 +280,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 380f86015454c8a00800000000000000
-      internalID: 760058600049143939
+      spriteID: 3c57aa1b949c397d0800000000000000
+      internalID: -2912763215628044861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_2
+      name: Revive_7
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4201e23faa8970b00800000000000000
-      internalID: 794771719245926436
+      spriteID: 0335a1db74544d300800000000000000
+      internalID: 275921651594056496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_3
+      name: Revive_8
       rect:
         serializedVersion: 2
         x: 0
@@ -190,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad5c4e33cc2d3ce00800000000000000
-      internalID: 1063925711475361242
+      spriteID: 3c62c3b8aeb9f9080800000000000000
+      internalID: -9178446083897153853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_4
+      name: Revive_9
       rect:
         serializedVersion: 2
         x: 0
@@ -210,16 +344,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d815323894bdade418b41ff341f3a241
-      internalID: -2004076551
+      spriteID: b347b988d2cd59ce0800000000000000
+      internalID: -1398970021105142725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_5
+      name: Revive_10
       rect:
         serializedVersion: 2
         x: 0
@@ -232,16 +366,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ebad2d9e8a977cf4aacfd0efe3259b94
-      internalID: -1527454894
+      spriteID: 0b147aba8c7f90340800000000000000
+      internalID: 4830664516576952752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_6
+      name: Revive_11
       rect:
         serializedVersion: 2
         x: 0
@@ -254,16 +388,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e37ae1e98c1787d45bf3401cd2fae22a
-      internalID: -1067182102
+      spriteID: 64f12b913cc1a7f30800000000000000
+      internalID: 4573999995823464262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_7
+      name: Revive_12
       rect:
         serializedVersion: 2
         x: 0
@@ -278,14 +412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0f9dd6370d2a54db00b0c72f96541c
-      internalID: -961866698
+      spriteID: 667f2b81ee9c58143afcd0815001f12d
+      internalID: -411774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_8
+      name: Revive_13
       rect:
         serializedVersion: 2
         x: 0
@@ -300,8 +434,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51029d4589a7114696963fe32fff38b
-      internalID: 1770009227
+      spriteID: 4fbf08468dffe0749ab6d32b3a259988
+      internalID: 1719867842
       vertices: []
       indices: 
       edges: []
@@ -310,7 +444,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d7be43d6166d3c34295ca277d52dd5bf
+    spriteID: 7dfd4621c893ff243881e497eca6b3bf
     internalID: 0
     vertices: []
     indices: 
@@ -319,20 +453,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":9.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":14.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle 1_0: -7050993540882883828
-      Idle 1_1: 760058600049143939
-      Idle 1_2: 794771719245926436
-      Idle 1_3: 1063925711475361242
-      Idle 1_4: -2004076551
-      Idle 1_5: -1527454894
-      Idle 1_6: -1067182102
-      Idle 1_7: -961866698
-      Idle 1_8: 1770009227
+      Revive_0: -8125774475627718875
+      Revive_1: 3907637768866723211
+      Revive_10: 4830664516576952752
+      Revive_11: 4573999995823464262
+      Revive_12: -411774
+      Revive_13: 1719867842
+      Revive_2: -1337629366075783680
+      Revive_3: 5540629322450169332
+      Revive_4: 1341426027440299867
+      Revive_5: -3985315229728037973
+      Revive_6: -2912763215628044861
+      Revive_7: 275921651594056496
+      Revive_8: -9178446083897153853
+      Revive_9: -1398970021105142725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

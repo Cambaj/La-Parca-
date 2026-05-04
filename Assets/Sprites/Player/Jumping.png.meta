@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 75f6ab6216ae3cd4f8001c9280832c31
+guid: 88119d514ba439847afe6b86dde78a32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5744196996056429098
-    second: Idle de la Parca_0
+      213: -4312366431063467818
+    second: Jumping_0
+  - first:
+      213: -4048530547193403679
+    second: Jumping_1
+  - first:
+      213: 2826979704478040783
+    second: Jumping_2
+  - first:
+      213: 5907000883226147584
+    second: Jumping_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle de la Parca_0
+      name: Jumping_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 345
-        width: 293
-        height: 344
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,108 +124,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a223fcddbbc77bf40800000000000000
-      internalID: 5744196996056429098
+      spriteID: 6d8942f24956724c0800000000000000
+      internalID: -4312366431063467818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle de la Parca_1
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 345
-        width: 293
-        height: 344
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0f4e81263e362d43921a3698f529e02
-      internalID: -1798681293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle de la Parca_2
-      rect:
-        serializedVersion: 2
-        x: 586
-        y: 345
-        width: 293
-        height: 344
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00b7e1936499290448b1d6aeb3e2b933
-      internalID: 1439953593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle de la Parca_3
+      name: Jumping_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 293
-        height: 344
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e7ca24ade346e0b48800dea721c0f045
-      internalID: 1762272034
+      spriteID: 1e62838daeab0d7c0800000000000000
+      internalID: -4048530547193403679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle de la Parca_4
+      name: Jumping_2
       rect:
         serializedVersion: 2
-        x: 293
-        y: 1
-        width: 293
-        height: 344
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0256974533080dc4c986b184e3c367b1
-      internalID: 1163754193
+      spriteID: fc207a030137b3720800000000000000
+      internalID: 2826979704478040783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle de la Parca_5
+      name: Jumping_3
       rect:
         serializedVersion: 2
-        x: 586
-        y: 1
-        width: 293
-        height: 344
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bfc94b102e9f150800000000000000
+      internalID: 5907000883226147584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,8 +212,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faf804cae8864424ca603a27030add1a
-      internalID: -538192815
+      spriteID: 74e42b4f6597adf49ada36f2270515cb
+      internalID: -1935297870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad33f77480efae847b5c37d2302776e1
+      internalID: -1084132574
       vertices: []
       indices: 
       edges: []
@@ -235,7 +244,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b072fedf31d366146ae3a74d4599f9a1
+    spriteID: 1c18c5e2dd2599b4cb303f4394442c7e
     internalID: 0
     vertices: []
     indices: 
@@ -245,14 +254,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":2.0},"gridSpriteSize":{"x":293.0,"y":344.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":6.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle de la Parca_0: 5744196996056429098
-      Idle de la Parca_1: -1798681293
-      Idle de la Parca_2: 1439953593
-      Idle de la Parca_3: 1762272034
-      Idle de la Parca_4: 1163754193
-      Idle de la Parca_5: -538192815
+      Jumping_0: -4312366431063467818
+      Jumping_1: -4048530547193403679
+      Jumping_2: 2826979704478040783
+      Jumping_3: 5907000883226147584
+      Jumping_4: -1935297870
+      Jumping_5: -1084132574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

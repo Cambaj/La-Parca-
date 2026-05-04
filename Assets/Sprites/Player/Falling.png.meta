@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 690478b317629174bb9bb1f86421013e
+guid: 68bb08acc23bc9c46bfa0073a4038ac0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7050993540882883828
-    second: Idle 1_0
+      213: 508591715825662441
+    second: Falling_0
   - first:
-      213: 760058600049143939
-    second: Idle 1_1
+      213: 1996277581079447406
+    second: Falling_1
   - first:
-      213: 794771719245926436
-    second: Idle 1_2
-  - first:
-      213: 1063925711475361242
-    second: Idle 1_3
+      213: 2370214711298654797
+    second: Falling_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,95 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle 1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0b1a1a7bb6d52e90800000000000000
-      internalID: -7050993540882883828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 380f86015454c8a00800000000000000
-      internalID: 760058600049143939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4201e23faa8970b00800000000000000
-      internalID: 794771719245926436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad5c4e33cc2d3ce00800000000000000
-      internalID: 1063925711475361242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_4
+      name: Falling_0
       rect:
         serializedVersion: 2
         x: 0
@@ -210,16 +119,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d815323894bdade418b41ff341f3a241
-      internalID: -2004076551
+      spriteID: 9e9be7d8871ee0700800000000000000
+      internalID: 508591715825662441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_5
+      name: Falling_1
       rect:
         serializedVersion: 2
         x: 0
@@ -232,16 +141,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ebad2d9e8a977cf4aacfd0efe3259b94
-      internalID: -1527454894
+      spriteID: e67015d12e334bb10800000000000000
+      internalID: 1996277581079447406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_6
+      name: Falling_2
       rect:
         serializedVersion: 2
         x: 0
@@ -254,16 +163,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e37ae1e98c1787d45bf3401cd2fae22a
-      internalID: -1067182102
+      spriteID: d428c54d8b1b4e020800000000000000
+      internalID: 2370214711298654797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_7
+      name: Falling_3
       rect:
         serializedVersion: 2
         x: 0
@@ -278,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0f9dd6370d2a54db00b0c72f96541c
-      internalID: -961866698
+      spriteID: 59a31eac5eabadc4ab9f59c8bc30018c
+      internalID: 211743629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_8
+      name: Falling_4
       rect:
         serializedVersion: 2
         x: 0
@@ -300,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51029d4589a7114696963fe32fff38b
-      internalID: 1770009227
+      spriteID: 094d7d81fbbccb44a868ae042b49fedc
+      internalID: -1689067737
       vertices: []
       indices: 
       edges: []
@@ -310,7 +219,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d7be43d6166d3c34295ca277d52dd5bf
+    spriteID: a09bc0daa4d9c414099ee2c60d608515
     internalID: 0
     vertices: []
     indices: 
@@ -319,20 +228,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":9.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":5.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle 1_0: -7050993540882883828
-      Idle 1_1: 760058600049143939
-      Idle 1_2: 794771719245926436
-      Idle 1_3: 1063925711475361242
-      Idle 1_4: -2004076551
-      Idle 1_5: -1527454894
-      Idle 1_6: -1067182102
-      Idle 1_7: -961866698
-      Idle 1_8: 1770009227
+      Falling_0: 508591715825662441
+      Falling_1: 1996277581079447406
+      Falling_2: 2370214711298654797
+      Falling_3: 211743629
+      Falling_4: -1689067737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        anim.SetBool("IsMovement",true);
+        
 
         // Ground Detection
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
@@ -97,12 +97,10 @@ public class PlayerMovement : MonoBehaviour
             wallSlideTime = wallSlideTimeMax;
             canDash = true;
             canGrapple = true;
-            anim.SetBool("IsJump", false);
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
-            anim.SetBool("IsJump", true);
         }
         // Jump buffer
         if (Input.GetKeyDown(KeyCode.Space))
@@ -118,9 +116,12 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = 0;
             audio.PlayOneShot(JumpSound);
         }
+        else
+        {
+        }
 
-        // ---- WALL SLIDE ----
-        bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
+            // ---- WALL SLIDE ----
+            bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
         
         if (wallNormal.x > 0 && horizontal < 0) isHoldingGrab = true;
         if (wallNormal.x < -0 && horizontal > 0) isHoldingGrab = true;
@@ -220,7 +221,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        // ---- FLIP PLAYER ----
+        // FLIP PLAYER
         if (horizontal < 0 && !facingRight && Time.timeScale != 0)
         {
             Flip();
@@ -230,7 +231,31 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        
+        // ANIMACIONES
+        if (horizontal != 0)
+        {
+            anim.SetBool("IsWalking", true);
+        }
+        else
+        {
+            anim.SetBool("IsWalking", false);
+        }
+        if (rb.linearVelocity.y > 0)
+        {
+            anim.SetBool("IsJump", true);
+            anim.SetBool("IsFall", false);
+        }
+        if (rb.linearVelocity.y < 0)
+        {
+            anim.SetBool("IsFall", true);
+            anim.SetBool("IsJump", false);
+        }
+        if (rb.linearVelocity.y == 0)
+        {
+            anim.SetBool("IsFall", false);
+            anim.SetBool("IsJump", false);
+        }
+
 
         if (Input.GetMouseButtonDown(1) && canGrapple)
         {
@@ -262,7 +287,7 @@ public class PlayerMovement : MonoBehaviour
 
             rb.linearVelocity = direction * grappleSpeed;
 
-            anim.SetBool("IsDashing", true);
+            anim.SetBool("IsGrappling", true);
         }
         else
         {
@@ -275,7 +300,7 @@ public class PlayerMovement : MonoBehaviour
                 
                 rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
             }
-            anim.SetBool("IsDashing", false); 
+            anim.SetBool("IsGrappling", false); 
         }
 
     }
@@ -284,7 +309,6 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight;
 
-        // Flip of the player
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
@@ -293,7 +317,7 @@ public class PlayerMovement : MonoBehaviour
     private void DoJump(Vector2 direction)
     {
         rb.AddForce(direction * jumpForce, ForceMode2D.Impulse);
-        //anim.SetBool("IsJump", true);
+        
     }
 
     private void StartGrapple()
@@ -371,7 +395,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            anim.SetTrigger("IsDeath");
         }
 
         if ((isDashing || isGrappling || isGrappleDashing) && collision.gameObject.CompareTag("Bone"))
@@ -421,6 +445,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Usada por la animacion de Death
+    private void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
