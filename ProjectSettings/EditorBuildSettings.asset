@@ -30,6 +30,15 @@ EditorBuildSettings:
     path: Assets/Scenes/estancia 7.unity
     guid: 204f622fe8fb3b04abbdbe0cea6fdd11
   - enabled: 1
+    path: Assets/Scenes/estancia 8.unity
+    guid: b611dbf0fedbdf04fb47bf220fab5809
+  - enabled: 1
+    path: Assets/Scenes/estancia 9.unity
+    guid: 9e887810706bfbe44b28331acab2da07
+  - enabled: 1
+    path: Assets/Scenes/estancia 10.unity
+    guid: b8dc1c119a352ae4fba4e9708961f0c5
+  - enabled: 1
     path: Assets/Scenes/StartMenu 1.unity
     guid: 63d3762b629596240af9dbf297997196
   - enabled: 1
