@@ -55,14 +55,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private float dashTime;
 
-
-    [Header("Grapple Dash")]
-    [SerializeField] private float grappleDashForce = 18f;
-    [SerializeField] private float grappleDashDuration = 0.15f;
-
     private bool canGrapple = true;
-    private bool isGrappleDashing = false;
-    private float grappleDashTime;
+
 
 
     [Header("Audio")]
@@ -170,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         // ---- DASH ----
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !grounded)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !grounded && !isGrappling)
         {
             canDash = false;
             isDashing = true;
@@ -200,16 +194,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.gravityScale = 1;
             }
         }
-        if (isGrappleDashing)
-        {
-            grappleDashTime -= Time.deltaTime;
 
-            if (grappleDashTime <= 0)
-            {
-                isGrappleDashing = false;
-                rb.gravityScale = 1;
-            }
-        }
 
         // ---- VARIABLE JUMP ----
         if (rb.linearVelocity.y < 0)
@@ -257,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButtonDown(1) && canGrapple)
+        if (Input.GetMouseButtonDown(1) && canGrapple && !isDashing)
         {
             StartGrapple();
         }
@@ -279,7 +264,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing || isGrappleDashing) return;
+        if (isDashing) return;
 
         if (isGrappling)
         {
@@ -398,7 +383,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("IsDeath");
         }
 
-        if ((isDashing || isGrappling || isGrappleDashing) && collision.gameObject.CompareTag("Bone"))
+        if ((isDashing || isGrappling) && collision.gameObject.CompareTag("Bone"))
         {
             DestroyBoneWall(collision.gameObject);
         }
