@@ -57,10 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canGrapple = true;
 
-
-
     [Header("Audio")]
     [SerializeField] private AudioClip JumpSound;
+
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
 
     Animator anim;
     AudioSource audio;
@@ -72,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
         //spawnPoint = GameObject.Find("SpawnPoint").transform;
     }
 
@@ -259,6 +262,16 @@ public class PlayerMovement : MonoBehaviour
                 StopGrapple();
             }
         }
+
+        if (!canDash)
+        {
+            spriteRenderer.color = Color.yellow;
+        }
+        else
+        {
+            spriteRenderer.color = originalColor;
+        }
+
         ToggleChildren(canGrapple);
     }
 
