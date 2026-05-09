@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float vertical;
+    //Mando Solo
+    private float horizontalRightStick;
+    private float verticalRightStick;
     private bool grounded;
     private Rigidbody2D rb;
 
@@ -54,11 +57,15 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool isDashing = false;
     private float dashTime;
-
     private bool canGrapple = true;
 
     [Header("Audio")]
     [SerializeField] private AudioClip JumpSound;
+
+    [Header("Mando")]
+    [SerializeField] private bool useController = true;
+
+    private Vector2 controllerAim;
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
@@ -82,7 +89,21 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        
+
+        horizontalRightStick = Input.GetAxisRaw("RightStickHorizontal");
+        verticalRightStick = Input.GetAxisRaw("RightStickVertical");
+
+        controllerAim = new Vector2(horizontalRightStick, verticalRightStick);
+
+        if (controllerAim.magnitude < 0.2f)
+        {
+            controllerAim = Vector2.zero;
+        }
+        else
+        {
+            controllerAim.Normalize();
+        }
+
 
         // Ground Detection
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
@@ -100,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
         // Jump buffer
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
             jumpBufferCounter = jumpBufferTime;
         else
             jumpBufferCounter -= Time.deltaTime;
@@ -165,9 +186,9 @@ public class PlayerMovement : MonoBehaviour
         {
             isWallSliding = false;
         }
-        
+
         // ---- DASH ----
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !grounded && !isGrappling)
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !grounded && !isGrappling)
         {
             canDash = false;
             isDashing = true;
@@ -245,7 +266,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButtonDown(1) && canGrapple && !isDashing)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing)
         {
             StartGrapple();
         }
@@ -328,14 +349,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void StartGrapple()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 rawDirection = (mousePos - (Vector2)transform.position).normalized;
+        Vector2 direction;
 
-        float angle = Mathf.Atan2(rawDirection.y, rawDirection.x) * Mathf.Rad2Deg;
-        float snappedAngle = Mathf.Round(angle / 45f) * 45f;
-        float rad = snappedAngle * Mathf.Deg2Rad;
+        if (useController && controllerAim != Vector2.zero)
+        {
+            direction = controllerAim;
+        }
+        else
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 rawDirection = (mousePos - (Vector2)transform.position).normalized;
 
-        Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+            float angle = Mathf.Atan2(rawDirection.y, rawDirection.x) * Mathf.Rad2Deg;
+            float snappedAngle = Mathf.Round(angle / 45f) * 45f;
+            float rad = snappedAngle * Mathf.Deg2Rad;
+
+            direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+        }
+
+        float controllerAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float snappedControllerAngle = Mathf.Round(controllerAngle / 45f) * 45f;
+        float controllerRad = snappedControllerAngle * Mathf.Deg2Rad;
+
+        direction = new Vector2(Mathf.Cos(controllerRad), Mathf.Sin(controllerRad));
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
 
