@@ -62,9 +62,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip JumpSound;
 
-    [Header("Mando")]
-    [SerializeField] private bool useController = true;
-
     private Vector2 controllerAim;
 
     private SpriteRenderer spriteRenderer;
@@ -139,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
             // ---- WALL SLIDE ----
-            bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
+        bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
         
         if (wallNormal.x > 0 && horizontal < 0) isHoldingGrab = true;
         if (wallNormal.x < -0 && horizontal > 0) isHoldingGrab = true;
@@ -149,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isWallSliding = true;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
             {
                 float jumpDirectionX= wallNormal.x;
                 rb.linearVelocity = new Vector2(jumpDirectionX * speed, jumpForce);
@@ -351,7 +348,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 direction;
 
-        if (useController && controllerAim != Vector2.zero)
+        if (controllerAim != Vector2.zero)
         {
             direction = controllerAim;
         }
