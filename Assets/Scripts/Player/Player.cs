@@ -131,9 +131,6 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = 0;
             audio.PlayOneShot(JumpSound);
         }
-        else
-        {
-        }
 
             // ---- WALL SLIDE ----
         bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
@@ -299,6 +296,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
         ToggleChildren(canGrapple);
+
+        // ---- DEBUG ----
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton7))
+        {
+            // Siguiente escena
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.JoystickButton6))
+        {
+            // Escena anterior
+            int previousScene = SceneManager.GetActiveScene().buildIndex - 1;
+
+            if (previousScene >= 0)
+            {
+                SceneManager.LoadScene(previousScene);
+            }
+        }
     }
 
     private void FixedUpdate()
