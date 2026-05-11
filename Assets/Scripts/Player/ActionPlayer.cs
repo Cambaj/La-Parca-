@@ -9,6 +9,7 @@ public class GrapplingHook : MonoBehaviour
 
     [Header("Grappling Hook")]
     [SerializeField] private InputActionReference grappleAction;
+    [SerializeField] private InputActionReference aimAction;
 
     [Header("Settings")]
     [SerializeField] private float grappleMaxDistance = 10f;
@@ -27,6 +28,7 @@ public class GrapplingHook : MonoBehaviour
     private void OnEnable()
     {
         grappleAction.action.Enable();
+        aimAction.action.Enable();
         grappleAction.action.started += _ => StartGrapple();
         grappleAction.action.canceled += _ => StopGrapple();
     }
@@ -40,15 +42,8 @@ public class GrapplingHook : MonoBehaviour
 
     private void StartGrapple()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 rawDirection = (mousePos - (Vector2)transform.position).normalized;
-
-        float angle = Mathf.Atan2(rawDirection.y, rawDirection.x) * Mathf.Rad2Deg;
-        float snappedAngle = Mathf.Round(angle / 45f) * 45f;
-        float rad = snappedAngle * Mathf.Deg2Rad;
-        Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
+        Vector2 direction = GetAimDirection();
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);  
 
         if (hit.collider != null)
         {
@@ -61,6 +56,28 @@ public class GrapplingHook : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
         }
      
+    }
+
+    private Vector2 GetAimDirection()
+    {
+        Vector2 inputDir = aimAction.action.ReadValue<Vector2>();
+        Vector2 finalDir;
+
+        if (inputDir.sqrMagnitude > 0.1f)
+        {
+            finalDir = inputDir.normalized;
+        }
+        else 
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            finalDir = (mousePos - (Vector2)transform.position.normalized);
+        }
+
+        float angle = Mathf.Atan2(finalDir.y, finalDir.x) * Mathf.Rad2Deg;
+        float snappedAngle = Mathf.Round(angle / 45f) * 45f;
+        float rad = snappedAngle * Mathf.Deg2Rad;
+
+        return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
     }
 
     private void StopGrapple()
