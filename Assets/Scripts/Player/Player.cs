@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
 
         // Coyote time
-        if (grounded)
+        if (grounded && !isGrappling && !isDashing)
         {
             coyoteTimeCounter = coyoteTime;
             wallSlideTime = wallSlideTimeMax;
@@ -209,6 +209,7 @@ public class PlayerMovement : MonoBehaviour
             if (dashTime <= 0)
             {
                 isDashing = false;
+                rb.linearVelocity = new Vector2(0, 0);
                 rb.gravityScale = 1;
             }
         }
@@ -260,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing && !isGrappling)
         {
             StartGrapple();
         }
@@ -268,7 +269,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrappling)
         {
-           
             grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
             grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
 
@@ -314,8 +314,6 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene(previousScene);
             }
         }
-        Debug.Log(vertical);
-        Debug.Log(controllerAim);
     }
 
     private void FixedUpdate()
@@ -407,6 +405,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrappling = false;
         grappleline.enabled = false;
+        rb.linearVelocity = new Vector2(0, 0);
         rb.gravityScale = 1;
     }
     void ToggleChildren(bool state)
@@ -445,6 +444,7 @@ public class PlayerMovement : MonoBehaviour
                 DestroyBoneWall(results[i].gameObject);
             }
         }
+        dashTime += 2;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
