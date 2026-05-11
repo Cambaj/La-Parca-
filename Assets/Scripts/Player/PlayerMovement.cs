@@ -269,7 +269,9 @@ private void HandleDashInput(InputAction.CallbackContext context)
             Muerte();
         }
 
-        if (Is_dashing || ((grappleScript != null && grappleScript.IsGrappling)) && collision.gameObject.CompareTag("Bone"))
+        bool estaAtacando = Is_dashing || (grappleScript != null && grappleScript.IsGrappling);
+
+        if (estaAtacando && collision.gameObject.CompareTag("Bone"))
         {
             Destroy(collision.gameObject);
         }
@@ -288,9 +290,10 @@ private void HandleDashInput(InputAction.CallbackContext context)
 
     public void Respawn()
     {
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    //Entidad de boost
+
+  //Entidad de boost
 
     /*
     private void OnTriggerEnter2D(Collider2D collision)
