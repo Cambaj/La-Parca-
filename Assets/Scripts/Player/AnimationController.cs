@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-   {
+   
     [Header("Animator Reference")]
     [SerializeField] private Animator animator;
 
@@ -44,6 +44,7 @@ public class AnimationController : MonoBehaviour
 
 
     }
+   
 
 }
 

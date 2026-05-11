@@ -2,9 +2,9 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    /*
+    
     [Header("Movimiento")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -22,6 +22,7 @@ using UnityEngine.SceneManagement;
     [SerializeField] private float coyoteTime = 0.15f;
 
     [Header("Grapping Hook")]
+ 
     [SerializeField] private float grappleMaxDistance = 10f;
     [SerializeField] private float grappleSpeed = 20f;
     [SerializeField] private LayerMask grappleLayer;
@@ -511,5 +512,8 @@ using UnityEngine.SceneManagement;
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
     }
-    */
+    
 }
+
+
+
