@@ -2,8 +2,9 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+//public class PlayerMovement : MonoBehaviour
 {
+    /*
     [Header("Movimiento")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -215,6 +216,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         // ---- VARIABLE JUMP ----
+        bool jumpButtonHeld = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0);
         if (rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -259,13 +261,13 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("IsJump", false);
         }
 
-
+        //Inicio de Grapple
         if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing)
         {
             StartGrapple();
         }
 
-
+        
         if (isGrappling)
         {
            
@@ -509,4 +511,5 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
     }
+    */
 }

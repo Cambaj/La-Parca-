@@ -8,3 +8,4 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 }
+
