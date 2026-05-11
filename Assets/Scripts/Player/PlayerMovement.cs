@@ -1,6 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerMovement : MonoBehaviour
@@ -257,6 +258,54 @@ private void HandleDashInput(InputAction.CallbackContext context)
             Gizmos.DrawRay(wallCheckTransform.position, Vector2.left * wallCheckDistance);
             Gizmos.DrawRay(wallCheckTransform.position, Vector2.right * wallCheckDistance);
         }
-    }    
+    }
+
+    //Script de muerte y logica del la pared de hueso
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Damage"))
+        {
+            Muerte();
+        }
+
+        if (Is_dashing || ((grappleScript != null && grappleScript.IsGrappling)) && collision.gameObject.CompareTag("Bone"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+    
+    private void Muerte()
+    {
+        playerRigidbody.linearVelocity = Vector2.zero;
+        playerRigidbody.simulated = false;
+
+        if(animController != null)
+        {
+            animController.PlayDeath();
+        }
+    }
+
+    public void Respawn()
+    {
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    //Entidad de boost
+
+    /*
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Entity"))
+        {
+            canDash = true;
+            canGrapple = true;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Estancia"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+    */
 
 }

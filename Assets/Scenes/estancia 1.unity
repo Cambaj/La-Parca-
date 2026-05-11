@@ -294,6 +294,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 542452328928578868, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       insertIndex: -1
       addedObject: {fileID: 658606263}
+    - targetCorrespondingSourceObject: {fileID: 542452328928578868, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 658606266}
   m_SourcePrefab: {fileID: 100100000, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
 --- !u!1 &409203766
 GameObject:
@@ -592,7 +595,7 @@ MonoBehaviour:
   grableRightAction: {fileID: -2427519462497785760, guid: 09978d006e2a2ca429df32244a70454e, type: 3}
   grappleScript: {fileID: 658606263}
   playerRigidbody: {fileID: 658606259}
-  animController: {fileID: 0}
+  animController: {fileID: 658606266}
   spriteRenderer: {fileID: 658606260}
   moveSpeed: 5
   jumpForce: 10
@@ -683,14 +686,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2de433832221247bbe50ab69f21813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrapplingHook
-  grappleAction: {fileID: 0}
+  grappleAction: {fileID: 7383828885268911508, guid: 09978d006e2a2ca429df32244a70454e, type: 3}
   grappleMaxDistance: 10
   grappleSpeed: 20
   grappleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   lineRenderer: {fileID: 658606257}
   rb: {fileID: 658606259}
+--- !u!95 &658606264 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8855314440702420934, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+  m_PrefabInstance: {fileID: 224325426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &658606266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658606254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e5d3899218a7ee4db35b4e43bf4d476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationController
+  animator: {fileID: 658606264}
+  Is_movingParameter: Is_moving
+  Is_idleParameter: Is_idle
+  Is_jumpingParameter: Is_jumping
+  Is_fallingParameter: Is_falling
+  Is_dashingParameter: Is_dashing
 --- !u!1 &705980776
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    
+    /*
     [Header("Movimiento")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -512,7 +512,7 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
     }
-    
+    */
 }
 
 
