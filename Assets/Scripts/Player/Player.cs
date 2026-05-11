@@ -219,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton0))
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
@@ -298,13 +298,13 @@ public class PlayerMovement : MonoBehaviour
         ToggleChildren(canGrapple);
 
         // ---- DEBUG ----
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton7))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             // Siguiente escena
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.JoystickButton6))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             // Escena anterior
             int previousScene = SceneManager.GetActiveScene().buildIndex - 1;
@@ -314,6 +314,8 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene(previousScene);
             }
         }
+        Debug.Log(vertical);
+        Debug.Log(controllerAim);
     }
 
     private void FixedUpdate()
@@ -366,6 +368,12 @@ public class PlayerMovement : MonoBehaviour
         if (controllerAim != Vector2.zero)
         {
             direction = controllerAim;
+
+            float controllerAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            float snappedControllerAngle = Mathf.Round(controllerAngle / 45f) * 45f;
+            float controllerRad = snappedControllerAngle * Mathf.Deg2Rad;
+
+            direction = new Vector2(Mathf.Cos(controllerRad), Mathf.Sin(controllerRad));
         }
         else
         {
@@ -378,12 +386,6 @@ public class PlayerMovement : MonoBehaviour
 
             direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
         }
-
-        float controllerAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        float snappedControllerAngle = Mathf.Round(controllerAngle / 45f) * 45f;
-        float controllerRad = snappedControllerAngle * Mathf.Deg2Rad;
-
-        direction = new Vector2(Mathf.Cos(controllerRad), Mathf.Sin(controllerRad));
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
 
