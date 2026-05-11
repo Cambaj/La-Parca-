@@ -70,7 +70,7 @@ public class GrapplingHook : MonoBehaviour
         else 
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            finalDir = (mousePos - (Vector2)transform.position.normalized);
+            finalDir = (mousePos - (Vector2)transform.position).normalized;
         }
 
         float angle = Mathf.Atan2(finalDir.y, finalDir.x) * Mathf.Rad2Deg;

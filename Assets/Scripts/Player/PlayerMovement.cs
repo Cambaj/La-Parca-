@@ -76,13 +76,28 @@ public class PlayerMovement : MonoBehaviour
     public bool Is_falling;
     public bool Is_wallSliding; //Ver si se hace animacion de esto
 
+    private static PlayerMovement instance;
     private void Awake()
     {
-        originalGravity = playerRigidbody.gravityScale;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else 
+        {
+            Destroy(gameObject);
+            return;
+        }
+            originalGravity = playerRigidbody.gravityScale;
     }
+
+
 
     private void OnEnable()
     {
+        SceneManager.sceneLoaded += AlCargarEscena;
+
         moveAction.action.Enable();
         jumpAction.action.Enable();
         dashAction.action.Enable();
@@ -95,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDisable()
     {
+        SceneManager.sceneLoaded -= AlCargarEscena;
+
         moveAction.action.Disable();
         jumpAction.action.Disable();
         dashAction.action.Disable();
@@ -102,6 +119,16 @@ public class PlayerMovement : MonoBehaviour
         jumpAction.action.started -= HandleJumpInput;
         dashAction.action.started -= HandleDashInput;
     }
+
+    private void AlCargarEscena(Scene scene, LoadSceneMode mode)
+    {
+        GameObject punto = GameObject.Find("SpawnPoint");
+        if (punto != null)
+        {
+            transform.position = punto.transform.position;
+            playerRigidbody.linearVelocity = Vector2.zero;
+        }
+    }   
 
     private void Update()
     {
