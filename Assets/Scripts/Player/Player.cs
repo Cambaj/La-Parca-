@@ -62,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip JumpSound;
 
+    private bool isDead = false;
+
     private Vector2 controllerAim;
 
     private SpriteRenderer spriteRenderer;
@@ -106,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
 
         // Coyote time
-        if (grounded && !isGrappling && !isDashing)
+        if (grounded && !isGrappling && !isDashing && !isDead)
         {
             coyoteTimeCounter = coyoteTime;
             wallSlideTime = wallSlideTimeMax;
@@ -182,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ---- DASH ----
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !grounded && !isGrappling)
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && !isDead)
         {
             canDash = false;
             isDashing = true;
@@ -226,11 +228,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // FLIP PLAYER
-        if (horizontal < 0 && !facingRight && Time.timeScale != 0)
+        if (horizontal < 0 && !facingRight && Time.timeScale != 0 && !isDead)
         {
             Flip();
         }
-        else if (horizontal > 0 && facingRight && Time.timeScale != 0)
+        else if (horizontal > 0 && facingRight && Time.timeScale != 0 && !isDead)
         {
             Flip();
         }
@@ -261,7 +263,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing && !isGrappling)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing && !isGrappling && !isDead)
         {
             StartGrapple();
         }
@@ -334,7 +336,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
-            else
+            else if (!isDead)
             {
                 
                 rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
@@ -451,6 +453,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
+            isDead = true;
+            rb.gravityScale = 0;
+            rb.linearVelocity = new Vector2(0, 0);
             anim.SetTrigger("IsDeath");
         }
 
