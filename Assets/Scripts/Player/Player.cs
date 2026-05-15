@@ -60,7 +60,14 @@ public class PlayerMovement : MonoBehaviour
     private bool canGrapple = true;
 
     [Header("Audio")]
-    [SerializeField] private AudioClip JumpSound;
+    AudioSource audio;
+    [SerializeField] private AudioSource walkAudio;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip grappleLaunchSound;
+    [SerializeField] private AudioClip grappleHookSound;
+    [SerializeField] private AudioClip grappleRecoverSound;
+    [SerializeField] private AudioClip dashSound;
+    [SerializeField] private AudioClip walkGrassSound;
 
     private bool isDead = false;
 
@@ -70,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     private Color originalColor;
 
     Animator anim;
-    AudioSource audio;
+    
 
     //public Transform spawnPoint;
 
@@ -131,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
             DoJump(Vector2.up);
             jumpBufferCounter = 0;
             coyoteTimeCounter = 0;
-            audio.PlayOneShot(JumpSound);
+            audio.PlayOneShot(jumpSound);
         }
 
             // ---- WALL SLIDE ----
@@ -202,6 +209,8 @@ public class PlayerMovement : MonoBehaviour
             dashDirection.Normalize();
 
             rb.linearVelocity = dashDirection * dashForce;
+
+            audio.PlayOneShot(dashSound);
         }
         if (isDashing)
         {
@@ -237,10 +246,15 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        // ANIMACIONES
-        if (horizontal != 0)
+        // ANIMACIONES y sonido de caminar
+        if (horizontal != 0 && grounded)
         {
             anim.SetBool("IsWalking", true);
+
+            if (!walkAudio.isPlaying)
+            {
+                walkAudio.PlayOneShot(walkGrassSound);
+            }
         }
         else
         {
@@ -392,10 +406,12 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider != null)
         {
             grapplePoint = hit.point;
+            audio.PlayOneShot(grappleHookSound);
         }
         else
         {
             grapplePoint = (Vector2)transform.position + direction * grappleMaxDistance;
+            audio.PlayOneShot(grappleLaunchSound);
         }
 
         isGrappling = true;
@@ -490,6 +506,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = true;
             canGrapple = true;
+            audio.PlayOneShot(grappleRecoverSound);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Estancia"))
