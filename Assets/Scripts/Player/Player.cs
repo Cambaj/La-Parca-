@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash")]
     [SerializeField] private float dashForce = 15f;
     [SerializeField] private float dashDuration = 0.2f;
+    private Vector2 dashVelocity;
     private bool canDash = true;
     private bool isDashing = false;
     private float dashTime;
@@ -208,13 +209,15 @@ public class PlayerMovement : MonoBehaviour
 
             dashDirection.Normalize();
 
-            rb.linearVelocity = dashDirection * dashForce;
+            dashVelocity = dashDirection * dashForce;
+            rb.linearVelocity = dashVelocity;
 
             audio.PlayOneShot(dashSound);
         }
         if (isDashing)
         {
             rb.gravityScale = 0;
+            rb.linearVelocity = dashVelocity;
             dashTime -= Time.deltaTime;
 
             if (dashTime <= 0)
@@ -462,7 +465,6 @@ public class PlayerMovement : MonoBehaviour
                 DestroyBoneWall(results[i].gameObject);
             }
         }
-        dashTime += 2;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -477,7 +479,15 @@ public class PlayerMovement : MonoBehaviour
 
         if ((isDashing || isGrappling) && collision.gameObject.CompareTag("Bone"))
         {
+            Collider2D playerCollision = GetComponent<Collider2D>();
+            Collider2D boneCollision = collision.collider;
+
+            // Ignora la colisión inmediatamente
+            Physics2D.IgnoreCollision(playerCollision, boneCollision, true);
+
             DestroyBoneWall(collision.gameObject);
+            rb.linearVelocity = dashVelocity;
+
         }
 
     }
