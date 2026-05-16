@@ -457,6 +457,14 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(0, 0);
         rb.gravityScale = 1;
     }
+    public void StopDash()
+    {
+        isDashing = false;
+        dashTime = 0f;
+
+        rb.gravityScale = 1;
+        rb.linearVelocity = Vector2.zero;
+    }
     void ToggleChildren(bool state)
     {
         foreach (Transform child in transform)

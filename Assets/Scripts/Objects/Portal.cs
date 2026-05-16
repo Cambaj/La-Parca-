@@ -22,6 +22,7 @@ public class Portal : MonoBehaviour
             if (player != null)
             {
                 player.StopGrapple();
+                player.StopDash();
             }
 
             rb.transform.position = destination.position + new Vector3(2, 0, 0); ;
