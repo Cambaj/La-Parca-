@@ -257,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ANIMACIONES y sonido de caminar
-        if (horizontal != 0 && grounded)
+        if (horizontal != 0)
         {
             anim.SetBool("IsWalking", true);
 
