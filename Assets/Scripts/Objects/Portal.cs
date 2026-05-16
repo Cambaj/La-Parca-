@@ -16,15 +16,20 @@ public class Portal : MonoBehaviour
 
         if (rb != null && destination != null)
         {
-            rb.transform.position = destination.position + new Vector3(2, 0, 0);
+            PlayerMovement player =
+                collision.gameObject.GetComponent<PlayerMovement>();
+
+            if (player != null)
+            {
+                player.StopGrapple();
+            }
+
+            rb.transform.position = destination.position + new Vector3(2, 0, 0); ;
 
             rb.linearVelocity = Vector2.zero;
 
             rb.linearVelocity =
                 launchDirection.normalized * launchSpeed;
-
-            PlayerMovement player =
-                collision.gameObject.GetComponent<PlayerMovement>();
 
             if (player != null)
             {
@@ -32,5 +37,4 @@ public class Portal : MonoBehaviour
                 player.externalLaunchTime = 0.25f;
             }
         }
-    }
-}
+    }}

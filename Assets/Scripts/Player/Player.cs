@@ -25,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float grappleSpeed = 20f;
     [SerializeField] private LayerMask grappleLayer;
     [SerializeField] private LineRenderer grappleline;
-   
+    [SerializeField] private float grappleDuration = 3f;
+    private float grappleTimer;
+
     private Vector2 grapplePoint;
     private bool isGrappling = false;
 
@@ -292,6 +294,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrappling)
         {
+            grappleTimer -= Time.deltaTime;
+
+            if (grappleTimer <= 0f)
+            {
+                StopGrapple();
+                return;
+            }
+
             grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
             grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
 
@@ -301,7 +311,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (!canDash && isWallSliding && wallSlideTime <= 2f)
+            if (!canDash && isWallSliding && wallSlideTime <= 2f)
         {
             spriteRenderer.color = Color.red;
         }
@@ -396,6 +406,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void StartGrapple()
     {
+        grappleTimer = grappleDuration;
+
         Vector2 direction;
 
         if (controllerAim != Vector2.zero)
@@ -438,7 +450,7 @@ public class PlayerMovement : MonoBehaviour
         canGrapple = false;
     }
 
-    private void StopGrapple()
+    public void StopGrapple()
     {
         isGrappling = false;
         grappleline.enabled = false;
