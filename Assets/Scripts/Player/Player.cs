@@ -60,6 +60,10 @@ public class PlayerMovement : MonoBehaviour
     private float dashTime;
     private bool canGrapple = true;
 
+    //Portal
+    [HideInInspector] public bool externalLaunch;
+    [HideInInspector] public float externalLaunchTime;
+
     [Header("Audio")]
     AudioSource audio;
     [SerializeField] private AudioSource walkAudio;
@@ -337,6 +341,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Portal
+        if (externalLaunch)
+        {
+            externalLaunchTime -= Time.fixedDeltaTime;
+
+            if (externalLaunchTime <= 0)
+            {
+                externalLaunch = false;
+            }
+
+            return;
+        }
         if (isDashing) return;
 
         if (isGrappling)

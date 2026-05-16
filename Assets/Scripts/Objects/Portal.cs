@@ -1,0 +1,36 @@
+using UnityEngine;
+
+public class Portal : MonoBehaviour
+{
+    [Header("Teleport")]
+    public Transform destination;
+
+    [Header("Launch")]
+    public float launchSpeed = 20f;
+
+    public Vector2 launchDirection = Vector2.right;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+
+        if (rb != null && destination != null)
+        {
+            rb.transform.position = destination.position + new Vector3(2, 0, 0);
+
+            rb.linearVelocity = Vector2.zero;
+
+            rb.linearVelocity =
+                launchDirection.normalized * launchSpeed;
+
+            PlayerMovement player =
+                collision.gameObject.GetComponent<PlayerMovement>();
+
+            if (player != null)
+            {
+                player.externalLaunch = true;
+                player.externalLaunchTime = 0.25f;
+            }
+        }
+    }
+}
