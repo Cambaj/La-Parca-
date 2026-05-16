@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class DashGhostController : MonoBehaviour
 {
+    [Header("Poner al Player para saber el estado del Dash")]
     [SerializeField] private PlayerMovement player;
+    [Header("Animator de DashGhost")]
     [SerializeField] private Animator anim;
 
     private bool previousCanDash;
@@ -17,7 +19,14 @@ public class DashGhostController : MonoBehaviour
 
         previousCanDash = player.CanDash();
 
-        anim.SetBool("CanDash", previousCanDash);
+        if (previousCanDash)
+        {
+            anim.Play("DashReady");
+        }
+        else
+        {
+            anim.Play("DashOff");
+        }
     }
 
     void Update()
@@ -26,9 +35,26 @@ public class DashGhostController : MonoBehaviour
 
         if (currentCanDash != previousCanDash)
         {
-            anim.SetBool("CanDash", currentCanDash);
+            if (currentCanDash)
+            {
+                anim.Play("DashTurnOn");
+            }
+            else
+            {
+                anim.Play("DashTurnOff");
+            }
 
             previousCanDash = currentCanDash;
         }
+    }
+    public void SetReadyState()
+    {
+        anim.Play("DashReady");
+    }
+
+
+    public void SetOffState()
+    {
+        anim.Play("DashOff");
     }
 }

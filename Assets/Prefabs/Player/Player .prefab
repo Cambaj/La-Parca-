@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DashGhostController
   player: {fileID: 8965283832765514625}
-  anim: {fileID: 8855314440702420934}
+  anim: {fileID: 7933443737898686730}
 --- !u!95 &7933443737898686730
 Animator:
   serializedVersion: 7
