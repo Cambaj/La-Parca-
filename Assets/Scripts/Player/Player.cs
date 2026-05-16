@@ -329,7 +329,10 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.color = originalColor;
         }
 
-        ToggleChildren(canGrapple);
+        if (grappleObject != null)
+        {
+            grappleObject.SetActive(canGrapple);
+        }
 
         // ---- DEBUG ----
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
@@ -458,6 +461,8 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(0, 0);
         rb.gravityScale = 1;
     }
+
+    //Usada por Portal
     public void StopDash()
     {
         isDashing = false;
@@ -466,14 +471,12 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 1;
         rb.linearVelocity = Vector2.zero;
     }
-    void ToggleChildren(bool state)
-    {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(state);
-        }
-    }
 
+    //usada por DashGhost
+    public bool CanDash()
+    {
+        return canDash;
+    }
     private void DestroyBoneWall(GameObject bone)
     {
         if (bone == null || !bone.CompareTag("Bone"))
