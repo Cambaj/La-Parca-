@@ -23,10 +23,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Grapping Hook")]
     [SerializeField] private float grappleMaxDistance = 10f;
     [SerializeField] private float grappleSpeed = 20f;
-    [SerializeField] private LayerMask grappleLayer;
-    [SerializeField] private LineRenderer grappleline;
     [SerializeField] private float grappleDuration = 3f;
     private float grappleTimer;
+    [SerializeField] private LayerMask grappleLayer;
+    [SerializeField] private LineRenderer grappleline;
+    [SerializeField] private GameObject grappleObject;
 
     private Vector2 grapplePoint;
     private bool isGrappling = false;
@@ -256,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ANIMACIONES y sonido de caminar
-        if (horizontal != 0 && grounded)
+        if (horizontal != 0)
         {
             anim.SetBool("IsWalking", true);
 
@@ -539,7 +540,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     isTouchingWall = true;
                     wallNormal = contact.normal;
-                    canDash = true;
                     return;
                 }
             }
