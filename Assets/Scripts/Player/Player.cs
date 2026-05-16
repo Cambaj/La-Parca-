@@ -312,17 +312,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-            if (!canDash && isWallSliding && wallSlideTime <= 2f)
-        {
-            spriteRenderer.color = Color.red;
-        }
-        else if (isWallSliding && wallSlideTime <= 2f)
+        if (isWallSliding && wallSlideTime <= 2f)
         {
             spriteRenderer.color = Color.cyan;
-        }
-        else if (!canDash)
-        {
-            spriteRenderer.color = Color.yellow;
         }
         else
         {
