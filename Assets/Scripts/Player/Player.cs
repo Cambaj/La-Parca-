@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,10 +15,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Salto variable")]
     [SerializeField] private float lowJumpMultiplier;
     [SerializeField] private float fallMultiplier;
-    //Cosas estilo Celeste 
-    [SerializeField] private float peakHoverThreshold = 2f; //Velocidad en Y para empezar a flotar
-    [SerializeField] private float peakHoverGravity = 0.2f; // Escala de gravedad casi nula en la cima
-    [SerializeField] private float normalGravityScale = 1f;  // Gravedad base cuando corre o sube rapido
+    [SerializeField] private float peakHoverThreshold = 2f;
+    [SerializeField] private float peakHoverGravity = 0.2f;
+    [SerializeField] private float normalGravityScale = 1f;
     [Header("Jump Buffer & Coyote Time")]
     [SerializeField] private float jumpBufferTime = 0.1f;
     [SerializeField] private float coyoteTime = 0.15f;
@@ -66,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private float dashTime;
     private bool canGrapple = true;
+    private bool hasJumped = false;
 
     //Portal
     [HideInInspector] public bool externalLaunch;
@@ -90,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
 
     Animator anim;
     
-
     //public Transform spawnPoint;
 
     void Start()
@@ -133,35 +131,35 @@ public class PlayerMovement : MonoBehaviour
             wallSlideTime = wallSlideTimeMax;
             canDash = true;
             canGrapple = true;
+            hasJumped = false;
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
+
         // Jump buffer
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
             jumpBufferCounter = jumpBufferTime;
         else
             jumpBufferCounter -= Time.deltaTime;
 
-        // ---- Normal Jump ----
-        if (jumpBufferCounter > 0 && coyoteTimeCounter > 0 && Time.timeScale == 1f)
+        // -- Normal Jump --
+        if (jumpBufferCounter > 0 && coyoteTimeCounter > 0 && !hasJumped && Time.timeScale == 1f)
         {
             DoJump(Vector2.up);
+            hasJumped = true;
             jumpBufferCounter = 0;
             coyoteTimeCounter = 0;
             audio.PlayOneShot(jumpSound);
         }
 
-        
-
-            // ---- WALL SLIDE ----
+        // -- WALL SLIDE --
         bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
         
         if (wallNormal.x > 0 && horizontal < 0) isHoldingGrab = true;
         if (wallNormal.x < -0 && horizontal > 0) isHoldingGrab = true;
         
-
         if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
         {
             isWallSliding = true;
@@ -179,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
                 wallSlideTime = 0;
                 return;
             }
-            // ---- Go Up or down while wall sliding ----
+            // -- Go Up/Down while wall sliding --
             if (vertical > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, wallSlideSpeed);
@@ -197,6 +195,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             isWallSliding = false;
+            float pushForce = 15f;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x + wallNormal.x * pushForce, rb.linearVelocity.y);
         }
         
         if (isDashing)
@@ -204,7 +204,7 @@ public class PlayerMovement : MonoBehaviour
             isWallSliding = false;
         }
 
-        // ---- DASH ----
+        // -- DASH --
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && !isDead)
         {
             canDash = false;
@@ -242,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        // ---- VARIABLE JUMP ----
+        // -- VARIABLE JUMP --
         /*
         if (rb.linearVelocity.y < 0)
         {
@@ -291,7 +291,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("IsWalking", true);
 
-            if (!walkAudio.isPlaying)
+            if (!walkAudio.isPlaying && grounded)
             {
                 walkAudio.PlayOneShot(walkGrassSound);
             }
@@ -321,7 +321,6 @@ public class PlayerMovement : MonoBehaviour
         {
             StartGrapple();
         }
-
 
         if (isGrappling)
         {
@@ -356,7 +355,7 @@ public class PlayerMovement : MonoBehaviour
             grappleObject.SetActive(canGrapple);
         }
 
-        // ---- DEBUG ----
+        // -- DEBUG --
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             // Siguiente escena
@@ -432,8 +431,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoJump(Vector2 direction)
     {
-        rb.AddForce(direction * jumpForce, ForceMode2D.Impulse);
-        
+        rb.AddForce(direction * jumpForce * 1.5f, ForceMode2D.Impulse);
+        rb.gravityScale = 2f;
     }
 
     private void StartGrapple()
