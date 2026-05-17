@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movimiento")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float maxFallVelocity;
 
     [Header("Detección de suelo")]
     [SerializeField] private float groundCheckDistance;
@@ -148,6 +149,8 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = 0;
             audio.PlayOneShot(jumpSound);
         }
+
+        
 
             // ---- WALL SLIDE ----
         bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
@@ -347,6 +350,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //fall max velocity
+        if (rb.linearVelocityY < -maxFallVelocity)
+        {
+            rb.linearVelocityY = -maxFallVelocity;
+        }
+
         //Portal
         if (externalLaunch)
         {

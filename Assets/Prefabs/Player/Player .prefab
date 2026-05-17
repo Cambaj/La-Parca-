@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 250
   jumpForce: 7
+  maxFallVelocity: 12
   groundCheckDistance: 0.53
   groundLayer:
     serializedVersion: 2

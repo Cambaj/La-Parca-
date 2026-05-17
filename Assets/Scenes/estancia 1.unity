@@ -275,8 +275,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: maxFallVelocity
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: lowJumpMultiplier
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: grappleMaxDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: lowJumpFallMultiplier
@@ -785,107 +793,9 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 803345740}
-    m_ColliderPaths:
-    - - X: -20000000
-        Y: -70000000
-      - X: -50000000
-        Y: -70000000
-      - X: -50000000
-        Y: -80000000
-      - X: -160000000
-        Y: -80000000
-      - X: -160000000
-        Y: 80000000
-      - X: 160000000
-        Y: 80000000
-      - X: 160000000
-        Y: 30000000
-      - X: 200000000
-        Y: 30000000
-      - X: 200000000
-        Y: 120000000
-      - X: -200000000
-        Y: 120000000
-      - X: -200000000
-        Y: 90000000
-      - X: -190000000
-        Y: 90000000
-      - X: -190000000
-        Y: -120000000
-      - X: -20000000
-        Y: -120000000
-    - - X: 220000000
-        Y: -110000000
-      - X: 230000000
-        Y: -110000000
-      - X: 230000000
-        Y: -100000000
-      - X: 220000000
-        Y: -100000000
-      - X: 220000000
-        Y: -90000000
-      - X: 210000000
-        Y: -90000000
-      - X: 210000000
-        Y: -20000000
-      - X: 160000000
-        Y: -20000000
-      - X: 160000000
-        Y: -70000000
-      - X: 100000000
-        Y: -70000000
-      - X: 100000000
-        Y: -80000000
-      - X: 60000000
-        Y: -80000000
-      - X: 60000000
-        Y: -90000000
-      - X: 40000000
-        Y: -90000000
-      - X: 40000000
-        Y: -80000000
-      - X: 0
-        Y: -80000000
-      - X: 0
-        Y: -120000000
-      - X: 220000000
-        Y: -120000000
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: -2.0000293, y: -12}
-      - {x: -2.0000293, y: -7}
-      - {x: -5, y: -7.0000296}
-      - {x: -5.0000296, y: -8}
-      - {x: -16, y: -7.9999704}
-      - {x: -15.999971, y: 8}
-      - {x: 16, y: 7.9999704}
-      - {x: 16.000029, y: 3}
-      - {x: 20, y: 3.0000293}
-      - {x: 19.999971, y: 12}
-      - {x: -20, y: 11.99997}
-      - {x: -19.999971, y: 9}
-      - {x: -19, y: 8.99997}
-      - {x: -18.999971, y: -12}
-    - - {x: 21.999971, y: -12}
-      - {x: 22.000029, y: -11}
-      - {x: 23, y: -10.99997}
-      - {x: 22.999971, y: -10}
-      - {x: 22, y: -9.99997}
-      - {x: 21.999971, y: -9}
-      - {x: 21, y: -8.99997}
-      - {x: 20.999971, y: -2}
-      - {x: 16, y: -2.0000293}
-      - {x: 15.999971, y: -7}
-      - {x: 10, y: -7.0000296}
-      - {x: 9.99997, y: -8}
-      - {x: 6, y: -8.00003}
-      - {x: 5.9999704, y: -9}
-      - {x: 4, y: -8.99997}
-      - {x: 3.999971, y: -8}
-      - {x: 0, y: -8.00003}
-      - {x: 0.000029300001, y: -12}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -917,11 +827,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!19719996 &803345740 stripped
-TilemapCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5580023628329032811, guid: d7e1ece2bff6bcc44bff7e8e24784c52, type: 3}
-  m_PrefabInstance: {fileID: 1728747159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832348158
 GameObject:
   m_ObjectHideFlags: 0
@@ -16032,7 +15937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5580023628329032811, guid: d7e1ece2bff6bcc44bff7e8e24784c52, type: 3}
       propertyPath: m_CompositeOperation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5723807002556034894, guid: d7e1ece2bff6bcc44bff7e8e24784c52, type: 3}
       propertyPath: m_Layer
