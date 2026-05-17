@@ -16,7 +16,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Salto variable")]
     [SerializeField] private float lowJumpMultiplier;
     [SerializeField] private float fallMultiplier;
-
+    //Cosas estilo Celeste 
+    [SerializeField] private float peakHoverThreshold = 2f; //Velocidad en Y para empezar a flotar
+    [SerializeField] private float peakHoverGravity = 0.2f; // Escala de gravedad casi nula en la cima
+    [SerializeField] private float normalGravityScale = 1f;  // Gravedad base cuando corre o sube rapido
     [Header("Jump Buffer & Coyote Time")]
     [SerializeField] private float jumpBufferTime = 0.1f;
     [SerializeField] private float coyoteTime = 0.15f;
@@ -240,6 +243,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         // ---- VARIABLE JUMP ----
+        /*
         if (rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -248,7 +252,30 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
-
+        */
+        if (!isDashing && !isGrappling && !externalLaunch && !isDead)
+        {
+            // Caso 1: Cayendo (Caída rápida y pesada)
+            if (rb.linearVelocity.y < 0)
+            {
+                rb.gravityScale = normalGravityScale * fallMultiplier;
+            }
+            // Caso 2: En el pico del salto (Efecto Suspensión / Hover)
+            else if (rb.linearVelocity.y > 0 && Mathf.Abs(rb.linearVelocity.y) < peakHoverThreshold)
+            {
+                rb.gravityScale = peakHoverGravity;
+            }
+            // Caso 3: Soltó el botón de salto antes de tiempo (Corta el salto rápido)
+            else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton0))
+            {
+                rb.gravityScale = normalGravityScale * lowJumpMultiplier;
+            }
+            // Caso 4: Subida normal inicial o en el suelo
+            else
+            {
+                rb.gravityScale = normalGravityScale;
+            }
+        }
         // FLIP PLAYER
         if (horizontal < 0 && !facingRight && Time.timeScale != 0 && !isDead)
         {
@@ -488,8 +515,8 @@ public class PlayerMovement : MonoBehaviour
         if (boneCollider == null)
             return;
 
-        ContactFilter2D filter = new ContactFilter2D();
-        filter.NoFilter();
+       ContactFilter2D filter = new ContactFilter2D();
+       filter.NoFilter();
 
         Collider2D[] results = new Collider2D[20];
 

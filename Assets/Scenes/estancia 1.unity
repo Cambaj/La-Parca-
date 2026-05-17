@@ -279,12 +279,24 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: peakHoverGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: lowJumpMultiplier
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: grappleMaxDistance
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: normalGravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: peakHoverThreshold
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: lowJumpFallMultiplier
