@@ -191,10 +191,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             isWallSliding = false;
-
-            //evita que se trabe con paredes
-            float pushForce = 15f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x + wallNormal.x * pushForce, rb.linearVelocity.y);
         }
         
         if (isDashing)
