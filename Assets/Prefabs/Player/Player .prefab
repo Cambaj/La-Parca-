@@ -209,6 +209,9 @@ MonoBehaviour:
   grappleObject: {fileID: 5820072371427939446}
   wallSlideSpeed: 3
   wallSlideTimeMax: 7
+  wallJumpForceX: 10
+  wallJumpForceY: 10
+  wallJumpDuration: 0.2
   dashForce: 15
   dashDuration: 0.2
   externalLaunch: 0
