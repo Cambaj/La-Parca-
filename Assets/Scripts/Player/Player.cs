@@ -403,8 +403,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (!isDead)
+            if (isWallSliding)
             {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            }
+            else if (!isDead)
+            {
+
+                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
 
                 float moveX = horizontal * speed * Time.fixedDeltaTime;
 
