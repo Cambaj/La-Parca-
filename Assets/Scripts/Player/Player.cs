@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isWallSliding;
     private float wallSlideTime;
     [SerializeField] private float wallSlideTimeMax;
+    private bool isHoldingGrab;
 
     [Header("Dash")]
     [SerializeField] private float dashForce = 15f;
@@ -155,10 +156,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // -- WALL SLIDE --
-        bool isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
-        
-        if (wallNormal.x > 0 && horizontal < 0) isHoldingGrab = true;
-        if (wallNormal.x < -0 && horizontal > 0) isHoldingGrab = true;
+        isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
         
         if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
         {
@@ -174,7 +172,6 @@ public class PlayerMovement : MonoBehaviour
                     Flip();
                 }
                 isWallSliding = false;
-                wallSlideTime = 0;
                 return;
             }
             // -- Go Up/Down while wall sliding --
@@ -406,14 +403,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (isWallSliding)
+            if (!isDead)
             {
-                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            }
-            else if (!isDead)
-            {
-                
-                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+
+                float moveX = horizontal * speed * Time.fixedDeltaTime;
+
+                if (isTouchingWall && !grounded)
+                {
+                    moveX = 0;
+                }
+
+                rb.linearVelocity = new Vector2(moveX, rb.linearVelocity.y);
             }
             anim.SetBool("IsGrappling", false); 
         }
