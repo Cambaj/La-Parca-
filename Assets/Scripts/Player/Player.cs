@@ -372,6 +372,10 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.color = Color.cyan;
         }
+        else
+        {
+            spriteRenderer.color = originalColor;
+        }
 
         if (grappleObject != null)
         {
