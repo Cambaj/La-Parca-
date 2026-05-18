@@ -411,15 +411,6 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
-
-                float moveX = horizontal * speed * Time.fixedDeltaTime;
-
-                if (isTouchingWall && !grounded)
-                {
-                    moveX = 0;
-                }
-
-                rb.linearVelocity = new Vector2(moveX, rb.linearVelocity.y);
             }
             anim.SetBool("IsGrappling", false); 
         }
@@ -578,6 +569,20 @@ public class PlayerMovement : MonoBehaviour
                     return;
                 }
             }
+        }
+
+
+        if ((isDashing || isGrappling) && collision.gameObject.CompareTag("Bone"))
+        {
+            Collider2D playerCollision = GetComponent<Collider2D>();
+            Collider2D boneCollision = collision.collider;
+
+            // Ignora la colisión inmediatamente
+            Physics2D.IgnoreCollision(playerCollision, boneCollision, true);
+
+            DestroyBoneWall(collision.gameObject);
+            rb.linearVelocity = dashVelocity;
+
         }
     }
 
