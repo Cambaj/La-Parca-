@@ -199,7 +199,7 @@ MonoBehaviour:
   normalGravityScale: 1.5
   jumpBufferTime: 0.1
   coyoteTime: 0.15
-  grappleMaxDistance: 10
+  grappleMaxDistance: 6
   grappleSpeed: 20
   grappleDuration: 3
   grappleLayer:
