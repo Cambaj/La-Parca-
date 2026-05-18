@@ -56,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
     private float wallSlideTime;
     [SerializeField] private float wallSlideTimeMax;
     private bool isHoldingGrab;
+    [Header("Wall Jump")]
+    [SerializeField] private float wallJumpForceX = 12f;
+    [SerializeField] private float wallJumpForceY = 16f;
 
     [Header("Dash")]
     [SerializeField] private float dashForce = 15f;
@@ -164,14 +167,33 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
             {
-                float jumpDirectionX= wallNormal.x;
-                rb.linearVelocity = new Vector2(jumpDirectionX * speed, jumpForce);
+                // Dirección opuesta a la pared
+                float jumpDirectionX = wallNormal.x;
 
-                if ((jumpDirectionX > 0 && !facingRight) || (jumpDirectionX < 0 && facingRight))
+                // Resetear velocidad
+                rb.linearVelocity = Vector2.zero;
+
+                // Fuerza del wall jump
+                Vector2 wallJumpForce = new Vector2(wallJumpForceX, wallJumpForceY);
+
+                rb.AddForce(wallJumpForce, ForceMode2D.Impulse);
+
+                // Flip visual
+                if ((jumpDirectionX > 0 && facingRight) || (jumpDirectionX < 0 && !facingRight))
                 {
                     Flip();
                 }
+
+                // Salir del wall slide
                 isWallSliding = false;
+                isTouchingWall = false;
+
+                // Evita salto doble inmediato
+                coyoteTimeCounter = 0;
+                jumpBufferCounter = 0;
+
+                audio.PlayOneShot(jumpSound);
+
                 return;
             }
             // -- Go Up/Down while wall sliding --
