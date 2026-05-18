@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -72,6 +73,13 @@ public class PlayerMovement : MonoBehaviour
     private float dashTime;
     private bool canGrapple = true;
     private bool hasJumped = false;
+    
+    //No borrar estas variables, se van a usar despues 
+    [Header("GrappleCorector")]
+    [SerializeField] private bool TopRight;
+    [SerializeField] private bool TopLeft;
+    [SerializeField] private bool BottomRight;
+    [SerializeField] private bool BottomLeft;
 
     //Portal
     [HideInInspector] public bool externalLaunch;
