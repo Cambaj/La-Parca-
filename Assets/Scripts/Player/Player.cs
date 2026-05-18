@@ -431,8 +431,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoJump(Vector2 direction)
     {
-        rb.AddForce(direction * jumpForce * 1.5f, ForceMode2D.Impulse);
-        rb.gravityScale = 2f;
+        rb.AddForce(direction * jumpForce, ForceMode2D.Impulse);
+        
     }
 
     private void StartGrapple()

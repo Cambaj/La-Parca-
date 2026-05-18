@@ -186,14 +186,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 250
-  jumpForce: 7
+  jumpForce: 8.5
   maxFallVelocity: 12
   groundCheckDistance: 0.53
   groundLayer:
     serializedVersion: 2
     m_Bits: 9
   lowJumpMultiplier: 3
-  fallMultiplier: 2.5
+  fallMultiplier: 3
+  peakHoverThreshold: 1.2
+  peakHoverGravity: 1
+  normalGravityScale: 1.5
   jumpBufferTime: 0.1
   coyoteTime: 0.15
   grappleMaxDistance: 10
