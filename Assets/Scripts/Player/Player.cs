@@ -195,8 +195,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             isWallSliding = false;
-            float pushForce = 15f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x + wallNormal.x * pushForce, rb.linearVelocity.y);
+            //float pushForce = 15f;
+            //rb.linearVelocity = new Vector2(rb.linearVelocity.x + wallNormal.x * pushForce, rb.linearVelocity.y);
         }
         
         if (isDashing)
@@ -432,7 +432,6 @@ public class PlayerMovement : MonoBehaviour
     private void DoJump(Vector2 direction)
     {
         rb.AddForce(direction * jumpForce, ForceMode2D.Impulse);
-        
     }
 
     private void StartGrapple()
