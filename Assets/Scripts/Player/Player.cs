@@ -103,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -196,8 +195,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             isWallSliding = false;
-            //float pushForce = 15f;
-            //rb.linearVelocity = new Vector2(rb.linearVelocity.x + wallNormal.x * pushForce, rb.linearVelocity.y);
         }
         
         if (isDashing)
@@ -373,6 +370,8 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene(previousScene);
             }
         }
+
+        if (isDead) return;
     }
 
     private void FixedUpdate()
