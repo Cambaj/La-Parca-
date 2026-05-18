@@ -103,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return;
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
