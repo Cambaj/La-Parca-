@@ -57,8 +57,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallSlideTimeMax;
     private bool isHoldingGrab;
     [Header("Wall Jump")]
-    [SerializeField] private float wallJumpForceX = 12f;
-    [SerializeField] private float wallJumpForceY = 16f;
+    [SerializeField] private float wallJumpForceX = 20f;
+    [SerializeField] private float wallJumpForceY = 10f;
+    private bool isWallJumping;
+    private float wallJumpTimer;
+    [SerializeField] private float wallJumpDuration = 0.2f;
 
     [Header("Dash")]
     [SerializeField] private float dashForce = 15f;
@@ -174,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
 
                 // Fuerza del wall jump
-                Vector2 wallJumpForce = new Vector2(wallJumpForceX, wallJumpForceY);
+                Vector2 wallJumpForce = new Vector2(jumpDirectionX * wallJumpForceX, wallJumpForceY);
 
                 rb.AddForce(wallJumpForce, ForceMode2D.Impulse);
 
@@ -191,6 +194,9 @@ public class PlayerMovement : MonoBehaviour
                 // Evita salto doble inmediato
                 coyoteTimeCounter = 0;
                 jumpBufferCounter = 0;
+
+                isWallJumping = true;
+                wallJumpTimer = wallJumpDuration;
 
                 audio.PlayOneShot(jumpSound);
 
@@ -413,6 +419,19 @@ public class PlayerMovement : MonoBehaviour
 
             return;
         }
+
+        if (isWallJumping)
+        {
+            wallJumpTimer -= Time.fixedDeltaTime;
+
+            if (wallJumpTimer <= 0)
+            {
+                isWallJumping = false;
+            }
+
+            return;
+        }
+
         if (isDashing) return;
 
         if (isGrappling)
