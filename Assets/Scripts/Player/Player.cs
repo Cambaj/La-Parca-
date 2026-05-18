@@ -364,13 +364,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (isWallSliding && wallSlideTime <= 2f)
+        if (wallSlideTime <= 0f)
+        {
+            spriteRenderer.color = Color.red;
+        }
+        else if (wallSlideTime <= 2f)
         {
             spriteRenderer.color = Color.cyan;
-        }
-        else
-        {
-            spriteRenderer.color = originalColor;
         }
 
         if (grappleObject != null)
