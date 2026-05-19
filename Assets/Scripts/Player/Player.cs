@@ -154,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump buffer
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
             jumpBufferCounter = jumpBufferTime;
         else
             jumpBufferCounter -= Time.deltaTime;
@@ -170,13 +170,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // -- WALL SLIDE --
-        isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton1);
+        isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton4);
         
         if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
         {
             isWallSliding = true;
 
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
             {
                 // Dirección opuesta a la pared
                 float jumpDirectionX = wallNormal.x;
@@ -236,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // -- DASH --
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
         {
             canDash = false;
             isDashing = true;
@@ -272,18 +272,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-        // -- VARIABLE JUMP --
-        /*
-        if (rb.linearVelocity.y < 0)
-        {
-            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton0))
-        {
-            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-        */
         if (!isDashing && !isGrappling && !externalLaunch && !isDead)
         {
             // Caso 1: Cayendo (Caída rápida y pesada)
@@ -297,7 +285,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.gravityScale = peakHoverGravity;
             }
             // Caso 3: Soltó el botón de salto antes de tiempo (Corta el salto rápido)
-            else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton0))
+            else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton1))
             {
                 rb.gravityScale = normalGravityScale * lowJumpMultiplier;
             }
@@ -348,7 +336,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton4)) && canGrapple && !isDashing && !isGrappling && !isDead)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6)) && canGrapple && !isDashing && !isGrappling && !isDead)
         {
             StartGrapple();
         }
