@@ -236,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // -- DASH --
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && !isDead)
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
         {
             canDash = false;
             isDashing = true;
@@ -623,20 +623,6 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-
-
-        if ((isDashing || isGrappling) && collision.gameObject.CompareTag("Bone"))
-        {
-            Collider2D playerCollision = GetComponent<Collider2D>();
-            Collider2D boneCollision = collision.collider;
-
-            // Ignora la colisión inmediatamente
-            Physics2D.IgnoreCollision(playerCollision, boneCollision, true);
-
-            DestroyBoneWall(collision.gameObject);
-            rb.linearVelocity = dashVelocity;
-
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -660,6 +646,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isTouchingWall = false;
         }
+
     }
 
     //Usada por la animacion de Death
