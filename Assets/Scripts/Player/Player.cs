@@ -453,6 +453,8 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = direction * grappleSpeed;
 
             anim.SetBool("IsGrappling", true);
+
+            DestroyBonesWhileGrappling();
         }
         else
         {
@@ -577,6 +579,25 @@ public class PlayerMovement : MonoBehaviour
             if (results[i] != null &&
                 results[i].CompareTag("Bone") &&
                 results[i].gameObject != bone)
+            {
+                DestroyBoneWall(results[i].gameObject);
+            }
+        }
+    }
+    private void DestroyBonesWhileGrappling()
+    {
+        Collider2D playerCollider = GetComponent<Collider2D>();
+        if (playerCollider == null) return;
+
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+
+        Collider2D[] results = new Collider2D[20];
+        int count = playerCollider.OverlapCollider(filter, results);
+
+        for (int i = 0; i < count; i++)
+        {
+            if (results[i] != null && results[i].CompareTag("Bone"))
             {
                 DestroyBoneWall(results[i].gameObject);
             }
