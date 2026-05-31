@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float maxFallVelocity;
 
-    [Header("Detección de suelo")]
+    [Header("Detecciï¿½n de suelo")]
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundLayer;
 
@@ -80,6 +80,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool TopLeft;
     [SerializeField] private bool BottomRight;
     [SerializeField] private bool BottomLeft;
+
+    //Mecanica de granada 
+    [Header("Mecanica de Granada")]
+    [SerializeField] private  Vector2 granadeLaunchForce = new Vector2(10f, 5f);
+    private Granade equippedGranade;
+    private bool hasGranade = false;
 
     //Portal
     [HideInInspector] public bool externalLaunch;
@@ -178,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
             {
-                // Dirección opuesta a la pared
+                // Direcciï¿½n opuesta a la pared
                 float jumpDirectionX = wallNormal.x;
 
                 // Resetear velocidad
@@ -274,17 +280,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isDashing && !isGrappling && !externalLaunch && !isDead)
         {
-            // Caso 1: Cayendo (Caída rápida y pesada)
+            // Caso 1: Cayendo (Caï¿½da rï¿½pida y pesada)
             if (rb.linearVelocity.y < 0)
             {
                 rb.gravityScale = normalGravityScale * fallMultiplier;
             }
-            // Caso 2: En el pico del salto (Efecto Suspensión / Hover)
+            // Caso 2: En el pico del salto (Efecto Suspensiï¿½n / Hover)
             else if (rb.linearVelocity.y > 0 && Mathf.Abs(rb.linearVelocity.y) < peakHoverThreshold)
             {
                 rb.gravityScale = peakHoverGravity;
             }
-            // Caso 3: Soltó el botón de salto antes de tiempo (Corta el salto rápido)
+            // Caso 3: Soltï¿½ el botï¿½n de salto antes de tiempo (Corta el salto rï¿½pido)
             else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton1))
             {
                 rb.gravityScale = normalGravityScale * lowJumpMultiplier;
@@ -360,6 +366,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //Input de la granada 
+
+        if (hasGranade && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton3)))
+        {
+            ThrowEquippedGranade();
+        }
+
         if (wallSlideTime <= 0f)
         {
             spriteRenderer.color = Color.red;
@@ -377,6 +390,7 @@ public class PlayerMovement : MonoBehaviour
         {
             grappleObject.SetActive(canGrapple);
         }
+
 
         // -- DEBUG --
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
@@ -398,6 +412,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isDead) return;
     }
+
 
     private void FixedUpdate()
     {
@@ -458,6 +473,28 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("IsGrappling", false); 
         }
 
+    }
+
+    //Aqui sigue la accion de la granada
+    private void ThrowEquippedGranade()
+    {
+        if (equippedGranade == null) return;
+        float directionX = facingRight ? 1 : -1;
+
+        float directionY = vertical > 0 ? 1.5f : 1f;
+
+        Vector2 FinalImpulse = new Vector2(granadeLaunchForce.x * directionX, granadeLaunchForce.y * directionY);
+
+        equippedGranade.Throw(FinalImpulse);
+
+        equippedGranade = null;
+        hasGranade = false;
+    }
+
+    public void ForceToDropGranade()
+    {
+        equippedGranade = null;
+        hasGranade = false;
     }
 
     private void Flip()
@@ -581,7 +618,7 @@ public class PlayerMovement : MonoBehaviour
         filter.NoFilter();
 
         Collider2D[] results = new Collider2D[20];
-        int count = playerCollider.OverlapCollider(filter, results);
+        int count = playerCollider.Overlap(filter, results);
 
         for (int i = 0; i < count; i++)
         {
@@ -607,7 +644,7 @@ public class PlayerMovement : MonoBehaviour
             Collider2D playerCollision = GetComponent<Collider2D>();
             Collider2D boneCollision = collision.collider;
 
-            // Ignora la colisión inmediatamente
+            // Ignora la colisiï¿½n inmediatamente
             Physics2D.IgnoreCollision(playerCollision, boneCollision, true);
 
             DestroyBoneWall(collision.gameObject);
@@ -634,8 +671,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Collision y Tag de la granada 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Granade") && !hasGranade)
+        {
+         Granade granadeground = collision.GetComponent<Granade>();
+            if (granadeground != null)
+            {
+                equippedGranade = granadeground;
+                hasGranade = true;
+                equippedGranade.PickUp(transform); //Activa la cuenta de los 5 segundo antes de que explote
+                audio.PlayOneShot(grappleRecoverSound);
+            }
+        }
+
         if (collision.CompareTag("Entity"))
         {
             canDash = true;
@@ -657,6 +708,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+    
 
     //Usada por la animacion de Death
     private void ReloadCurrentScene()
