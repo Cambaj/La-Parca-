@@ -260,6 +260,36 @@ public class PlayerMovement : MonoBehaviour
             dashDirection.Normalize();
 
             dashVelocity = dashDirection * dashForce;
+
+            //Animaciones
+            int dashType = 0;
+
+            if (!grounded)
+            {
+                if (vertical < 0 && horizontal == 0)
+                    dashType = 1; // Down
+                else if (vertical > 0 && horizontal == 0)
+                    dashType = 2; // Up
+                else if (vertical > 0 && horizontal != 0)
+                    dashType = 3; // Diagonal Up
+                else if (vertical < 0 && horizontal != 0)
+                    dashType = 4; // Diagonal Down
+                else
+                    dashType = 5; // Forward
+            }
+            else
+            {
+                if (vertical > 0 && horizontal == 0)
+                    dashType = 6; // Up
+                else if (vertical > 0 && horizontal != 0)
+                    dashType = 7; // Diagonal Up
+                else
+                    dashType = 8; // Forward
+            }
+
+            anim.SetInteger("DashType", dashType);
+            anim.SetBool("IsDashing", true);
+
             rb.linearVelocity = dashVelocity;
 
             audio.PlayOneShot(dashSound);
@@ -275,6 +305,9 @@ public class PlayerMovement : MonoBehaviour
                 isDashing = false;
                 rb.linearVelocity = new Vector2(0, 0);
                 rb.gravityScale = 1;
+
+                anim.SetBool("IsDashing", false);
+                anim.SetInteger("DashType", 0);
             }
         }
 
