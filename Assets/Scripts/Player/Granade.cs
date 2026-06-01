@@ -3,7 +3,7 @@ using System.Collections;
 public class Granade : MonoBehaviour
 {
     [Header("Configuracion de Tiempo")]
-    [SerializeField] private float explosionDelay = 5f;
+    [SerializeField] private float explosionDelay;
     private float timer;
     private bool isActive = false;
     private bool wasThrown = false;
@@ -112,7 +112,7 @@ public class Granade : MonoBehaviour
             }
 
             // Compatibilidad por Tag con tus estructuras viejas si las dejás en la misma capa
-            if (hit.CompareTag("Destroyable Wall") || hit.CompareTag("Bone"))
+            if (hit.CompareTag("Destroyable Wall") )
             {
                 Destroy(hit.gameObject);
             }

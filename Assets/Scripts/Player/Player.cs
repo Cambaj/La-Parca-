@@ -527,7 +527,8 @@ public class PlayerMovement : MonoBehaviour
     private void ThrowEquippedGranade()
     {
         if (equippedGranade == null) return;
-        float directionX = facingRight ? 1 : -1;
+        float directionX = facingRight ? -1 : 1;
+        
 
         float directionY = vertical > 0 ? 1.5f : 1f;
 
