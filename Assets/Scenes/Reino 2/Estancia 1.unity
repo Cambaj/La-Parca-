@@ -11718,7 +11718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Portal
   destination: {fileID: 1204115910}
-  launchSpeed: 20
+  launchSpeed: 13
   launchDirection: {x: 0, y: 1}
 --- !u!212 &1214669515
 SpriteRenderer:

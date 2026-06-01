@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5650008909718471854}
   - component: {fileID: 2829403499994155831}
   - component: {fileID: 571691574986150034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Portal
   destination: {fileID: 0}
-  launchSpeed: 20
+  launchSpeed: 13
   launchDirection: {x: 0, y: 1}
 --- !u!61 &571691574986150034
 BoxCollider2D:
