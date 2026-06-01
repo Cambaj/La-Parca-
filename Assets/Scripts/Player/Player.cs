@@ -81,6 +81,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool BottomRight;
     [SerializeField] private bool BottomLeft;
 
+
+
     //Mecanica de granada 
     [Header("Mecanica de Granada")]
     [SerializeField] private  Vector2 granadeLaunchForce = new Vector2(10f, 5f);
@@ -90,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
     //Portal
     [HideInInspector] public bool externalLaunch;
     [HideInInspector] public float externalLaunchTime;
+    [HideInInspector] private float cooldownTP = 0;
+    [HideInInspector] public bool canTP;
 
     [Header("Audio")]
     AudioSource audio;
@@ -467,6 +471,17 @@ public class PlayerMovement : MonoBehaviour
 
             return;
         }
+
+        if (canTP == false)
+        {
+            cooldownTP += Time.deltaTime;
+
+            if (cooldownTP >= 0.5f)
+            {
+                canTP = true;
+            }
+        }
+
 
         if (isWallJumping)
         {

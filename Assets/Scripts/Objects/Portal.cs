@@ -10,14 +10,21 @@ public class Portal : MonoBehaviour
 
     public Vector2 launchDirection = Vector2.right;
 
+    PlayerMovement player;
+
+    private void Start()
+    {
+        player = FindAnyObjectByType<PlayerMovement>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
-        if (rb != null && destination != null)
+        if (rb != null && destination != null && player.canTP == true)
         {
-            PlayerMovement player =
-                collision.gameObject.GetComponent<PlayerMovement>();
+            //PlayerMovement player =
+            //    collision.gameObject.GetComponent<PlayerMovement>();
 
             if (player != null)
             {
@@ -25,7 +32,7 @@ public class Portal : MonoBehaviour
                 player.StopDash();
             }
 
-            rb.transform.position = destination.position + new Vector3(2, 0, 0); ;
+            rb.transform.position = destination.position;
 
             rb.linearVelocity = Vector2.zero;
 
@@ -37,5 +44,8 @@ public class Portal : MonoBehaviour
                 player.externalLaunch = true;
                 player.externalLaunchTime = 0.25f;
             }
+
+            player.canTP = false;
         }
-    }}
+    }
+ }
