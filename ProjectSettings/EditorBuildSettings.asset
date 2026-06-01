@@ -39,6 +39,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino 1/estancia 10.unity
     guid: b8dc1c119a352ae4fba4e9708961f0c5
   - enabled: 1
+    path: Assets/Scenes/Reino 1/estancia 11.unity
+    guid: 08ecb164e4144a3489321c4b88e48de4
+  - enabled: 1
+    path: Assets/Scenes/Reino 2/Estancia 1.unity
+    guid: 2c74f2559edc7a64d8d20bb7fc03c028
+  - enabled: 1
+    path: Assets/Scenes/Reino 2/Estancia 2.unity
+    guid: 792872796d9103146b65f6c1e67e0304
+  - enabled: 1
+    path: Assets/Scenes/Reino 2/Estancia 3.unity
+    guid: a8138f73acc086942984bf9332cf9b0c
+  - enabled: 1
     path: Assets/Scenes/StartMenu 1.unity
     guid: 63d3762b629596240af9dbf297997196
   - enabled: 1
