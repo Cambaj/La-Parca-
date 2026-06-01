@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class Granade : MonoBehaviour
 {
     [Header("Configuracion de Tiempo")]
@@ -10,7 +10,7 @@ public class Granade : MonoBehaviour
 
     [Header("Explosion y Destruccion")]
     [SerializeField] private float explosionRadius = 5f;
-    [SerializeField] private LayerMask DestroyableWall;
+    [SerializeField] private LayerMask destroyableLayer;
     [SerializeField] private GameObject explosionEffectPrefab;
 
     private Transform equippedPlayer;
@@ -21,7 +21,7 @@ public class Granade : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        rb.bodyType = RigidbodyType2D.Kinematic; //Empieza la granada quieta en mapa y espera a que sea reccogida
+        rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void Update()
@@ -39,28 +39,50 @@ public class Granade : MonoBehaviour
             }
         }
     }
+
     public void PickUp(Transform player)
     {
         isActive = true;
         timer = explosionDelay;
         equippedPlayer = player;
+        wasThrown = false;
 
-        col.enabled = false; //Se desactiva colisiones mientras el jugador tiene la granada
+        col.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        rb.linearVelocity = Vector2.zero; //Detiene cualquier movimiento previo
+        rb.linearVelocity = Vector2.zero;
     }
 
     public void Throw(Vector2 impulseForce)
     {
+        if (wasThrown) return;
+
         wasThrown = true;
+
+        Collider2D playerCollider = equippedPlayer != null ? equippedPlayer.GetComponent<Collider2D>() : null;
         equippedPlayer = null;
 
-        col.enabled = true; //Se reactiva colisiones para que rebote en las paredes
-        rb.bodyType = RigidbodyType2D.Dynamic; //Permite que la granada se mueva libremente
-        rb.linearVelocity = impulseForce;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        col.enabled = true;
+
+        rb.linearVelocity = Vector2.zero;
         rb.AddForce(impulseForce, ForceMode2D.Impulse);
-        //Ver aca que se le puede cambiar
+
+        if (playerCollider != null)
+        {
+            StartCoroutine(IgnorePlayerTemporarily(playerCollider));
+        }
     }
+
+    private IEnumerator IgnorePlayerTemporarily(Collider2D playerCol)
+    {
+        Physics2D.IgnoreCollision(col, playerCol, true);
+        yield return new WaitForSeconds(0.15f);
+        if (col != null && playerCol != null)
+        {
+            Physics2D.IgnoreCollision(col, playerCol, false);
+        }
+    }
+
     private void Explotes()
     {
         isActive = false;
@@ -70,25 +92,32 @@ public class Granade : MonoBehaviour
             PlayerMovement player = equippedPlayer.GetComponent<PlayerMovement>();
             if (player != null) player.ForceToDropGranade();
         }
+
         if (explosionEffectPrefab != null)
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
-        
-        ContactFilter2D filter= new ContactFilter2D();
-        filter.layerMask = DestroyableWall;
-        filter.useLayerMask = true;
-        
 
-        Collider2D[] impactedObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius, DestroyableWall);
+        // Realiza la búsqueda física en el radio asignado
+        Collider2D[] impactedObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius, destroyableLayer);
 
         foreach (Collider2D hit in impactedObjects)
         {
-            if (hit.CompareTag("DestroyableWall")  || hit.CompareTag("bones"))//Cambiarle de Tag
+            // Busca si el objeto impactado tiene el script de la nueva pared
+            DestroyableBlock nuevoBloque = hit.GetComponent<DestroyableBlock>();
+            if (nuevoBloque != null)
+            {
+                nuevoBloque.Shatter();
+                continue;
+            }
+
+            // Compatibilidad por Tag con tus estructuras viejas si las dejás en la misma capa
+            if (hit.CompareTag("Destroyable Wall") || hit.CompareTag("Bone"))
             {
                 Destroy(hit.gameObject);
             }
         }
+
         Destroy(gameObject);
     }
 
@@ -98,3 +127,4 @@ public class Granade : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }
+
