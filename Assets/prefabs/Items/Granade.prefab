@@ -146,7 +146,7 @@ MonoBehaviour:
   explosionRadius: 2
   destroyableLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 256
   explosionEffectPrefab: {fileID: 0}
 --- !u!50 &1546586223508534541
 Rigidbody2D:

@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3008313853153845746, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.349691
+      value: 2.3921866
       objectReference: {fileID: 0}
     - target: {fileID: 3008313853153845746, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
       propertyPath: m_LocalScale.y
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3008313853153845746, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.639
+      value: 9.6601
       objectReference: {fileID: 0}
     - target: {fileID: 3008313853153845746, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
       propertyPath: m_LocalPosition.y
@@ -178,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 7329856719324669755, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
       propertyPath: m_Name
       value: DestroyableWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329856719324669755, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329856719324669755, guid: b125e0ed84931de46b3f8a06a16fa389, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -666,6 +674,99 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1333622959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333622962}
+  - component: {fileID: 1333622961}
+  - component: {fileID: 1333622960}
+  m_Layer: 0
+  m_Name: GranadeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1333622960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333622959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96108c02715f2cb4f817d5aaf3f6ecf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GranadeSpawner
+  granadePrefab: {fileID: 5352683378677795670, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
+  spawnCooldown: 3
+--- !u!61 &1333622961
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333622959}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1333622962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333622959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: -1.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1363802081
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,71 +1093,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6481121693455416815, guid: b75051736ec481643acf39aeebb40a37, type: 3}
   m_PrefabInstance: {fileID: 858313506}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2131782556
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5352683378677795670, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_Name
-      value: 'Granade '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602089672358788792, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: explosionDelay
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602089672358788792, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: explosionRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.78995
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.11411
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344973914547910688, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 989b4a363f434de40b968a53e76c929c, type: 3}
 --- !u!1001 &1999092733326444434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1125,6 +1161,10 @@ PrefabInstance:
     - target: {fileID: 542452328928578868, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: m_Name
       value: 'Player '
+      objectReference: {fileID: 0}
+    - target: {fileID: 542452328928578868, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6266706852661697300, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1368,5 +1408,5 @@ SceneRoots:
   - {fileID: 8406470920139609945}
   - {fileID: 858313506}
   - {fileID: 8213756697930810912}
-  - {fileID: 2131782556}
   - {fileID: 362742629}
+  - {fileID: 1333622962}

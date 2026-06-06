@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -527,17 +528,39 @@ public class PlayerMovement : MonoBehaviour
     private void ThrowEquippedGranade()
     {
         if (equippedGranade == null) return;
-        float directionX = facingRight ? -1 : 1;
+        Vector2 throwDirection = Vector2.zero;
+        //Intenter apuntar con el joystick derecho
+        if (controllerAim != Vector2.zero)
+        {
+            throwDirection = controllerAim;
+        }
+        else //Si no hay jostcick apunta con el Mouse 
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            throwDirection = (mousePos - (Vector2)transform.position).normalized;
+        }
         
+        float angle = Mathf.Atan2(throwDirection.y, throwDirection.x) * Mathf.Rad2Deg;
+        float snappedAngle = Mathf.Round(angle / 45f) * 45f;
+        float rad = snappedAngle * Mathf.Deg2Rad;
 
-        float directionY = vertical > 0 ? 1.5f : 1f;
+        Vector2 finalDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
 
-        Vector2 FinalImpulse = new Vector2(granadeLaunchForce.x * directionX, granadeLaunchForce.y * directionY);
+        Vector2 FinalImpulse = new Vector2(finalDirection.x * granadeLaunchForce.x, finalDirection.y * granadeLaunchForce.y);
 
         equippedGranade.Throw(FinalImpulse);
 
         equippedGranade = null;
         hasGranade = false;
+    }
+
+    public void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+        rb.gravityScale = 0;
+        rb.linearVelocity = new Vector2(0, 0);
+        anim.SetTrigger("IsDeath");
     }
 
     public void ForceToDropGranade()
@@ -720,18 +743,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //Collision y Tag de la granada 
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Granade") && !hasGranade)
         {
-         Granade granadeground = collision.GetComponent<Granade>();
+            Granade granadeground = collision.GetComponent<Granade>();
             if (granadeground != null)
             {
                 equippedGranade = granadeground;
                 hasGranade = true;
-                equippedGranade.PickUp(transform); //Activa la cuenta de los 5 segundo antes de que explote
+
+                equippedGranade.PickUp(transform);
+
                 audio.PlayOneShot(grappleRecoverSound);
             }
         }

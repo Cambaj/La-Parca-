@@ -76,13 +76,27 @@ public class Granade : MonoBehaviour
     private IEnumerator IgnorePlayerTemporarily(Collider2D playerCol)
     {
         Physics2D.IgnoreCollision(col, playerCol, true);
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.1f); // Tiempo corto para que se aleje del jugador
         if (col != null && playerCol != null)
         {
             Physics2D.IgnoreCollision(col, playerCol, false);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (wasThrown)
+        {
+            Explotes();
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (wasThrown && !other.CompareTag("Player") && !other.CompareTag("Entity"))
+        {
+            Explotes();
+        }
+    }
     private void Explotes()
     {
         isActive = false;
@@ -90,7 +104,12 @@ public class Granade : MonoBehaviour
         if (!wasThrown && equippedPlayer != null)
         {
             PlayerMovement player = equippedPlayer.GetComponent<PlayerMovement>();
-            if (player != null) player.ForceToDropGranade();
+            if (player != null)
+            {
+                 player.ForceToDropGranade();
+                 player.Die(); //El jugador muere si la granda explota en la mano
+            }
+           
         }
 
         if (explosionEffectPrefab != null)
@@ -98,23 +117,31 @@ public class Granade : MonoBehaviour
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
 
-        // Realiza la búsqueda física en el radio asignado
-        Collider2D[] impactedObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius, destroyableLayer);
+        // Detectar objetos en el radio de explosión (Paredes agrietadas y el Jugador)
+        Collider2D[] radiatedObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
-        foreach (Collider2D hit in impactedObjects)
+        foreach (Collider2D hit in radiatedObjects)
         {
-            // Busca si el objeto impactado tiene el script de la nueva pared
             DestroyableBlock nuevoBloque = hit.GetComponent<DestroyableBlock>();
             if (nuevoBloque != null)
             {
-                nuevoBloque.Shatter();
-                continue;
+                    nuevoBloque.Shatter();
+                    continue;   
             }
 
             // Compatibilidad por Tag con tus estructuras viejas si las dejás en la misma capa
             if (hit.CompareTag("Destroyable Wall") )
             {
                 Destroy(hit.gameObject);
+                continue;
+            }
+            if (hit.CompareTag("Player"))
+            {
+                PlayerMovement player = hit.GetComponent<PlayerMovement>();
+                if (player != null)
+                {
+                    player.Die();
+                }
             }
         }
 
