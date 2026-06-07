@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -19,33 +20,39 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
 
-        if (rb != null && destination != null && player.canTP == true)
+        if (rb != null && destination != null && player.canTP)
         {
-            //PlayerMovement player =
-            //    collision.gameObject.GetComponent<PlayerMovement>();
-
-            if (player != null)
-            {
-                player.StopGrapple();
-                player.StopDash();
-            }
-
-            rb.transform.position = destination.position;
-
-            rb.linearVelocity = Vector2.zero;
-
-            rb.linearVelocity =
-                launchDirection.normalized * launchSpeed;
-
-            if (player != null)
-            {
-                player.externalLaunch = true;
-                player.externalLaunchTime = 0.25f;
-            }
-
-            player.canTP = false;
+            StartCoroutine(TeleportPlayer(rb));
         }
     }
- }
+
+    private IEnumerator TeleportPlayer(Rigidbody2D rb)
+    {
+        player.canTP = false;
+
+        if (player != null)
+        {
+            player.StopGrapple();
+            player.StopDash();
+        }
+
+        rb.transform.position = new Vector3(2000f, 2000f, 0f);
+
+        yield return new WaitForSeconds(1f);
+
+        rb.transform.position = destination.position;
+
+        rb.linearVelocity = Vector2.zero;
+
+        rb.linearVelocity =
+            launchDirection.normalized * launchSpeed;
+
+        if (player != null)
+        {
+            player.externalLaunch = true;
+            player.externalLaunchTime = 0.25f;
+        }
+    }
+}

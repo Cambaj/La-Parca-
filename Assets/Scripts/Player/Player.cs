@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool externalLaunch;
     [HideInInspector] public float externalLaunchTime;
     [HideInInspector] private float cooldownTP = 0;
-    [HideInInspector] public bool canTP;
+    [HideInInspector] public bool canTP = true;
 
     [Header("Audio")]
     AudioSource audio;
@@ -487,9 +487,10 @@ public class PlayerMovement : MonoBehaviour
         {
             cooldownTP += Time.deltaTime;
 
-            if (cooldownTP >= 0.5f)
+            if (cooldownTP >= 1.2f)
             {
                 canTP = true;
+                cooldownTP = 0f;
             }
         }
 
