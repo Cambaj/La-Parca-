@@ -27,6 +27,10 @@ public class HungrySoul : MonoBehaviour
     public float radiusChangeSpeed = 1f;
     public float speedChangeSpeed = 1f;
 
+    [Header("Sistema de Distraccion")]
+    private Transform realPlayer; //Guarda la referencia del jugador original 
+    private bool isDistracted = false;
+
     private float angle;
 
     private float currentRadius;
@@ -39,6 +43,7 @@ public class HungrySoul : MonoBehaviour
 
     private void Start()
     {
+        realPlayer = player; // Guarda al jugador al iniciar 
         currentRadius = Random.Range(minRadius, maxRadius);
         targetRadius = currentRadius;
 
@@ -52,6 +57,11 @@ public class HungrySoul : MonoBehaviour
 
     private void Update()
     {
+        if (isDistracted && player == null)
+        {
+            isDistracted = false;
+            player = realPlayer;
+        }
         if (player == null || dashing)
             return;
 
@@ -70,6 +80,12 @@ public class HungrySoul : MonoBehaviour
         transform.position = (Vector2)player.position + offset;
     }
 
+    public void Distract(Transform boneTransform) //Distracion del hueso 
+    {
+        if (dashing) return;
+        isDistracted = true;
+        player = boneTransform;
+    }
     void UpdateRadius()
     {
         currentRadius = Mathf.Lerp(
@@ -150,5 +166,17 @@ public class HungrySoul : MonoBehaviour
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         dashing = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if (collision.CompareTag("Player"))
+        {
+          PlayerMovement playerMovement = collision.GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.Die();
+            }
+        }
     }
 }
