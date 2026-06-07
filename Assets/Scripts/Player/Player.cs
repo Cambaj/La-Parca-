@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
 
         // Coyote time
-        if (grounded && !isGrappling && !isDashing && !isDead)
+        if (grounded && !isGrappling && !isDashing && !isDead && canTP)
         {
             coyoteTimeCounter = coyoteTime;
             wallSlideTime = wallSlideTimeMax;
