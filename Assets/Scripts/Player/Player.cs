@@ -412,7 +412,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Input de la granada 
 
-        if (hasGranade && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton3)))
+        if (hasGranade && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)))
         {
             ThrowEquippedGranade();
         }

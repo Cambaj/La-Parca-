@@ -226,7 +226,7 @@ MonoBehaviour:
   groundCheckDistance: 0.53
   groundLayer:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 265
   lowJumpMultiplier: 3
   fallMultiplier: 3
   peakHoverThreshold: 1.2
@@ -239,9 +239,12 @@ MonoBehaviour:
   grappleDuration: 3
   grappleLayer:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 265
   grappleline: {fileID: 3464255328292084296}
   grappleObject: {fileID: 5820072371427939446}
+  bonePrefab: {fileID: 0}
+  boneLaunchForce: {x: 12, y: 6}
+  maxBones: 2
   wallSlideSpeed: 3
   wallSlideTimeMax: 7
   wallJumpForceX: 10
@@ -249,8 +252,14 @@ MonoBehaviour:
   wallJumpDuration: 0.2
   dashForce: 15
   dashDuration: 0.2
+  TopRight: 0
+  TopLeft: 0
+  BottomRight: 0
+  BottomLeft: 0
+  granadeLaunchForce: {x: 10, y: 5}
   externalLaunch: 0
   externalLaunchTime: 0
+  canTP: 0
   walkAudio: {fileID: 8144122554586509392}
   jumpSound: {fileID: 0}
   grappleLaunchSound: {fileID: 8300000, guid: 8dc91a8a08af1fe40b52b3c6f0099e83, type: 3}

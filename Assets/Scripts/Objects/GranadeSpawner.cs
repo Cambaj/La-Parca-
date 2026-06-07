@@ -9,9 +9,14 @@ public class GranadeSpawner : MonoBehaviour
     private float cooldownTimer = 0f;
     private bool isAreaOccupied = false;
 
+    private void Start()
+    {
+        SpawnGranade();
+    }
+
     private void Update()
     {
-        if (isAreaOccupied)
+        if (isAreaOccupied == false)
         {
             cooldownTimer += Time.deltaTime;
             if (cooldownTimer >= spawnCooldown)
@@ -36,7 +41,7 @@ public class GranadeSpawner : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") || other.CompareTag("Granade"))
         {
