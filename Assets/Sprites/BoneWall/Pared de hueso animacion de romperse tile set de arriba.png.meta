@@ -1,0 +1,1287 @@
+fileFormatVersion: 2
+guid: dcbc4a5116d7320458005f2a389e05f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9073932471985139071
+    second: Pared de hueso animacion de romperse tile set de arriba_0
+  - first:
+      213: 3730464054247944453
+    second: Pared de hueso animacion de romperse tile set de arriba_1
+  - first:
+      213: -4543199712807202485
+    second: Pared de hueso animacion de romperse tile set de arriba_2
+  - first:
+      213: 1825336228322975176
+    second: Pared de hueso animacion de romperse tile set de arriba_3
+  - first:
+      213: 2722526225963963077
+    second: Pared de hueso animacion de romperse tile set de arriba_4
+  - first:
+      213: 122526979679196446
+    second: Pared de hueso animacion de romperse tile set de arriba_5
+  - first:
+      213: -6317714732697199890
+    second: Pared de hueso animacion de romperse tile set de arriba_6
+  - first:
+      213: 7224863920874529746
+    second: Pared de hueso animacion de romperse tile set de arriba_7
+  - first:
+      213: 3072141924356923348
+    second: Pared de hueso animacion de romperse tile set de arriba_8
+  - first:
+      213: -5160888454409325489
+    second: Pared de hueso animacion de romperse tile set de arriba_9
+  - first:
+      213: 815003941843124289
+    second: Pared de hueso animacion de romperse tile set de arriba_10
+  - first:
+      213: 4730976259814816860
+    second: Pared de hueso animacion de romperse tile set de arriba_11
+  - first:
+      213: -7758679966383085514
+    second: Pared de hueso animacion de romperse tile set de arriba_12
+  - first:
+      213: -3718829004719605169
+    second: Pared de hueso animacion de romperse tile set de arriba_13
+  - first:
+      213: 6474096799116486472
+    second: Pared de hueso animacion de romperse tile set de arriba_14
+  - first:
+      213: -2479364388393348921
+    second: Pared de hueso animacion de romperse tile set de arriba_15
+  - first:
+      213: -4237146004960177541
+    second: Pared de hueso animacion de romperse tile set de arriba_16
+  - first:
+      213: 5434550717876552951
+    second: Pared de hueso animacion de romperse tile set de arriba_17
+  - first:
+      213: -6281886895214209241
+    second: Pared de hueso animacion de romperse tile set de arriba_18
+  - first:
+      213: 4398317712071909202
+    second: Pared de hueso animacion de romperse tile set de arriba_19
+  - first:
+      213: 3630653829397528766
+    second: Pared de hueso animacion de romperse tile set de arriba_20
+  - first:
+      213: -1096528241576321092
+    second: Pared de hueso animacion de romperse tile set de arriba_21
+  - first:
+      213: -8318417791877976826
+    second: Pared de hueso animacion de romperse tile set de arriba_22
+  - first:
+      213: 1283878622827062713
+    second: Pared de hueso animacion de romperse tile set de arriba_23
+  - first:
+      213: 6584079969129052456
+    second: Pared de hueso animacion de romperse tile set de arriba_24
+  - first:
+      213: 8208657427251136910
+    second: Pared de hueso animacion de romperse tile set de arriba_25
+  - first:
+      213: 1064488446831410022
+    second: Pared de hueso animacion de romperse tile set de arriba_26
+  - first:
+      213: -7561689301684055733
+    second: Pared de hueso animacion de romperse tile set de arriba_27
+  - first:
+      213: -254329903454037600
+    second: Pared de hueso animacion de romperse tile set de arriba_28
+  - first:
+      213: -7281795232233050063
+    second: Pared de hueso animacion de romperse tile set de arriba_29
+  - first:
+      213: 573464399744759389
+    second: Pared de hueso animacion de romperse tile set de arriba_30
+  - first:
+      213: -8168976502290441399
+    second: Pared de hueso animacion de romperse tile set de arriba_31
+  - first:
+      213: -9118245506389865076
+    second: Pared de hueso animacion de romperse tile set de arriba_32
+  - first:
+      213: 4833178913260261947
+    second: Pared de hueso animacion de romperse tile set de arriba_33
+  - first:
+      213: -3061121574308069670
+    second: Pared de hueso animacion de romperse tile set de arriba_34
+  - first:
+      213: -8761153227534005420
+    second: Pared de hueso animacion de romperse tile set de arriba_35
+  - first:
+      213: -517833226899358945
+    second: Pared de hueso animacion de romperse tile set de arriba_36
+  - first:
+      213: 5020078491429063823
+    second: Pared de hueso animacion de romperse tile set de arriba_37
+  - first:
+      213: -2895578790215591221
+    second: Pared de hueso animacion de romperse tile set de arriba_38
+  - first:
+      213: -6952886698373773979
+    second: Pared de hueso animacion de romperse tile set de arriba_39
+  - first:
+      213: -4910292795453370012
+    second: Pared de hueso animacion de romperse tile set de arriba_40
+  - first:
+      213: -7355922519388123638
+    second: Pared de hueso animacion de romperse tile set de arriba_41
+  - first:
+      213: 5956104350029700225
+    second: Pared de hueso animacion de romperse tile set de arriba_42
+  - first:
+      213: 2364124185879779040
+    second: Pared de hueso animacion de romperse tile set de arriba_43
+  - first:
+      213: 3107301253862950150
+    second: Pared de hueso animacion de romperse tile set de arriba_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d6e8ce1851ded70800000000000000
+      internalID: 9073932471985139071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 230
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501ffc0ea4545c330800000000000000
+      internalID: 3730464054247944453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 192
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41587e9eef43f0c0800000000000000
+      internalID: -4543199712807202485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 154
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd97dce0a5e45910800000000000000
+      internalID: 1825336228322975176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 115
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2544e8d2b58c520800000000000000
+      internalID: 2722526225963963077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_5
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 127
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e151e2b83ad43b100800000000000000
+      internalID: 122526979679196446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 116
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eead45d5ce7f258a0800000000000000
+      internalID: -6317714732697199890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d32342057fd34460800000000000000
+      internalID: 7224863920874529746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 106
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df11e4adc072aa20800000000000000
+      internalID: 3072141924356923348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_9
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 101
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4474855b47d068b0800000000000000
+      internalID: -5160888454409325489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 104
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1404a1c54c97f4b00800000000000000
+      internalID: 815003941843124289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_11
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 102
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c711fa7ddc7a140800000000000000
+      internalID: 4730976259814816860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_12
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 105
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638ebc58da1a35490800000000000000
+      internalID: -7758679966383085514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 95
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ab44139b0146cc0800000000000000
+      internalID: -3718829004719605169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 100
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847e4d0dcbc98d950800000000000000
+      internalID: 6474096799116486472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c09f099937879dd0800000000000000
+      internalID: -2479364388393348921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 92
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7212e86822a235c0800000000000000
+      internalID: -4237146004960177541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_17
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 83
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f440ec95176b6b40800000000000000
+      internalID: 5434550717876552951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 91
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7275393d62142d8a0800000000000000
+      internalID: -6281886895214209241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 83
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fda55e7a6f90d30800000000000000
+      internalID: 4398317712071909202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_20
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 88
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0c6abfb6ca26230800000000000000
+      internalID: 3630653829397528766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 84
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbfd8aabf5958c0f0800000000000000
+      internalID: -1096528241576321092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_22
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 87
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60de2d5571b0f8c80800000000000000
+      internalID: -8318417791877976826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_23
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 77
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b523502ec041d110800000000000000
+      internalID: 1283878622827062713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829b3b419d95f5b50800000000000000
+      internalID: 6584079969129052456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 70
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e890d2250720be170800000000000000
+      internalID: 8208657427251136910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_26
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 75
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bb4ec3a92d5ce00800000000000000
+      internalID: 1064488446831410022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 70
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b411047c4ab7f0790800000000000000
+      internalID: -7561689301684055733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_28
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 75
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9dcd0ec40787cf0800000000000000
+      internalID: -254329903454037600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_29
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 67
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130bd9f11ddd1fa90800000000000000
+      internalID: -7281795232233050063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_30
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 66
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d567e1e45da55f700800000000000000
+      internalID: 573464399744759389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_31
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 76
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b177af627f1ae80800000000000000
+      internalID: -8168976502290441399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_32
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 62
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d84d0c50c757180800000000000000
+      internalID: -9118245506389865076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_33
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 44
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3259c44d96e21340800000000000000
+      internalID: 4833178913260261947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_34
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 55
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade351d8526b485d0800000000000000
+      internalID: -3061121574308069670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 59
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b8112ee812a6680800000000000000
+      internalID: -8761153227534005420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 50
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bf4c97c6940d8f0800000000000000
+      internalID: -517833226899358945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_37
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 46
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c453a5ac6eaa540800000000000000
+      internalID: 5020078491429063823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_38
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca5b068e66d0d7d0800000000000000
+      internalID: -2895578790215591221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_39
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 40
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56584e3c262628f90800000000000000
+      internalID: -6952886698373773979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_40
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 41
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46197d7e7b22bdbb0800000000000000
+      internalID: -4910292795453370012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_41
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e039421738ae990800000000000000
+      internalID: -7355922519388123638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18cddac795558a250800000000000000
+      internalID: 5956104350029700225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_43
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 16
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e61640eb6e0fc020800000000000000
+      internalID: 2364124185879779040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pared de hueso animacion de romperse tile set de arriba_44
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60580a6f60a5f1b20800000000000000
+      internalID: 3107301253862950150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pared de hueso animacion de romperse tile set de arriba_0: 9073932471985139071
+      Pared de hueso animacion de romperse tile set de arriba_1: 3730464054247944453
+      Pared de hueso animacion de romperse tile set de arriba_10: 815003941843124289
+      Pared de hueso animacion de romperse tile set de arriba_11: 4730976259814816860
+      Pared de hueso animacion de romperse tile set de arriba_12: -7758679966383085514
+      Pared de hueso animacion de romperse tile set de arriba_13: -3718829004719605169
+      Pared de hueso animacion de romperse tile set de arriba_14: 6474096799116486472
+      Pared de hueso animacion de romperse tile set de arriba_15: -2479364388393348921
+      Pared de hueso animacion de romperse tile set de arriba_16: -4237146004960177541
+      Pared de hueso animacion de romperse tile set de arriba_17: 5434550717876552951
+      Pared de hueso animacion de romperse tile set de arriba_18: -6281886895214209241
+      Pared de hueso animacion de romperse tile set de arriba_19: 4398317712071909202
+      Pared de hueso animacion de romperse tile set de arriba_2: -4543199712807202485
+      Pared de hueso animacion de romperse tile set de arriba_20: 3630653829397528766
+      Pared de hueso animacion de romperse tile set de arriba_21: -1096528241576321092
+      Pared de hueso animacion de romperse tile set de arriba_22: -8318417791877976826
+      Pared de hueso animacion de romperse tile set de arriba_23: 1283878622827062713
+      Pared de hueso animacion de romperse tile set de arriba_24: 6584079969129052456
+      Pared de hueso animacion de romperse tile set de arriba_25: 8208657427251136910
+      Pared de hueso animacion de romperse tile set de arriba_26: 1064488446831410022
+      Pared de hueso animacion de romperse tile set de arriba_27: -7561689301684055733
+      Pared de hueso animacion de romperse tile set de arriba_28: -254329903454037600
+      Pared de hueso animacion de romperse tile set de arriba_29: -7281795232233050063
+      Pared de hueso animacion de romperse tile set de arriba_3: 1825336228322975176
+      Pared de hueso animacion de romperse tile set de arriba_30: 573464399744759389
+      Pared de hueso animacion de romperse tile set de arriba_31: -8168976502290441399
+      Pared de hueso animacion de romperse tile set de arriba_32: -9118245506389865076
+      Pared de hueso animacion de romperse tile set de arriba_33: 4833178913260261947
+      Pared de hueso animacion de romperse tile set de arriba_34: -3061121574308069670
+      Pared de hueso animacion de romperse tile set de arriba_35: -8761153227534005420
+      Pared de hueso animacion de romperse tile set de arriba_36: -517833226899358945
+      Pared de hueso animacion de romperse tile set de arriba_37: 5020078491429063823
+      Pared de hueso animacion de romperse tile set de arriba_38: -2895578790215591221
+      Pared de hueso animacion de romperse tile set de arriba_39: -6952886698373773979
+      Pared de hueso animacion de romperse tile set de arriba_4: 2722526225963963077
+      Pared de hueso animacion de romperse tile set de arriba_40: -4910292795453370012
+      Pared de hueso animacion de romperse tile set de arriba_41: -7355922519388123638
+      Pared de hueso animacion de romperse tile set de arriba_42: 5956104350029700225
+      Pared de hueso animacion de romperse tile set de arriba_43: 2364124185879779040
+      Pared de hueso animacion de romperse tile set de arriba_44: 3107301253862950150
+      Pared de hueso animacion de romperse tile set de arriba_5: 122526979679196446
+      Pared de hueso animacion de romperse tile set de arriba_6: -6317714732697199890
+      Pared de hueso animacion de romperse tile set de arriba_7: 7224863920874529746
+      Pared de hueso animacion de romperse tile set de arriba_8: 3072141924356923348
+      Pared de hueso animacion de romperse tile set de arriba_9: -5160888454409325489
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
