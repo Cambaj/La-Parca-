@@ -858,6 +858,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 257888021}
+    - target: {fileID: 7057272098543275843, guid: 9541f5b1808affb4fac086925def96ea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9144246342613035867, guid: 9541f5b1808affb4fac086925def96ea, type: 3}
       propertyPath: m_Name
       value: Soul
