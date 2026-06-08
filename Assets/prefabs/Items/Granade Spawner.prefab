@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 386473265218063068}
   - component: {fileID: 921032539536790654}
   - component: {fileID: 5285497988515403994}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Granade Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
