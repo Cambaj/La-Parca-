@@ -73,14 +73,22 @@ public class Granade : MonoBehaviour
         }
     }
 
+    public bool WasThrown()
+        {
+        return wasThrown;
+    }
+
     private IEnumerator IgnorePlayerTemporarily(Collider2D playerCol)
     {
         Physics2D.IgnoreCollision(col, playerCol, true);
+        yield return null;
+        /*
         yield return new WaitForSeconds(0.1f); // Tiempo corto para que se aleje del jugador
         if (col != null && playerCol != null)
         {
             Physics2D.IgnoreCollision(col, playerCol, false);
         }
+        */
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -117,6 +125,22 @@ public class Granade : MonoBehaviour
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
 
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, playerObj.transform.position);
+
+            if (distanceToPlayer <= explosionRadius)
+            {
+                PlayerMovement playerMovement = playerObj.GetComponent<PlayerMovement>();
+                if (playerMovement != null)
+                {
+                    Debug.Log("<Color=Red><b>¡EL JUGADOR DEBERÍA MORIR AHORA!</b></Color> Distancia: " + distanceToPlayer);
+                    playerMovement.Die();
+                }
+            }
+        }
+
         // Detectar objetos en el radio de explosión (Paredes agrietadas y el Jugador)
         Collider2D[] radiatedObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
@@ -125,16 +149,17 @@ public class Granade : MonoBehaviour
             DestroyableBlock nuevoBloque = hit.GetComponent<DestroyableBlock>();
             if (nuevoBloque != null)
             {
-                    nuevoBloque.Shatter();
-                    continue;   
+                nuevoBloque.Shatter();
+                continue;
             }
 
             // Compatibilidad por Tag con tus estructuras viejas si las dejás en la misma capa
-            if (hit.CompareTag("Destroyable Wall") )
+            if (hit.CompareTag("Destroyable Wall"))
             {
                 Destroy(hit.gameObject);
                 continue;
             }
+
             if (hit.CompareTag("Player"))
             {
                 PlayerMovement player = hit.GetComponent<PlayerMovement>();
@@ -144,7 +169,7 @@ public class Granade : MonoBehaviour
                 }
             }
         }
-
+        
         Destroy(gameObject);
     }
 

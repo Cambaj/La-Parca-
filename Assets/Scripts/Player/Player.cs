@@ -141,6 +141,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return;
+
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -477,6 +479,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDead) return;
         //fall max velocity
         if (rb.linearVelocityY < -maxFallVelocity)
         {
@@ -808,7 +811,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Granade") && !hasGranade)
         {
             Granade granadeground = collision.GetComponent<Granade>();
-            if (granadeground != null)
+            if (granadeground != null && !granadeground.WasThrown())
             {
                 equippedGranade = granadeground;
                 hasGranade = true;
