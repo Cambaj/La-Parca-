@@ -131,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         //spawnPoint = GameObject.Find("SpawnPoint").transform;
+        canTP = true;
     }
 
     void Update()
@@ -417,7 +418,7 @@ public class PlayerMovement : MonoBehaviour
             ThrowEquippedGranade();
         }
 
-        if (currentBones > 0 && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.JoystickButton2)))
+        if (currentBones > 0 && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton2)))
         {
             ThrowDistractionBone();
         }

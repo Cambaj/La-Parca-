@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Portal
   destination: {fileID: 0}
-  launchSpeed: 13
+  launchSpeed: 20.5
   launchDirection: {x: 0, y: 1}
 --- !u!61 &571691574986150034
 BoxCollider2D:
