@@ -33,12 +33,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LineRenderer grappleline;
     [SerializeField] private GameObject grappleObject;
 
-    [Header("Mecanica de hueso distractor")]
-    [SerializeField] private GameObject bonePrefab;
-    [SerializeField] private Vector2 boneLaunchForce = new Vector2(12f, 6f);
-    [SerializeField] private int maxBones = 2; //Esta cantidad puede que se cambie 
-    private int currentBones = 2; 
-
     private Vector2 grapplePoint;
     private bool isGrappling = false;
 
@@ -418,10 +412,6 @@ public class PlayerMovement : MonoBehaviour
             ThrowEquippedGranade();
         }
 
-        if (currentBones > 0 && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton2)))
-        {
-            ThrowDistractionBone();
-        }
         if (wallSlideTime <= 0f)
         {
             spriteRenderer.color = Color.red;
@@ -579,50 +569,6 @@ public class PlayerMovement : MonoBehaviour
     {
         equippedGranade = null;
         hasGranade = false;
-    }
-
-    private void ThrowDistractionBone()
-    {
-        if (bonePrefab == null) return;
-
-        currentBones--;
-
-        GameObject thrownBone = Instantiate(bonePrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
-        Rigidbody2D boneRb = thrownBone.GetComponent<Rigidbody2D>();
-        Collider2D boneCol = thrownBone.GetComponent<Collider2D>();
-        Collider2D playerCol = GetComponent<Collider2D>();
-
-        if (boneCol != null && playerCol != null)
-        {
-            Physics2D.IgnoreCollision(boneCol, playerCol, true);
-        }
-
-        Vector2 throwDirection = Vector2.zero;
-
-        if (controllerAim != Vector2.zero)
-        {
-            throwDirection = controllerAim;
-        }
-        else
-        {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            throwDirection = (mousePos - (Vector2)transform.position).normalized;   
-        }
-        float angle = Mathf.Atan2(throwDirection.y, throwDirection.x) * Mathf.Rad2Deg;
-        float snappedAngle = Mathf.Round(angle / 45f) * 45f;
-        float rad = snappedAngle * Mathf.Deg2Rad;
-
-        Vector2 finalDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
-        Vector2 finalImpulse = new Vector2(finalDirection.x * boneLaunchForce.x, finalDirection.y * boneLaunchForce.y);
-
-        if (boneRb != null)
-        {
-            boneRb.bodyType = RigidbodyType2D.Dynamic; // Activa gravedad para el arco de lanzamiento
-
-            boneRb.linearVelocity = Vector2.zero;
-            boneRb.AddForce(finalImpulse, ForceMode2D.Impulse);
-        }
-
     }
 
     private void Flip()
