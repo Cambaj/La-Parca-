@@ -63,6 +63,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino 3/Estancia 1.unity
     guid: 5dce5352ae4d1ed42ae9f8491e641b65
   - enabled: 1
+    path: Assets/Scenes/Reino 3/Estancia 2.unity
+    guid: 77539c1d3a0c067419def1f6e6950650
+  - enabled: 1
+    path: Assets/Scenes/Reino 3/Estancia 3.unity
+    guid: 05c94f7fefe1ab742bcf6cb47a88ce03
+  - enabled: 1
+    path: Assets/Scenes/Reino 3/Estancia 4.unity
+    guid: 6781094e113ed3d43b6295733e69a687
+  - enabled: 1
+    path: Assets/Scenes/Reino 3/Estancia 5.unity
+    guid: eae4bd93e6e80cd44abc0a793d33a4d0
+  - enabled: 1
+    path: Assets/Scenes/Reino 3/Estancia 6.unity
+    guid: 3f78dac35f4751f40afde521219b8fa5
+  - enabled: 1
+    path: Assets/Scenes/Reino 4/Estancia 1.unity
+    guid: fe802b65c08f1fa40a169f6cefaf19a8
+  - enabled: 1
+    path: Assets/Scenes/Reino 4/Estancia 2.unity
+    guid: 71c3238b2172fa14fa9608fbd0df964f
+  - enabled: 1
+    path: Assets/Scenes/Reino 4/Estancia 3.unity
+    guid: 13f5cdc5c399ccf489130388ce6fc6d6
+  - enabled: 1
+    path: Assets/Scenes/Reino 4/Estancia 4.unity
+    guid: 180ee4db57179e743aeed11cbc7fa134
+  - enabled: 1
+    path: Assets/Scenes/Reino 4/Estancia 5.unity
+    guid: 3c5b4ca0f86f80948bdd581e1d43525a
+  - enabled: 1
+    path: Assets/Scenes/Reino 4/Estancia 6.unity
+    guid: ea449e99fa9de1c48b0c941251a693e1
+  - enabled: 1
     path: Assets/Scenes/StartMenu 1.unity
     guid: 63d3762b629596240af9dbf297997196
   - enabled: 1
