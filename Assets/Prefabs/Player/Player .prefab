@@ -151,7 +151,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: cef2e09bdffaf5243928b91cc6e20068, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -242,9 +242,6 @@ MonoBehaviour:
     m_Bits: 265
   grappleline: {fileID: 3464255328292084296}
   grappleObject: {fileID: 5820072371427939446}
-  bonePrefab: {fileID: 0}
-  boneLaunchForce: {x: 12, y: 6}
-  maxBones: 2
   wallSlideSpeed: 3
   wallSlideTimeMax: 7
   wallJumpForceX: 10
@@ -257,6 +254,10 @@ MonoBehaviour:
   BottomRight: 0
   BottomLeft: 0
   granadeLaunchForce: {x: 10, y: 5}
+  soulBonePrefab: {fileID: 0}
+  soulBoneSpawn: {fileID: 0}
+  hungrySoul: {fileID: 0}
+  soulBoneCooldown: 5
   externalLaunch: 0
   externalLaunchTime: 0
   canTP: 0
