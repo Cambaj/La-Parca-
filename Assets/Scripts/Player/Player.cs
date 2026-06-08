@@ -90,6 +90,17 @@ public class PlayerMovement : MonoBehaviour
     private Granade equippedGranade;
     private bool hasGranade = false;
 
+    //Soul
+    [Header("Mecanica de Soul Bone")]
+    [SerializeField] private GameObject soulBonePrefab;
+    [SerializeField] private Transform soulBoneSpawn;
+    [SerializeField] private HungrySoul hungrySoul;
+
+    [SerializeField] private float soulBoneCooldown = 5f;
+
+    private bool hasSoulBone = true;
+    private float soulBoneTimer;
+
     //Portal
     [HideInInspector] public bool externalLaunch;
     [HideInInspector] public float externalLaunchTime;
@@ -412,6 +423,17 @@ public class PlayerMovement : MonoBehaviour
             ThrowEquippedGranade();
         }
 
+        //Soul bone
+        if (Input.GetMouseButtonDown(0) && !hasGranade)
+        {
+            ThrowSoulBone();
+        }
+
+        if (hasSoulBone)
+        {
+            soulBoneTimer -= Time.deltaTime;
+        }
+
         if (wallSlideTime <= 0f)
         {
             spriteRenderer.color = Color.red;
@@ -556,6 +578,39 @@ public class PlayerMovement : MonoBehaviour
         hasGranade = false;
     }
 
+    private void ThrowSoulBone()
+    {
+        if (!hasSoulBone)
+            return;
+
+        if (soulBoneTimer > 0)
+            return;
+
+        GameObject bone =
+            Instantiate(
+                soulBonePrefab,
+                soulBoneSpawn.position,
+                Quaternion.identity);
+
+        SoulBone soulBone =
+            bone.GetComponent<SoulBone>();
+
+        soulBone.Initialize(hungrySoul);
+
+        hasSoulBone = false;
+        soulBoneTimer = soulBoneCooldown;
+    }
+
+    public void RecoverSoulBone()
+    {
+        hasSoulBone = true;
+
+        canDash = true;
+        canGrapple = true;
+
+        audio.PlayOneShot(grappleRecoverSound);
+    }
+
     public void Die()
     {
         if (isDead) return;
@@ -654,6 +709,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return canDash;
     }
+    
     private void DestroyBoneWall(GameObject bone)
     {
         if (bone == null || !bone.CompareTag("Bone"))

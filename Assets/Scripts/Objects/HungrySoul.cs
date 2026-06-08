@@ -37,6 +37,9 @@ public class HungrySoul : MonoBehaviour
 
     private bool dashing;
 
+    private bool pinned = false;
+    private bool canDamagePlayer = true;
+
     private void Start()
     {
         currentRadius = Random.Range(minRadius, maxRadius);
@@ -53,7 +56,7 @@ public class HungrySoul : MonoBehaviour
     private void Update()
     {
 
-        if (player == null || dashing)
+        if (player == null || dashing || pinned)
             return;
 
         UpdateRadius();
@@ -99,10 +102,27 @@ public class HungrySoul : MonoBehaviour
         }
     }
 
+    public void PinSoul()
+    {
+        pinned = true;
+        dashing = false;
+
+        StopAllCoroutines();
+
+        canDamagePlayer = false;
+    }
+
+    public void ReleaseSoul()
+    {
+        StartCoroutine(ReleaseRoutine());
+    }
+
     IEnumerator DashRoutine()
     {
         while (true)
         {
+            if (pinned)
+                continue;
             yield return new WaitForSeconds(
                 Random.Range(minDashCooldown, maxDashCooldown)
             );
@@ -122,6 +142,9 @@ public class HungrySoul : MonoBehaviour
 
     IEnumerator PerformDash()
     {
+        if (pinned)
+            yield break;
+
         dashing = true;
 
         Vector2 startPos = transform.position;
@@ -152,15 +175,35 @@ public class HungrySoul : MonoBehaviour
         dashing = false;
     }
 
+    IEnumerator ReleaseRoutine()
+    {
+        yield return new WaitForSeconds(1f);
+
+        pinned = false;
+        canDamagePlayer = true;
+
+        StartCoroutine(DashRoutine());
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       if (collision.CompareTag("Player"))
+        PlayerMovement player =
+            collision.GetComponent<PlayerMovement>();
+
+        if (player == null)
+            return;
+
+        if (pinned)
         {
-          PlayerMovement playerMovement = collision.GetComponent<PlayerMovement>();
-            if (playerMovement != null)
-            {
-                playerMovement.Die();
-            }
+            player.RecoverSoulBone();
+
+            ReleaseSoul();
+            return;
+        }
+
+        if (canDamagePlayer)
+        {
+            player.Die();
         }
     }
 }

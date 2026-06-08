@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &255704437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6025629613750178706, guid: 9541f5b1808affb4fac086925def96ea, type: 3}
+  m_PrefabInstance: {fileID: 7826662769058741313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7525af834098d4a4595e824109bd9d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &257888021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6266706852661697300, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
@@ -734,6 +745,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: bonePrefab
+      value: 
+      objectReference: {fileID: 3894223179446321950, guid: fffa48f6669034c4f9f3fd9c213aa9b3, type: 3}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: hungrySoul
+      value: 
+      objectReference: {fileID: 255704437}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: soulBoneSpawn
+      value: 
+      objectReference: {fileID: 257888021}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: soulBonePrefab
       value: 
       objectReference: {fileID: 3894223179446321950, guid: fffa48f6669034c4f9f3fd9c213aa9b3, type: 3}
     m_RemovedComponents: []
