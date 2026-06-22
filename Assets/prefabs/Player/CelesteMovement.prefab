@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4076782422965308737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1800628412294582659, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_Name
+      value: CelesteMovement
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.26289
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99841
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300142109410215843, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7138528259936804662, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 7627792694668740252, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1800628412294582659, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7461150797068468648}
+  m_SourcePrefab: {fileID: 100100000, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+--- !u!1 &2337009781453888706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1800628412294582659, guid: 09410ac44db17fd42a7d5c0053e0df3c, type: 3}
+  m_PrefabInstance: {fileID: 4076782422965308737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7461150797068468648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337009781453888706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776f6f981382a424885725f93d340e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CelesteMovement
+  speed: 250
+  jumpForce: 8.5
+  maxFallVelocity: 12
+  groundCheckDistance: 0.53
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 265
+  lowJumpMultiplier: 3
+  fallMultiplier: 3
+  peakHoverThreshold: 1.2
+  peakHoverGravity: 1
+  normalGravityScale: 1.5
+  jumpBufferTime: 0.1
+  coyoteTime: 0.15
+  grappleMaxDistance: 0
+  grappleSpeed: 0
+  grappleDuration: 0
+  grappleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  grappleline: {fileID: 0}
+  grappleObject: {fileID: 0}
+  wallSlideSpeed: 10
+  wallSlideTimeMax: 0
+  wallJumpForceX: 20
+  wallJumpForceY: 10
+  wallJumpDuration: 0.2
+  dashForce: 15
+  dashDuration: 0.2
+  TopRight: 0
+  TopLeft: 0
+  BottomRight: 0
+  BottomLeft: 0
+  runAcceleration: 90
+  runDecceleration: 80
+  airAcceleration: 60
+  airDecceleration: 30
+  dashEndHorizontalCut: 0.7
+  granadeLaunchForce: {x: 10, y: 5}
+  soulBonePrefab: {fileID: 0}
+  soulBoneSpawn: {fileID: 0}
+  hungrySoul: {fileID: 0}
+  soulBoneCooldown: 5
+  externalLaunch: 0
+  externalLaunchTime: 0
+  canTP: 1
+  walkAudio: {fileID: 0}
+  jumpSound: {fileID: 0}
+  grappleLaunchSound: {fileID: 0}
+  grappleHookSound: {fileID: 0}
+  grappleRecoverSound: {fileID: 0}
+  dashSound: {fileID: 0}
+  walkGrassSound: {fileID: 0}
