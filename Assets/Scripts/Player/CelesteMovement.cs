@@ -85,11 +85,12 @@ public class CelesteMovement : MonoBehaviour
 
     //Movimiento de Celeste 
     [Header("Celeste Feel Tweaks")]
-    [SerializeField] private float runAcceleration = 90f;
-    [SerializeField] private float runDecceleration = 80f;
-    [SerializeField] private float airAcceleration = 60f;
-    [SerializeField] private float airDecceleration = 30f;
-    [Range(0f, 1f)][SerializeField] private float dashEndHorizontalCut = 0.7f;
+    [SerializeField] private float runAcceleration;
+    [SerializeField] private float runDecceleration;
+    [SerializeField] private float airAcceleration;
+    [SerializeField] private float airDecceleration;
+    [Range(0f, 1f)][SerializeField] private float dashEndHorizontalCut;
+    [SerializeField] private float maxRunVelocity;
 
 
 
@@ -418,14 +419,29 @@ public class CelesteMovement : MonoBehaviour
             else
             {
                 // CORRECCIÓN DE CELESTE: Aceleración y fricción matemática real sin usar Time.fixedDeltaTime en la velocidad final.
-                float targetSpeed = horizontal * speed;
-                float accelRate = grounded ? (Mathf.Abs(targetSpeed) > 0.01f ? runAcceleration : runDecceleration)
-                                           : (Mathf.Abs(targetSpeed) > 0.01f ? airAcceleration : airDecceleration);
+                //float targetSpeed = horizontal * speed;
+                //float accelRate = grounded ? (Mathf.Abs(targetSpeed) > 0.01f ? runAcceleration : runDecceleration)
+                //                           : (Mathf.Abs(targetSpeed) > 0.01f ? airAcceleration : airDecceleration);
 
-                float speedDif = targetSpeed - rb.linearVelocity.x;
-                float movement = speedDif * accelRate * Time.fixedDeltaTime;
+                //float speedDif = targetSpeed - rb.linearVelocity.x;
+                //float movement = speedDif * accelRate * Time.fixedDeltaTime;
 
-                rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
+                //rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
+
+                if (horizontal != 0 && rb.linearVelocityX > -maxRunVelocity && rb.linearVelocityX < maxRunVelocity)
+                {
+                    rb.AddForce(runAcceleration * horizontal * Vector2.right, ForceMode2D.Force);
+                }
+
+                if (rb.linearVelocityX < 0)
+                {
+                    rb.AddForce(runDecceleration * Vector2.right, ForceMode2D.Force);
+                }
+
+                if (rb.linearVelocityX > 0)
+                {
+                    rb.AddForce(-runDecceleration * Vector2.right, ForceMode2D.Force);
+                }
             }
             anim.SetBool("IsGrappling", false);
         }

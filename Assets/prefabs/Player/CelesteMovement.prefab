@@ -112,11 +112,12 @@ MonoBehaviour:
   TopLeft: 0
   BottomRight: 0
   BottomLeft: 0
-  runAcceleration: 90
-  runDecceleration: 80
-  airAcceleration: 60
-  airDecceleration: 30
+  runAcceleration: 9
+  runDecceleration: 8
+  airAcceleration: 6
+  airDecceleration: 3
   dashEndHorizontalCut: 0.7
+  maxRunVelocity: 5
   granadeLaunchForce: {x: 10, y: 5}
   soulBonePrefab: {fileID: 0}
   soulBoneSpawn: {fileID: 0}
