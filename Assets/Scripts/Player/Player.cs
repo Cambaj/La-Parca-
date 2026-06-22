@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.15f;
 
     [Header("Grapping Hook")]
+    [SerializeField] private bool unlockedGrapple;
     [SerializeField] private float grappleMaxDistance = 10f;
     [SerializeField] private float grappleSpeed = 20f;
     [SerializeField] private float grappleDuration = 3f;
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpDuration = 0.2f;
 
     [Header("Dash")]
+    [SerializeField] private bool unlockedDash;
     [SerializeField] private float dashForce = 15f;
     [SerializeField] private float dashDuration = 0.2f;
     private Vector2 dashVelocity;
@@ -262,72 +264,75 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // -- DASH --
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
+        if (unlockedDash == true)
         {
-            canDash = false;
-            isDashing = true;
-            dashTime = dashDuration;
-
-            rb.linearVelocity = Vector2.zero;
-
-            Vector2 dashDirection = new Vector2(horizontal, vertical);
-
-            if (dashDirection == Vector2.zero)
+            if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
             {
-                dashDirection = facingRight ? Vector2.right : Vector2.left;
-            }
+                canDash = false;
+                isDashing = true;
+                dashTime = dashDuration;
 
-            dashDirection.Normalize();
+                rb.linearVelocity = Vector2.zero;
 
-            dashVelocity = dashDirection * dashForce;
+                Vector2 dashDirection = new Vector2(horizontal, vertical);
 
-            //Animaciones
-            int dashType = 0;
+                if (dashDirection == Vector2.zero)
+                {
+                    dashDirection = facingRight ? Vector2.right : Vector2.left;
+                }
 
-            if (!grounded)
-            {
-                if (vertical < 0 && horizontal == 0)
-                    dashType = 1; // Down
-                else if (vertical > 0 && horizontal == 0)
-                    dashType = 2; // Up
-                else if (vertical > 0 && horizontal != 0)
-                    dashType = 3; // Diagonal Up
-                else if (vertical < 0 && horizontal != 0)
-                    dashType = 4; // Diagonal Down
+                dashDirection.Normalize();
+
+                dashVelocity = dashDirection * dashForce;
+
+                //Animaciones
+                int dashType = 0;
+
+                if (!grounded)
+                {
+                    if (vertical < 0 && horizontal == 0)
+                        dashType = 1; // Down
+                    else if (vertical > 0 && horizontal == 0)
+                        dashType = 2; // Up
+                    else if (vertical > 0 && horizontal != 0)
+                        dashType = 3; // Diagonal Up
+                    else if (vertical < 0 && horizontal != 0)
+                        dashType = 4; // Diagonal Down
+                    else
+                        dashType = 5; // Forward
+                }
                 else
-                    dashType = 5; // Forward
+                {
+                    if (vertical > 0 && horizontal == 0)
+                        dashType = 6; // Up
+                    else if (vertical > 0 && horizontal != 0)
+                        dashType = 7; // Diagonal Up
+                    else
+                        dashType = 8; // Forward
+                }
+
+                anim.SetInteger("DashType", dashType);
+                anim.SetBool("IsDashing", true);
+
+                rb.linearVelocity = dashVelocity;
+
+                audio.PlayOneShot(dashSound);
             }
-            else
+            if (isDashing)
             {
-                if (vertical > 0 && horizontal == 0)
-                    dashType = 6; // Up
-                else if (vertical > 0 && horizontal != 0)
-                    dashType = 7; // Diagonal Up
-                else
-                    dashType = 8; // Forward
-            }
+                rb.gravityScale = 0;
+                rb.linearVelocity = dashVelocity;
+                dashTime -= Time.deltaTime;
 
-            anim.SetInteger("DashType", dashType);
-            anim.SetBool("IsDashing", true);
+                if (dashTime <= 0)
+                {
+                    isDashing = false;
+                    rb.linearVelocity = new Vector2(0, 0);
+                    rb.gravityScale = 1;
 
-            rb.linearVelocity = dashVelocity;
-
-            audio.PlayOneShot(dashSound);
-        }
-        if (isDashing)
-        {
-            rb.gravityScale = 0;
-            rb.linearVelocity = dashVelocity;
-            dashTime -= Time.deltaTime;
-
-            if (dashTime <= 0)
-            {
-                isDashing = false;
-                rb.linearVelocity = new Vector2(0, 0);
-                rb.gravityScale = 1;
-
-                anim.SetBool("IsDashing", false);
-                anim.SetInteger("DashType", 0);
+                    anim.SetBool("IsDashing", false);
+                    anim.SetInteger("DashType", 0);
+                }
             }
         }
 
@@ -394,30 +399,33 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("IsJump", false);
         }
 
-
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6)) && canGrapple && !isDashing && !isGrappling && !isDead)
+        if (unlockedGrapple == true)
         {
-            StartGrapple();
-        }
-
-        if (isGrappling)
-        {
-            grappleTimer -= Time.deltaTime;
-
-            if (grappleTimer <= 0f)
+            if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6)) && canGrapple && !isDashing && !isGrappling && !isDead)
             {
-                StopGrapple();
-                return;
+                StartGrapple();
             }
 
-            grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
-            grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
-
-            if (Vector2.Distance(transform.position, grapplePoint) < 0.7f)
+            if (isGrappling)
             {
-                StopGrapple();
+                grappleTimer -= Time.deltaTime;
+
+                if (grappleTimer <= 0f)
+                {
+                    StopGrapple();
+                    return;
+                }
+
+                grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
+                grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
+
+                if (Vector2.Distance(transform.position, grapplePoint) < 0.7f)
+                {
+                    StopGrapple();
+                }
             }
         }
+        
 
         //Input de la granada 
 
@@ -450,9 +458,12 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.color = originalColor;
         }
 
-        if (grappleObject != null)
+        if (unlockedGrapple == true)
         {
-            grappleObject.SetActive(canGrapple);
+            if (grappleObject != null)
+            {
+                grappleObject.SetActive(canGrapple);
+            }
         }
 
 

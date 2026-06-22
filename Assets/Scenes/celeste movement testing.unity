@@ -617,6 +617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CelesteMovement
       objectReference: {fileID: 0}
+    - target: {fileID: 7461150797068468648, guid: 5574734fcfa858341b3cb0766e7fd15c, type: 3}
+      propertyPath: runAcceleration
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8151030618501352162, guid: 5574734fcfa858341b3cb0766e7fd15c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.07685

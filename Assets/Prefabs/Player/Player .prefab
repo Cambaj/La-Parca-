@@ -234,6 +234,7 @@ MonoBehaviour:
   normalGravityScale: 1.5
   jumpBufferTime: 0.1
   coyoteTime: 0.15
+  unlockedGrapple: 1
   grappleMaxDistance: 6
   grappleSpeed: 20
   grappleDuration: 3
@@ -247,6 +248,7 @@ MonoBehaviour:
   wallJumpForceX: 10
   wallJumpForceY: 10
   wallJumpDuration: 0.2
+  unlockedDash: 1
   dashForce: 15
   dashDuration: 0.2
   TopRight: 0
