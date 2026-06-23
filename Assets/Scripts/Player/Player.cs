@@ -585,7 +585,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 finalDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
 
-        Vector2 FinalImpulse = new Vector2(finalDirection.x * granadeLaunchForce.x, finalDirection.y * granadeLaunchForce.y);
+        float totalForce = granadeLaunchForce.x;
+
+        Vector2 FinalImpulse = finalDirection * totalForce;
+
+        FinalImpulse.y += granadeLaunchForce.y; 
+
 
         equippedGranade.Throw(FinalImpulse);
 
