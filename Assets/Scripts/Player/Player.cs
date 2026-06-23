@@ -591,7 +591,6 @@ public class PlayerMovement : MonoBehaviour
 
         FinalImpulse.y += granadeLaunchForce.y; 
 
-
         equippedGranade.Throw(FinalImpulse);
 
         equippedGranade = null;

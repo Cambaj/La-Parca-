@@ -22643,6 +22643,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
+      propertyPath: fallMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965283832765514625, guid: 3f4bb5e500ffe5d4ba192c995d9f0091, type: 3}
       propertyPath: grappleDashForce
       value: 19
       objectReference: {fileID: 0}

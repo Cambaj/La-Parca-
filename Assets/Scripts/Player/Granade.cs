@@ -107,45 +107,38 @@ public class Granade : MonoBehaviour
     }
     private void Explotes()
     {
+        Debug.Log($"[Granada] Explotando en {transform.position}. Radio: {explosionRadius}");
+
         isActive = false;
 
         if (!wasThrown && equippedPlayer != null)
         {
-            PlayerMovement player = equippedPlayer.GetComponent<PlayerMovement>();
-            if (player != null)
+            var playerMovement = equippedPlayer.GetComponent<MonoBehaviour>();
+            if (playerMovement != null)
             {
-                 player.ForceToDropGranade();
-                 player.Die(); //El jugador muere si la granda explota en la mano
+                playerMovement.SendMessage("ForceToDropGranade", SendMessageOptions.DontRequireReceiver);
+                playerMovement.SendMessage("Die", SendMessageOptions.DontRequireReceiver);
             }
            
         }
-
         if (explosionEffectPrefab != null)
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+        // --- NUEVO ESCANEO BRUTO (IGNORA CONFIGURACIÓN DE LAYERS DEL PROYECTO) ---
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter(); // Le dice a Unity: "No me importa la capa, busca TODO"
+
+        Collider2D[] radiatedObjects = new Collider2D[30]; // Array temporal para guardar los impactos
+        int count = Physics2D.OverlapCircle(transform.position, explosionRadius, filter, radiatedObjects);
+
+        for (int i = 0; i < count; i++)
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, playerObj.transform.position);
+            Collider2D hit = radiatedObjects[i];
+            if (hit == null) continue;
 
-            if (distanceToPlayer <= explosionRadius)
-            {
-                PlayerMovement playerMovement = playerObj.GetComponent<PlayerMovement>();
-                if (playerMovement != null)
-                {
-                    Debug.Log("<Color=Red><b>¡EL JUGADOR DEBERÍA MORIR AHORA!</b></Color> Distancia: " + distanceToPlayer);
-                    playerMovement.Die();
-                }
-            }
-        }
-
-        // Detectar objetos en el radio de explosión (Paredes agrietadas y el Jugador)
-        Collider2D[] radiatedObjects = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
-
-        foreach (Collider2D hit in radiatedObjects)
-        {
+            // Bloques destructibles
             DestroyableBlock nuevoBloque = hit.GetComponent<DestroyableBlock>();
             if (nuevoBloque != null)
             {
@@ -153,24 +146,22 @@ public class Granade : MonoBehaviour
                 continue;
             }
 
-            // Compatibilidad por Tag con tus estructuras viejas si las dejás en la misma capa
             if (hit.CompareTag("Destroyable Wall"))
             {
                 Destroy(hit.gameObject);
                 continue;
             }
 
+            // CONTROL DE DAÑO AL JUGADOR
             if (hit.CompareTag("Player"))
             {
-                PlayerMovement player = hit.GetComponent<PlayerMovement>();
-                if (player != null)
-                {
-                    player.Die();
-                }
+                Debug.Log("<Color=Green><b>¡GRANADA DETECTÓ AL JUGADOR!</b></Color> Enviando señal de muerte...");
+                hit.gameObject.SendMessage("Die", SendMessageOptions.DontRequireReceiver);
             }
         }
-        
+
         Destroy(gameObject);
+
     }
 
     private void OnDrawGizmosSelected()
