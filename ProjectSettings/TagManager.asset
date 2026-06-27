@@ -11,6 +11,7 @@ TagManager:
   - Bone
   - DestroyableWall
   - Granade
+  - PausePanel
   layers:
   - Default
   - TransparentFX
