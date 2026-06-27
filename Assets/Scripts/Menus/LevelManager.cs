@@ -39,25 +39,12 @@ public class LevelManager : MonoBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-       if(SceneManager.GetActiveScene().name == startScreenScene)
+       if(currentScene == startScreenScene)
         {
             if (Input.GetKeyDown(startKey) || Input.GetKeyDown(KeyCode.JoystickButton7))
             {
                 LoadScene(menuScene);
             }
-            return;
-        }
-        if (Input.GetKeyDown(pauseKey) || Input.GetKeyDown(KeyCode.JoystickButton7))
-        {
-            if (pausePanel == null)
-            {
-                pausePanel = GameObject.Find("PausePanel");
-            }
-
-            if (!isPaused)
-                PauseGame();
-            else
-                ResumeGame();
         }
     }
     public void LoadScene(string sceneName, float delay = 2.0f)
