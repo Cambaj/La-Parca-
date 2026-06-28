@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: d908bec852d169f42a8e99ab77d7f178
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4040223164706775526
+    second: Tile para tercer Reino_0
+  - first:
+      213: 4551583663719763474
+    second: Tile para tercer Reino_1
+  - first:
+      213: 7246308627933729933
+    second: Tile para tercer Reino_2
+  - first:
+      213: 7652575115544442671
+    second: Tile para tercer Reino_3
+  - first:
+      213: 3428296518145308485
+    second: Tile para tercer Reino_4
+  - first:
+      213: -3513307016816459467
+    second: Tile para tercer Reino_5
+  - first:
+      213: 5596900344481544380
+    second: Tile para tercer Reino_6
+  - first:
+      213: 4495092611770268611
+    second: Tile para tercer Reino_7
+  - first:
+      213: -5718884014869074478
+    second: Tile para tercer Reino_8
+  - first:
+      213: -7170739761000365009
+    second: Tile para tercer Reino_9
+  - first:
+      213: 809625749151627929
+    second: Tile para tercer Reino_10
+  - first:
+      213: -3221085401865425151
+    second: Tile para tercer Reino_11
+  - first:
+      213: 9085789234578605409
+    second: Tile para tercer Reino_12
+  - first:
+      213: 1487141054231062586
+    second: Tile para tercer Reino_13
+  - first:
+      213: 2978075467701676818
+    second: Tile para tercer Reino_14
+  - first:
+      213: -7584934364026250745
+    second: Tile para tercer Reino_15
+  - first:
+      213: 5714420814716340274
+    second: Tile para tercer Reino_16
+  - first:
+      213: -3909536514951416490
+    second: Tile para tercer Reino_17
+  - first:
+      213: -950957472786347403
+    second: Tile para tercer Reino_18
+  - first:
+      213: -4608931850886891494
+    second: Tile para tercer Reino_19
+  - first:
+      213: -4782203790482412249
+    second: Tile para tercer Reino_20
+  - first:
+      213: -8609211815472900819
+    second: Tile para tercer Reino_21
+  - first:
+      213: -8324386082543910409
+    second: Tile para tercer Reino_22
+  - first:
+      213: -8054602620598759025
+    second: Tile para tercer Reino_23
+  - first:
+      213: 9220589518167503821
+    second: Tile para tercer Reino_24
+  - first:
+      213: -7449782975324775067
+    second: Tile para tercer Reino_25
+  - first:
+      213: -7243509862382025590
+    second: Tile para tercer Reino_26
+  - first:
+      213: 6590501792154334729
+    second: Tile para tercer Reino_27
+  - first:
+      213: -3735692634474146603
+    second: Tile para tercer Reino_28
+  - first:
+      213: 4941910898301060756
+    second: Tile para tercer Reino_29
+  - first:
+      213: -3938185691435986320
+    second: Tile para tercer Reino_30
+  - first:
+      213: -1983209626844188780
+    second: Tile para tercer Reino_31
+  - first:
+      213: 649947258429889974
+    second: Tile para tercer Reino_32
+  - first:
+      213: -3363293470432980554
+    second: Tile para tercer Reino_33
+  - first:
+      213: 4541810866264945256
+    second: Tile para tercer Reino_34
+  - first:
+      213: 8201249790975847911
+    second: Tile para tercer Reino_35
+  - first:
+      213: -8422656835978417348
+    second: Tile para tercer Reino_36
+  - first:
+      213: -8739284655949618667
+    second: Tile para tercer Reino_37
+  - first:
+      213: 688364821531822209
+    second: Tile para tercer Reino_38
+  - first:
+      213: 6866418834994869481
+    second: Tile para tercer Reino_39
+  - first:
+      213: 4124630137241415229
+    second: Tile para tercer Reino_40
+  - first:
+      213: 2571063761168969815
+    second: Tile para tercer Reino_41
+  - first:
+      213: -3790857440609206174
+    second: Tile para tercer Reino_42
+  - first:
+      213: 6128356625365646151
+    second: Tile para tercer Reino_43
+  - first:
+      213: -4208227896243327630
+    second: Tile para tercer Reino_44
+  - first:
+      213: 7781009467552647729
+    second: Tile para tercer Reino_45
+  - first:
+      213: -764651069805313742
+    second: Tile para tercer Reino_46
+  - first:
+      213: -5211981022283096674
+    second: Tile para tercer Reino_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile para tercer Reino_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e195e007e3ee7c0800000000000000
+      internalID: -4040223164706775526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ecc711a397a2f30800000000000000
+      internalID: 4551583663719763474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 232
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8496d4fd4f009460800000000000000
+      internalID: 7246308627933729933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 198
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f273503c588633a60800000000000000
+      internalID: 7652575115544442671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 232
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54772c4f481c39f20800000000000000
+      internalID: 3428296518145308485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 198
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53184cbe1e93e3fc0800000000000000
+      internalID: -3513307016816459467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 230
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8751ca53f2cad40800000000000000
+      internalID: 5596900344481544380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_7
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 231
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cbbc051ae6c16e30800000000000000
+      internalID: 4495092611770268611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_8
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 231
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dda116d94172a0b0800000000000000
+      internalID: -5718884014869074478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 232
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24cdc8fd2a6c7c90800000000000000
+      internalID: -7170739761000365009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 198
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a313b445e5c3b00800000000000000
+      internalID: 809625749151627929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f6d9e94e76c43d0800000000000000
+      internalID: -3221085401865425151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 165
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16540279b25371e70800000000000000
+      internalID: 9085789234578605409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 165
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38a75cd8e263a410800000000000000
+      internalID: 1487141054231062586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 198
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21be9aefbdf345920800000000000000
+      internalID: 2978075467701676818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_15
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 165
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70adf83f166ecb690800000000000000
+      internalID: -7584934364026250745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 164
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23804466473bd4f40800000000000000
+      internalID: 5714420814716340274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655f6e5d0498eb9c0800000000000000
+      internalID: -3909536514951416490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a011687358dc2f0800000000000000
+      internalID: -950957472786347403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_19
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 98
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1837e996e8c900c0800000000000000
+      internalID: -4608931850886891494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_20
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 132
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72de4c06df232adb0800000000000000
+      internalID: -4782203790482412249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_21
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 98
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2554a6a77fe58880800000000000000
+      internalID: -8609211815472900819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_22
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 132
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1c3c066f6d97c80800000000000000
+      internalID: -8324386082543910409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_23
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 99
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81d748779d483090800000000000000
+      internalID: -8054602620598759025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_24
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 132
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc37012605d16ff70800000000000000
+      internalID: 9220589518167503821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 132
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d9306cadd0d9890800000000000000
+      internalID: -7449782975324775067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 99
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a844ead6822e97b90800000000000000
+      internalID: -7243509862382025590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_27
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 99
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9063fe4467a267b50800000000000000
+      internalID: 6590501792154334729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_28
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 132
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4102c6757282cc0800000000000000
+      internalID: -3735692634474146603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_29
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 98
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496cdd457c1359440800000000000000
+      internalID: 4941910898301060756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_30
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 132
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0729e62aaf0c859c0800000000000000
+      internalID: -3938185691435986320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f21d41a593a74e0800000000000000
+      internalID: -1983209626844188780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_32
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 65
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bdd3758693150900800000000000000
+      internalID: 649947258429889974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_33
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 65
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1937b786e2351d0800000000000000
+      internalID: -3363293470432980554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_34
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 66
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8623bb85be0c70f30800000000000000
+      internalID: 4541810866264945256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_35
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 33
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edac599b31b0d170800000000000000
+      internalID: 8201249790975847911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_36
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 66
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bad7a9b36bc1b80800000000000000
+      internalID: -8422656835978417348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_37
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 33
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512e91b78e2d7b680800000000000000
+      internalID: -8739284655949618667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_38
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 66
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188874778209d8900800000000000000
+      internalID: 688364821531822209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_39
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 33
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4bbe2fc8b6a4f50800000000000000
+      internalID: 6866418834994869481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_40
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 64
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e2520b141ad3930800000000000000
+      internalID: 4124630137241415229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7503b536ed04ea320800000000000000
+      internalID: 2571063761168969815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_42
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 29
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260875a1e3b246bc0800000000000000
+      internalID: -3790857440609206174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_43
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 29
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74bb4df91eb4c0550800000000000000
+      internalID: 6128356625365646151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_44
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27de686460f5995c0800000000000000
+      internalID: -4208227896243327630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_45
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a4d6b92e2bbfb60800000000000000
+      internalID: 7781009467552647729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_46
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231c12f37e96365f0800000000000000
+      internalID: -764651069805313742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile para tercer Reino_47
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 30
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d1dbedfd25ba7b0800000000000000
+      internalID: -5211981022283096674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tile para tercer Reino_0: -4040223164706775526
+      Tile para tercer Reino_1: 4551583663719763474
+      Tile para tercer Reino_10: 809625749151627929
+      Tile para tercer Reino_11: -3221085401865425151
+      Tile para tercer Reino_12: 9085789234578605409
+      Tile para tercer Reino_13: 1487141054231062586
+      Tile para tercer Reino_14: 2978075467701676818
+      Tile para tercer Reino_15: -7584934364026250745
+      Tile para tercer Reino_16: 5714420814716340274
+      Tile para tercer Reino_17: -3909536514951416490
+      Tile para tercer Reino_18: -950957472786347403
+      Tile para tercer Reino_19: -4608931850886891494
+      Tile para tercer Reino_2: 7246308627933729933
+      Tile para tercer Reino_20: -4782203790482412249
+      Tile para tercer Reino_21: -8609211815472900819
+      Tile para tercer Reino_22: -8324386082543910409
+      Tile para tercer Reino_23: -8054602620598759025
+      Tile para tercer Reino_24: 9220589518167503821
+      Tile para tercer Reino_25: -7449782975324775067
+      Tile para tercer Reino_26: -7243509862382025590
+      Tile para tercer Reino_27: 6590501792154334729
+      Tile para tercer Reino_28: -3735692634474146603
+      Tile para tercer Reino_29: 4941910898301060756
+      Tile para tercer Reino_3: 7652575115544442671
+      Tile para tercer Reino_30: -3938185691435986320
+      Tile para tercer Reino_31: -1983209626844188780
+      Tile para tercer Reino_32: 649947258429889974
+      Tile para tercer Reino_33: -3363293470432980554
+      Tile para tercer Reino_34: 4541810866264945256
+      Tile para tercer Reino_35: 8201249790975847911
+      Tile para tercer Reino_36: -8422656835978417348
+      Tile para tercer Reino_37: -8739284655949618667
+      Tile para tercer Reino_38: 688364821531822209
+      Tile para tercer Reino_39: 6866418834994869481
+      Tile para tercer Reino_4: 3428296518145308485
+      Tile para tercer Reino_40: 4124630137241415229
+      Tile para tercer Reino_41: 2571063761168969815
+      Tile para tercer Reino_42: -3790857440609206174
+      Tile para tercer Reino_43: 6128356625365646151
+      Tile para tercer Reino_44: -4208227896243327630
+      Tile para tercer Reino_45: 7781009467552647729
+      Tile para tercer Reino_46: -764651069805313742
+      Tile para tercer Reino_47: -5211981022283096674
+      Tile para tercer Reino_5: -3513307016816459467
+      Tile para tercer Reino_6: 5596900344481544380
+      Tile para tercer Reino_7: 4495092611770268611
+      Tile para tercer Reino_8: -5718884014869074478
+      Tile para tercer Reino_9: -7170739761000365009
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
