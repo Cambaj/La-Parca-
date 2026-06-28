@@ -8,6 +8,7 @@ public class HungrySoul : MonoBehaviour
     public Transform player;
     public AudioSource audioSource;
     public AudioClip warningSound;
+    public AudioClip pinnedLoopSound;
 
     [Header("Girando")]
     public float minRadius = 2.5f;
@@ -110,6 +111,14 @@ public class HungrySoul : MonoBehaviour
         StopAllCoroutines();
 
         canDamagePlayer = false;
+
+        if (audioSource && pinnedLoopSound)
+        {
+            audioSource.Stop();
+            audioSource.clip = pinnedLoopSound;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 
     public void ReleaseSoul()
@@ -177,6 +186,13 @@ public class HungrySoul : MonoBehaviour
 
     IEnumerator ReleaseRoutine()
     {
+        if (audioSource && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.loop = false;
+            audioSource.clip = null;
+        }
+
         yield return new WaitForSeconds(1f);
 
         pinned = false;

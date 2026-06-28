@@ -144,7 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   player: {fileID: 0}
   audioSource: {fileID: 1521762241455214659}
-  warningSound: {fileID: 8300000, guid: 71a1fbb7fdc16ca4ba016eb02e423fc8, type: 3}
+  warningSound: {fileID: 8300000, guid: 44f16eea35fda0e43abe279092277c2e, type: 3}
+  pinnedLoopSound: {fileID: 8300000, guid: 993b53252e4b88e48aad87c4b1ffef73, type: 3}
   minRadius: 2.5
   maxRadius: 3.5
   minAngularSpeed: 150
