@@ -24,6 +24,15 @@ public class CanvasManager : MonoBehaviour
     private GameObject panelActivoActual;
     private GameObject panelAnterior;
 
+    //Variables Globales para trucos 
+    public static bool CheatInmortal = false;
+    public static bool CheatSaltarEscenas = false;
+
+    [Header("Componente de Opciones")]
+    [SerializeField] private Toggle toggleInmortal;
+    [SerializeField] private Toggle toggleSaltar;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -39,13 +48,20 @@ public class CanvasManager : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.pause = false;
         if (pausePanel != null) pausePanel.SetActive(false);
-        if (optionsPanel != null) optionsPanel.SetActive(false);     
+        if (optionsPanel != null) optionsPanel.SetActive(false);
 
         AsegurarFocoInicial();
     }
 
-     void Start() => AsegurarFocoInicial();
-     
+    private void Start()
+    {
+        // Le dice al LevelManager que refresque los botones que tenga asignados
+        if (LevelManager.instance != null)
+        {
+            LevelManager.instance.ActualizarSelectorNiveles();
+        }
+        AsegurarFocoInicial();
+    }
     void Update()
     {
         if (pausePanel != null)
@@ -61,9 +77,7 @@ public class CanvasManager : MonoBehaviour
             if (escapePressed) TogglePause();
         }
 
-
-
-// Sistema de movimiento automático de las guadañas
+        // Sistema de movimiento automático de las guadañas
         if (indicadorVisual != null && UnityEngine.EventSystems.EventSystem.current != null)
         {
             GameObject seleccionadoActual = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
@@ -84,13 +98,24 @@ public class CanvasManager : MonoBehaviour
                 }
             }
         }
+
+        // Adentro del Update() actual, abajo de todo:
+        if (CheatSaltarEscenas && Input.GetKeyDown(KeyCode.N))
+        {
+            int siguienteEscenaIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            // Si no es la última escena del juego, avanza
+            if (siguienteEscenaIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(siguienteEscenaIndex);
+            }
+        }
+
     }
 
     private void AsegurarFocoInicial()
     {
         if (mainMenuPanel != null && mainMenuPanel.activeSelf) panelActivoActual = mainMenuPanel;
         else if (levelSelectorPanel != null && levelSelectorPanel.activeSelf) panelActivoActual = levelSelectorPanel;
-        else if (pausePanel != null && pausePanel.activeSelf) panelActivoActual = pausePanel;
         else if (pausePanel != null && pausePanel.activeSelf) panelActivoActual = pausePanel;
 
         if (panelActivoActual != null)
@@ -99,6 +124,18 @@ public class CanvasManager : MonoBehaviour
             Selectable primerElemento = panelActivoActual.GetComponentInChildren<Button>();
             if (primerElemento == null) primerElemento = panelActivoActual.GetComponentInChildren<Slider>();
 
+            if (primerElemento != null && !primerElemento.interactable)
+            {
+                Selectable[] todos = panelActivoActual.GetComponentsInChildren<Selectable>();
+                foreach (Selectable s in todos)
+                {
+                    if (s.interactable)
+                    {
+                        primerElemento = s;
+                        break;
+                    }
+                }
+            }
             if (primerElemento != null)
             {
                 primerElemento.Select();
@@ -110,7 +147,16 @@ public class CanvasManager : MonoBehaviour
         }
     }
 
-    // Flujo de Navegacion 
+    public void UI_DesbloquearNivelDev(string reino)
+    {
+        if (LevelManager.instance != null) LevelManager.instance.DesbloquearSiguienteNivel(reino, 2);
+    }
+
+    public void U_BorrarProgresoDev()
+    {
+        if (LevelManager.instance != null) LevelManager.instance.BorrarProgreso();
+        AsegurarFocoInicial();
+    }
 
     public void CambiarPanel(GameObject panelDestino)
     {
@@ -118,18 +164,20 @@ public class CanvasManager : MonoBehaviour
 
         if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
         if (levelSelectorPanel != null) levelSelectorPanel.SetActive(false);
-        if(optionsPanel != null) optionsPanel.SetActive(false);
-        if (optionsPanel != null) pausePanel.SetActive(false);
+        if (optionsPanel != null) optionsPanel.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
 
         panelDestino.SetActive(true);
         panelActivoActual = panelDestino;
         AsegurarFocoInicial();
     }
+
     public void VolverAtras()
     {
         if (panelAnterior != null) CambiarPanel(panelAnterior);
         else if (mainMenuPanel != null) CambiarPanel(mainMenuPanel);
     }
+
     public void TogglePause()
     {
         isPaused = !isPaused;
@@ -137,9 +185,9 @@ public class CanvasManager : MonoBehaviour
 
         if (isPaused)
         {
-            Time.timeScale = 0f; // Congela el tiempo del juego
+            Time.timeScale = 0f;
             AudioListener.pause = true;
-            if (pausePanel != null) pausePanel.SetActive(true); // Muestra el panel
+            if (pausePanel != null) pausePanel.SetActive(true);
             panelActivoActual = pausePanel;
             AsegurarFocoInicial();
             if (playerHandler != null) playerHandler.PausePlayer();
@@ -151,13 +199,10 @@ public class CanvasManager : MonoBehaviour
             Time.timeScale = 1f;
             AudioListener.pause = false;
             if (pausePanel != null) pausePanel.SetActive(false);
-            if (playerHandler != null) playerHandler.ResumePlayer();
             if (optionsPanel != null) optionsPanel.SetActive(false);
-            if(playerHandler !=null) playerHandler.PausePlayer();
+            if (playerHandler != null) playerHandler.ResumePlayer();
         }
     }
-
-    //Acciones de juego y reinicio 
 
     public void ReiniciarNivelActual()
     {
@@ -175,7 +220,7 @@ public class CanvasManager : MonoBehaviour
 
     public void CargarEscena(string nombreEscena)
     {
-        Time.timeScale += 1f;
+        Time.timeScale = 1f; // Corregido el acelerador involuntario de tiempo
         AudioListener.pause = false;
         SceneManager.LoadScene(nombreEscena);
     }
@@ -185,15 +230,32 @@ public class CanvasManager : MonoBehaviour
         Application.Quit();
     }
 
-    //Ajustes de volumen
+    // --- NUEVO: Lógica de Cheats (Se vinculan a los Toggles) ---
+
+    public void UI_ToggleInmortalidad(bool estado)
+    {
+        CheatInmortal = estado;
+        Debug.Log("Modo Dios: " + (CheatInmortal ? "ACTIVADO" : "DESACTIVADO"));
+    }
+
+    public void UI_ToggleSaltarEscenas(bool estado)
+    {
+        CheatSaltarEscenas = estado;
+        Debug.Log("Saltear Escenas: " + (CheatSaltarEscenas ? "ACTIVADO" : "DESACTIVADO"));
+    }
+
+    // --- AJUSTES DE VOLUMEN (Actualizados) ---
 
     public void CambiarVolumenMusica(float valor)
     {
-        Debug.Log("Volumen Musica" + valor);
+        // El valor va de 0.0f a 1.0f. Aquí conectarías con tu AudioMixer a futuro
+        Debug.Log("Volumen Musica: " + (valor * 100).ToString("F0") + "%");
     }
 
     public void CambiarVolumenSonido(float valor)
     {
-        Debug.Log("Volumen Sonido:" + valor);
+        Debug.Log("Volumen Sonido: " + (valor * 100).ToString("F0") + "%");
     }
+
+
 }

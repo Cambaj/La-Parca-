@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class LevelManager : MonoBehaviour
@@ -9,16 +10,22 @@ public class LevelManager : MonoBehaviour
 
     [Header("Tecla de Sistema Clasico")]
     [SerializeField] private KeyCode startKey = KeyCode.Return;
-    [SerializeField] private KeyCode pauseKey = KeyCode.Escape; 
 
     [Header("References")]
     [SerializeField] private string startScreenScene = "StartScreen";
     [SerializeField] private string menuScene = "Menu";
 
-    [Header("Refencia Directa al Panel")]
-    [SerializeField] public GameObject pausePanel;
+    private string activeSceneName;
 
-    public bool isPaused = false;
+    [System.Serializable]
+    public struct ReinoBotones
+    {
+        public string nombreReino;
+        public Button[] botonesNiveles;
+    }
+
+    [Header("Progreso de Reinos y Niveles")]
+    [SerializeField] private ReinoBotones[] reinos;
 
     private void Awake()
     {
@@ -35,6 +42,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        ActualizarSelectorNiveles();
+    }
+
     private void Update()
     {
         string currentScene = SceneManager.GetActiveScene().name;
@@ -43,77 +55,76 @@ public class LevelManager : MonoBehaviour
         {
             if (Input.GetKeyDown(startKey) || Input.GetKeyDown(KeyCode.JoystickButton7))
             {
-                LoadScene(menuScene);
+                LoadScene(menuScene, 0f);
             }
         }
     }
+
+    public void ActualizarSelectorNiveles()
+    {
+        if (reinos == null || reinos.Length == 0) return;
+
+        foreach (var reino in reinos)
+        {
+            for (int i = 0; i < reino.botonesNiveles.Length; i++)
+            {
+                if (reino.botonesNiveles[i] == null) continue;
+
+                if (i == 0)
+                {
+                    reino.botonesNiveles[i].interactable = true;
+                    continue;
+                }
+
+                // Generamos la clave única de guardado, ej: "Hambruna_Nivel_2"
+                string claveGuardado = reino.nombreReino + "_Nivel_" + (i + 1);
+
+                int nivelDesbloqueado = PlayerPrefs.GetInt(claveGuardado, 0);
+
+                reino.botonesNiveles[i].interactable = (nivelDesbloqueado == 1);
+            }
+        }
+    }
+
+    public void DesbloquearSiguienteNivel(string nombreReino, int numeroNivelAlLiberar)
+    {
+        string claveGuardado = nombreReino + "_Nivel_" + numeroNivelAlLiberar;
+        PlayerPrefs.SetInt(claveGuardado, 1);
+        PlayerPrefs.Save();
+
+        ActualizarSelectorNiveles();
+    }
+
+    [ContextMenu("Borrar Todo el Progreso")]
+    public void BorrarProgreso()
+    {
+        if (reinos != null)
+        {
+            foreach (var reino in reinos)
+            {
+                for (int i = 2; i <= reino.botonesNiveles.Length; i++)
+                {
+                    PlayerPrefs.DeleteKey(reino.nombreReino + "_Nivel_" + i);
+                }
+            }
+        }
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Progreso de niveles reseteados.");
+        ActualizarSelectorNiveles();
+    }
+
+    // FUNCIONEES NATIVAS DE ESCENA Y PAUSA
+
     public void LoadScene(string sceneName, float delay = 2.0f)
     {
         Invoke(nameof(ExecuteLoad), delay);
         activeSceneName = sceneName;
     }
-    private string activeSceneName;
     private void ExecuteLoad()
     {
         // Carga la escena de forma Single (borra la anterior automáticamente)
         SceneManager.LoadScene(activeSceneName, LoadSceneMode.Single);
     }
-    public void PauseGame()
-    {
-        isPaused = true;
-        Time.timeScale = 0f;
-
-        // Si la referencia se perdió, buscamos el objeto en la escena aunque esté desactivado
-        if (pausePanel == null)
-        {
-            pausePanel.SetActive(true);
-
-            foreach (Animator anim in pausePanel.GetComponentsInChildren<Animator>())
-                anim.updateMode = AnimatorUpdateMode.UnscaledTime;
-        }
-        PlayerPauseHandler playerHandler = FindFirstObjectByType<PlayerPauseHandler>();
-        if (playerHandler != null) playerHandler.PausePlayer();
-    }
-
-    public void ResumeGame()
-    {
-        isPaused = false;
-        Time.timeScale = 1f;
-
-        if (pausePanel != null)
-        {
-            pausePanel.SetActive(false);
-        }
-
-        PlayerPauseHandler playerHandler = GetPlayerHandler();
-        if (playerHandler != null)
-        {
-            playerHandler.ResumePlayer();
-        }
-    }
-
-    public void ReturnToMenuFromPause(float delay = 0f)
-    {
-        isPaused = false;
-        Time.timeScale = 1f;
-        LoadScene(menuScene, delay);
-    }
-
-    private PlayerPauseHandler GetPlayerHandler()
-    {
-        return FindFirstObjectByType<PlayerPauseHandler>();
-    }
-
-    public void ExitGame()
-    {
-        Debug.Log("Exit Game...");
-
-        Application.Quit();
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-    }
-
+    
 }
 

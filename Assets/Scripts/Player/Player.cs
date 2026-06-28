@@ -632,6 +632,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Die()
     {
+        if (CanvasManager.CheatInmortal) return;
+
         if (isDead) return;
         isDead = true;
         rb.gravityScale = 0;
@@ -782,6 +784,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
+            if (CanvasManager.CheatInmortal) return;
+
             isDead = true;
             rb.gravityScale = 0;
             rb.linearVelocity = new Vector2(0, 0);
@@ -859,7 +863,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    
 
     //Usada por la animacion de Death
     private void ReloadCurrentScene()
