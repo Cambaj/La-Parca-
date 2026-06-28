@@ -11,6 +11,11 @@ public class Portal : MonoBehaviour
 
     public Vector2 launchDirection = Vector2.right;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip enterPortalSound;
+    public AudioClip exitPortalSound;
+
     PlayerMovement player;
 
     private void Start()
@@ -24,6 +29,7 @@ public class Portal : MonoBehaviour
 
         if (rb != null && destination != null && player.canTP)
         {
+            AudioSource.PlayClipAtPoint(enterPortalSound, transform.position);
             StartCoroutine(TeleportPlayer(rb));
         }
     }
@@ -43,6 +49,8 @@ public class Portal : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         rb.transform.position = destination.position;
+
+        AudioSource.PlayClipAtPoint(exitPortalSound, destination.position);
 
         rb.linearVelocity = Vector2.zero;
 
