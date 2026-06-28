@@ -13,6 +13,12 @@ public class Granade : MonoBehaviour
     [SerializeField] private LayerMask destroyableLayer;
     [SerializeField] private GameObject explosionEffectPrefab;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip pickUpSound;
+    [SerializeField] private AudioClip throwSound;
+    [SerializeField] private AudioClip explosionSound;
+
     private Transform equippedPlayer;
     private Rigidbody2D rb;
     private Collider2D col;
@@ -22,6 +28,7 @@ public class Granade : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -50,6 +57,8 @@ public class Granade : MonoBehaviour
         col.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
+
+        audioSource.PlayOneShot(pickUpSound);
     }
 
     public void Throw(Vector2 impulseForce)
@@ -71,6 +80,8 @@ public class Granade : MonoBehaviour
         {
             StartCoroutine(IgnorePlayerTemporarily(playerCollider));
         }
+
+        audioSource.PlayOneShot(throwSound);
     }
 
     public bool WasThrown()
@@ -118,6 +129,7 @@ public class Granade : MonoBehaviour
             {
                 playerMovement.SendMessage("ForceToDropGranade", SendMessageOptions.DontRequireReceiver);
                 playerMovement.SendMessage("Die", SendMessageOptions.DontRequireReceiver);
+                AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             }
            
         }
@@ -159,7 +171,7 @@ public class Granade : MonoBehaviour
                 hit.gameObject.SendMessage("Die", SendMessageOptions.DontRequireReceiver);
             }
         }
-
+        AudioSource.PlayClipAtPoint(explosionSound, transform.position);
         Destroy(gameObject);
 
     }
