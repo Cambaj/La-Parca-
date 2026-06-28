@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -8,7 +9,12 @@ public class CanvasManager : MonoBehaviour
     [Header("UI Panels")]
     [SerializeField] private GameObject pausePanel;
 
+    [Header("Configuracion del Indicador Visual")]
+    [SerializeField] private RectTransform indicadorVisual;
+    [SerializeField] private Vector3 offsetIndicador = Vector3.zero;
+
     private bool isPaused = false;
+    private GameObject ultimoSeleccionado;
 
     void Awake()
     {
@@ -53,12 +59,32 @@ public class CanvasManager : MonoBehaviour
         {
             TogglePause();
         }
+
+        // Si el juego está pausado, rastreamos qué botón tiene el foco del teclado
+        if (isPaused && indicadorVisual != null && UnityEngine.EventSystems.EventSystem.current != null)
+        {
+            GameObject seleccionadoActual = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+
+            // Si cambiamos de botón con el teclado, movemos el indicador al instante
+            if (seleccionadoActual != null && seleccionadoActual != ultimoSeleccionado)
+            {
+                // Verificar que el objeto seleccionado sea un botón hijo del panel de pausa
+                if (seleccionadoActual.transform.IsChildOf(pausePanel.transform))
+                {
+                    ultimoSeleccionado = seleccionadoActual;
+                    RectTransform botonRect = seleccionadoActual.GetComponent<RectTransform>();
+
+                    // Teletransporta las guadañas a la posición exacta del botón actual
+                    indicadorVisual.position = botonRect.position + offsetIndicador;
+                }
+
+            }
+        }
     }
 
     public void TogglePause()
     {
         isPaused = !isPaused;
-
         PlayerPauseHandler playerHandler = FindFirstObjectByType<PlayerPauseHandler>();
 
         if (isPaused)
@@ -69,7 +95,26 @@ public class CanvasManager : MonoBehaviour
             if (pausePanel != null)
             {
                 pausePanel.SetActive(true); // Muestra el panel
+
+                if (UnityEngine.EventSystems.EventSystem.current != null)
+                {
+                    UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+                }
+
+                Button primerBoton = pausePanel.GetComponentInChildren<Button>();
+                if (primerBoton != null)
+                {
+                    primerBoton.Select();
+                    primerBoton.OnSelect(null);
+
+                    ultimoSeleccionado = primerBoton.gameObject;
+                    if (indicadorVisual != null)
+                    {
+                        indicadorVisual.position = primerBoton.GetComponent<RectTransform>().position + offsetIndicador;
+                    }
+                }
             }
+            if (playerHandler != null) playerHandler.PausePlayer();
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
