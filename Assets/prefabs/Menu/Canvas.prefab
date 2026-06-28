@@ -1691,6 +1691,7 @@ GameObject:
   - component: {fileID: 1890979471309226165}
   - component: {fileID: 4859339895268346499}
   - component: {fileID: 7372419685282613299}
+  - component: {fileID: 5653338037593603817}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1794,8 +1795,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanvasManager
   pausePanel: {fileID: 2428289661977070771}
+  mainMenuPanel: {fileID: 0}
+  levelSelectorPanel: {fileID: 0}
+  optionsPanel: {fileID: 0}
   indicadorVisual: {fileID: 6631289412537685002}
   offsetIndicador: {x: 0, y: 0, z: 0}
+  toggleInmortal: {fileID: 0}
+  toggleSaltar: {fileID: 0}
+--- !u!114 &5653338037593603817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567763448855514530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e85054b0e0505141aafddc512241f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseButtonConector
+  botonReanudar: {fileID: 2005387233424203366}
+  botonReiniciarNivel: {fileID: 4121295288449378762}
+  botonReiniciarReino: {fileID: 7388431389098594736}
+  botonSelectorNiveles: {fileID: 2752446588481661654}
+  botonOpciones: {fileID: 5112831790157357473}
+  botonSalirJuego: {fileID: 1592797161074647041}
+  botonMenuPrincipal: {fileID: 6377121055648345165}
+  primerNivelDelReino: 
 --- !u!1 &7331717915203931878
 GameObject:
   m_ObjectHideFlags: 0

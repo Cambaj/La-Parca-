@@ -15,6 +15,8 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private GameObject levelSelectorPanel;
     [SerializeField] private GameObject optionsPanel;
 
+    public GameObject OptionsPanel => optionsPanel;
+
     [Header("Configuracion del Indicador Visual")]
     [SerializeField] private RectTransform indicadorVisual;
     [SerializeField] private Vector3 offsetIndicador = Vector3.zero;
@@ -117,6 +119,7 @@ public class CanvasManager : MonoBehaviour
         if (mainMenuPanel != null && mainMenuPanel.activeSelf) panelActivoActual = mainMenuPanel;
         else if (levelSelectorPanel != null && levelSelectorPanel.activeSelf) panelActivoActual = levelSelectorPanel;
         else if (pausePanel != null && pausePanel.activeSelf) panelActivoActual = pausePanel;
+        else panelActivoActual = null;
 
         if (panelActivoActual != null)
         {
@@ -188,8 +191,7 @@ public class CanvasManager : MonoBehaviour
             Time.timeScale = 0f;
             AudioListener.pause = true;
             if (pausePanel != null) pausePanel.SetActive(true);
-            panelActivoActual = pausePanel;
-            AsegurarFocoInicial();
+
             if (playerHandler != null) playerHandler.PausePlayer();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -199,7 +201,6 @@ public class CanvasManager : MonoBehaviour
             Time.timeScale = 1f;
             AudioListener.pause = false;
             if (pausePanel != null) pausePanel.SetActive(false);
-            if (optionsPanel != null) optionsPanel.SetActive(false);
             if (playerHandler != null) playerHandler.ResumePlayer();
         }
     }

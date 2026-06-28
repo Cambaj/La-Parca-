@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 63d3762b629596240af9dbf297997196
   - enabled: 1
-    path: Assets/Scenes/PantallaNiveles.unity
-    guid: 5088fb5e2bbd4594bbdd89be486394b0
-  - enabled: 1
     path: Assets/Scenes/Reino 1/1-1.unity
     guid: 991c2f577c57e994a9af51c391287040
   - enabled: 1
