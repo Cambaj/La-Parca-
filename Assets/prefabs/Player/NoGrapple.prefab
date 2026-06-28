@@ -232,6 +232,7 @@ MonoBehaviour:
   normalGravityScale: 1.5
   jumpBufferTime: 0.1
   coyoteTime: 0.15
+  unlockedGrapple: 0
   grappleMaxDistance: 0
   grappleSpeed: 0
   grappleDuration: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   wallJumpForceX: 10
   wallJumpForceY: 10
   wallJumpDuration: 0.2
+  unlockedDash: 0
   dashForce: 15
   dashDuration: 0.2
   TopRight: 0
@@ -260,12 +262,14 @@ MonoBehaviour:
   externalLaunchTime: 0
   canTP: 0
   walkAudio: {fileID: 5744049087706763607}
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 13404797f5b6b7b43a29c1c723fa1737, type: 3}
   grappleLaunchSound: {fileID: 0}
   grappleHookSound: {fileID: 0}
   grappleRecoverSound: {fileID: 0}
   dashSound: {fileID: 8300000, guid: 31ff6c8a114ae504da2553b3bfe89842, type: 3}
   walkGrassSound: {fileID: 8300000, guid: 9420863647575a24dad83dc95e8af1e1, type: 3}
+  throwBoneSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: 437ede7b1f675b34184d98fc960080e3, type: 3}
 --- !u!95 &4924457454789412545
 Animator:
   serializedVersion: 7

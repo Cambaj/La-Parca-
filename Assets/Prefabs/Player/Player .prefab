@@ -265,12 +265,14 @@ MonoBehaviour:
   externalLaunchTime: 0
   canTP: 0
   walkAudio: {fileID: 8144122554586509392}
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 13404797f5b6b7b43a29c1c723fa1737, type: 3}
   grappleLaunchSound: {fileID: 8300000, guid: 8dc91a8a08af1fe40b52b3c6f0099e83, type: 3}
   grappleHookSound: {fileID: 8300000, guid: 71a1fbb7fdc16ca4ba016eb02e423fc8, type: 3}
   grappleRecoverSound: {fileID: 8300000, guid: c6a2c0f537eeda349ac29bdfafd5cdf9, type: 3}
   dashSound: {fileID: 8300000, guid: 31ff6c8a114ae504da2553b3bfe89842, type: 3}
   walkGrassSound: {fileID: 8300000, guid: 9420863647575a24dad83dc95e8af1e1, type: 3}
+  throwBoneSound: {fileID: 8300000, guid: 46c489b588b17af4d955743f0e56f05e, type: 3}
+  dieSound: {fileID: 8300000, guid: 437ede7b1f675b34184d98fc960080e3, type: 3}
 --- !u!120 &3464255328292084296
 LineRenderer:
   serializedVersion: 3

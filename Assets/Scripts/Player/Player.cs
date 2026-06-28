@@ -119,6 +119,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip grappleRecoverSound;
     [SerializeField] private AudioClip dashSound;
     [SerializeField] private AudioClip walkGrassSound;
+    [SerializeField] private AudioClip throwBoneSound;
+    [SerializeField] private AudioClip dieSound;
 
     private bool isDead = false;
 
@@ -611,6 +613,8 @@ public class PlayerMovement : MonoBehaviour
                 soulBoneSpawn.position,
                 Quaternion.identity);
 
+        audio.PlayOneShot(throwBoneSound);
+
         SoulBone soulBone =
             bone.GetComponent<SoulBone>();
 
@@ -638,6 +642,7 @@ public class PlayerMovement : MonoBehaviour
         isDead = true;
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(0, 0);
+        audio.PlayOneShot(dieSound);
         anim.SetTrigger("IsDeath");
     }
 
