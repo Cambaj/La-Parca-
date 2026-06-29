@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6036510867163731878}
   - component: {fileID: 3631349519173558260}
   m_Layer: 0
-  m_Name: FondoDeHambre (1)
+  m_Name: FondoDeHambre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
