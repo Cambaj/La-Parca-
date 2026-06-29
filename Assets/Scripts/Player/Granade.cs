@@ -38,7 +38,7 @@ public class Granade : MonoBehaviour
             timer -= Time.deltaTime;
             if (!wasThrown && equippedPlayer != null)
             {
-                transform.position = equippedPlayer.position + new Vector3(0, 0.8f, 0);
+                transform.position = equippedPlayer.position;
             }
             if (timer <= 0f)
             {
