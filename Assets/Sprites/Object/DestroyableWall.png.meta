@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ea7359e5041aa964aa5e6f5ac862a908
+guid: 1d3256916814e30468625bfce5922743
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1615136969325600889
-    second: Alma Hambrienta atacando_buscando buscando hueso-3.png_0
+      213: 8217397039453328221
+    second: DestroyableWall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alma Hambrienta atacando_buscando buscando hueso-3.png_0
+      name: DestroyableWall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78f1fb7db71e599e0800000000000000
-      internalID: -1615136969325600889
+      spriteID: d5356fad11f0a0270800000000000000
+      internalID: 8217397039453328221
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Alma Hambrienta atacando_buscando buscando hueso-3.png_0: -1615136969325600889
+      DestroyableWall_0: 8217397039453328221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

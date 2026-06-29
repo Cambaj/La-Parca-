@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 314761755764048729}
   - component: {fileID: 6025629613750178706}
   - component: {fileID: 1521762241455214659}
+  - component: {fileID: -5445859044407219578}
   m_Layer: 6
   m_Name: Soul
   m_TagString: Untagged
@@ -84,8 +85,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.7830189, g: 0.23496772, b: 0.06278926, a: 1}
+  m_Sprite: {fileID: -2035158071548229085, guid: a5cb7d25b910b6b4884f508a55618fff, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -146,6 +147,7 @@ MonoBehaviour:
   audioSource: {fileID: 1521762241455214659}
   warningSound: {fileID: 8300000, guid: 44f16eea35fda0e43abe279092277c2e, type: 3}
   pinnedLoopSound: {fileID: 8300000, guid: 993b53252e4b88e48aad87c4b1ffef73, type: 3}
+  animator: {fileID: -5445859044407219578}
   minRadius: 2.5
   maxRadius: 3.5
   minAngularSpeed: 150
@@ -253,3 +255,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &-5445859044407219578
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144246342613035867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07e76f7b3e4b3d04ab2d9ffcca032eda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
