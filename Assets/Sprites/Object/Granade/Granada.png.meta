@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ea7359e5041aa964aa5e6f5ac862a908
+guid: 5f86097403998954883b5a9df3b4bce9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1615136969325600889
-    second: Alma Hambrienta atacando_buscando buscando hueso-3.png_0
+      213: -8279916456554442738
+    second: Granada_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alma Hambrienta atacando_buscando buscando hueso-3.png_0
+      name: Granada_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 32
+        width: 30
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78f1fb7db71e599e0800000000000000
-      internalID: -1615136969325600889
+      spriteID: e0059250ad3d71d80800000000000000
+      internalID: -8279916456554442738
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Alma Hambrienta atacando_buscando buscando hueso-3.png_0: -1615136969325600889
+      Granada_0: -8279916456554442738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
