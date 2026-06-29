@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Granade
   explosionDelay: 5
-  explosionRadius: 5
+  explosionRadius: 2
   destroyableLayer:
     serializedVersion: 2
     m_Bits: 256
