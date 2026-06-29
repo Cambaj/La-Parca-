@@ -9,6 +9,7 @@ public class HungrySoul : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip warningSound;
     public AudioClip pinnedLoopSound;
+    public Animator animator;
 
     [Header("Girando")]
     public float minRadius = 2.5f;
@@ -43,6 +44,7 @@ public class HungrySoul : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         currentRadius = Random.Range(minRadius, maxRadius);
         targetRadius = currentRadius;
 
@@ -112,6 +114,8 @@ public class HungrySoul : MonoBehaviour
 
         canDamagePlayer = false;
 
+        animator.Play("Pinned");
+
         if (audioSource && pinnedLoopSound)
         {
             audioSource.Stop();
@@ -156,6 +160,8 @@ public class HungrySoul : MonoBehaviour
 
         dashing = true;
 
+        animator.Play("Dashing");
+
         Vector2 startPos = transform.position;
 
         Vector2 relative = startPos - (Vector2)player.position;
@@ -198,6 +204,7 @@ public class HungrySoul : MonoBehaviour
         pinned = false;
         canDamagePlayer = true;
 
+        animator.Play("Orbit");
         StartCoroutine(DashRoutine());
     }
 
