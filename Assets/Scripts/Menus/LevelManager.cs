@@ -44,6 +44,22 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        // 1. Primero bloqueamos ABSOLUTAMENTE TODOS los botones de todos los reinos
+        for (int r = 0; r < reinos.Length; r++)
+        {
+            for (int n = 0; n < reinos[r].botonesNiveles.Length; n++)
+            {
+                if (reinos[r].botonesNiveles[n] != null)
+                {
+                    reinos[r].botonesNiveles[n].interactable = false;
+                }
+            }
+        }
+        // 2. Cargamos el progreso guardado o inicializamos por primera vez
+        // El Reino 0 (Hambruna) Nivel 1 SIEMPRE debe estar disponible para empezar
+        PlayerPrefs.SetInt("Progreso_Hambruna", Mathf.Max(PlayerPrefs.GetInt("Progreso_Hambruna", 1), 1));
+
+        // 3. Aplicamos el progreso real que el jugador tenga guardado en el disco
         ActualizarSelectorNiveles();
     }
 
@@ -70,18 +86,19 @@ public class LevelManager : MonoBehaviour
             {
                 if (reino.botonesNiveles[i] == null) continue;
 
-                if (i == 0)
-                {
-                    reino.botonesNiveles[i].interactable = true;
-                    continue;
-                }
-
-                // Generamos la clave única de guardado, ej: "Hambruna_Nivel_2"
                 string claveGuardado = reino.nombreReino + "_Nivel_" + (i + 1);
 
                 int nivelDesbloqueado = PlayerPrefs.GetInt(claveGuardado, 0);
 
-                reino.botonesNiveles[i].interactable = (nivelDesbloqueado == 1);
+                if (i == 0 && reino.nombreReino == "Muerte")
+                {
+                    reino.botonesNiveles[i].interactable = true;
+
+                }
+                else 
+                {
+                    reino.botonesNiveles[i].interactable = (nivelDesbloqueado == 1);
+                }
             }
         }
     }
@@ -98,18 +115,7 @@ public class LevelManager : MonoBehaviour
     [ContextMenu("Borrar Todo el Progreso")]
     public void BorrarProgreso()
     {
-        if (reinos != null)
-        {
-            foreach (var reino in reinos)
-            {
-                for (int i = 2; i <= reino.botonesNiveles.Length; i++)
-                {
-                    PlayerPrefs.DeleteKey(reino.nombreReino + "_Nivel_" + i);
-                }
-            }
-        }
         PlayerPrefs.DeleteAll();
-        Debug.Log("Progreso de niveles reseteados.");
         ActualizarSelectorNiveles();
     }
 

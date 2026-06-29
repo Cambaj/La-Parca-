@@ -84,14 +84,14 @@ public class CanvasManager : MonoBehaviour
         {
             GameObject seleccionadoActual = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
 
+            if (seleccionadoActual == null && panelActivoActual == levelSelectorPanel)
+            {
+                AsegurarFocoInicial();
+                return;
+            }
+
             if (seleccionadoActual != null && seleccionadoActual != ultimoSeleccionado)
             {
-                // Si el jugador está tocando un Slider (barra de volumen), ocultamos temporalmente las guadañas o las dejamos fijas
-                if (seleccionadoActual.GetComponent<Slider>() != null)
-                {
-                    // Opcional: puedes ajustar una posición fija para los Sliders
-                }
-
                 ultimoSeleccionado = seleccionadoActual;
                 RectTransform botonRect = seleccionadoActual.GetComponent<RectTransform>();
                 if (botonRect != null)
@@ -123,28 +123,36 @@ public class CanvasManager : MonoBehaviour
 
         if (panelActivoActual != null)
         {
-            // Busca primero un botón, si no, busca un Slider para darle el foco
-            Selectable primerElemento = panelActivoActual.GetComponentInChildren<Button>();
-            if (primerElemento == null) primerElemento = panelActivoActual.GetComponentInChildren<Slider>();
+            Selectable elementoASeleccionar = null;
 
-            if (primerElemento != null && !primerElemento.interactable)
+            // Si estamos en el selector de niveles, buscamos el primer botón que SÍ sea interactuable
+            if (panelActivoActual == levelSelectorPanel)
             {
-                Selectable[] todos = panelActivoActual.GetComponentsInChildren<Selectable>();
-                foreach (Selectable s in todos)
+                Selectable[] todosLosBotones = panelActivoActual.GetComponentsInChildren<Selectable>();
+                foreach (Selectable s in todosLosBotones)
                 {
-                    if (s.interactable)
+                    // Buscamos el primero de la lista que no esté bloqueado (en tu caso, Muerte Nivel 1)
+                    if (s.interactable && (s is UnityEngine.UI.Button || s is UnityEngine.UI.Slider))
                     {
-                        primerElemento = s;
-                        break;
+                        elementoASeleccionar = s;
+                        break; // Corta la búsqueda apenas encuentra tu nivel activo
                     }
                 }
             }
-            if (primerElemento != null)
+            else
             {
-                primerElemento.Select();
+                // Para el menú principal o pausa, usa el comportamiento estándar
+                elementoASeleccionar = panelActivoActual.GetComponentInChildren<UnityEngine.UI.Button>();
+            }
+
+            // Si encontramos el botón activo, le clavamos el foco y movemos las guadañas ahí
+            if (elementoASeleccionar != null)
+            {
+                elementoASeleccionar.Select();
                 if (indicadorVisual != null)
                 {
-                    indicadorVisual.position = primerElemento.GetComponent<RectTransform>().position + offsetIndicador;
+                    // Forzamos al indicador a moverse instantáneamente a la posición del botón
+                    indicadorVisual.position = elementoASeleccionar.GetComponent<RectTransform>().position + offsetIndicador;
                 }
             }
         }
@@ -172,6 +180,10 @@ public class CanvasManager : MonoBehaviour
 
         panelDestino.SetActive(true);
         panelActivoActual = panelDestino;
+        if (panelDestino == levelSelectorPanel && LevelManager.instance != null)
+        {
+            LevelManager.instance.ActualizarSelectorNiveles();
+        }
         AsegurarFocoInicial();
     }
 
@@ -228,7 +240,15 @@ public class CanvasManager : MonoBehaviour
 
     public void SalirJuego()
     {
-        Application.Quit();
+        Debug.Log("Intentando salir del juego...");
+
+        // Si estás jugando dentro del Editor de Unity
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            // Si el juego ya está compilado en un .exe ejecutable
+            Application.Quit();
+#endif
     }
 
     // --- NUEVO: Lógica de Cheats (Se vinculan a los Toggles) ---
