@@ -257,8 +257,8 @@ MonoBehaviour:
   BottomRight: 0
   BottomLeft: 0
   granadeLaunchForce: {x: 10, y: 5}
-  soulBonePrefab: {fileID: 0}
-  soulBoneSpawn: {fileID: 0}
+  soulBonePrefab: {fileID: 3894223179446321950, guid: fffa48f6669034c4f9f3fd9c213aa9b3, type: 3}
+  soulBoneSpawn: {fileID: 6266706852661697300}
   hungrySoul: {fileID: 0}
   soulBoneCooldown: 5
   externalLaunch: 0
