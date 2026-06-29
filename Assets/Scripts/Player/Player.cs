@@ -167,7 +167,11 @@ public class PlayerMovement : MonoBehaviour
 
 
         // Ground Detection
-        grounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+        bool groundCenter = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+        bool groundLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.35f, transform.position.y), Vector2.down, groundCheckDistance, groundLayer);
+        bool groundRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.32f, transform.position.y), Vector2.down, groundCheckDistance, groundLayer);
+
+        grounded = groundCenter || groundLeft || groundRight;
 
         // Coyote time
         if (grounded && !isGrappling && !isDashing && !isDead && canTP)
@@ -888,5 +892,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
+
+        Gizmos.DrawLine(new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z), new Vector3(transform.position.x - 0.35f, transform.position.y - groundCheckDistance, transform.position.z));
+        // Derecho
+        Gizmos.DrawLine(new Vector3(transform.position.x + 0.32f, transform.position.y, transform.position.z), new Vector3(transform.position.x + 0.32f, transform.position.y - groundCheckDistance, transform.position.z));
+
     }
 }
