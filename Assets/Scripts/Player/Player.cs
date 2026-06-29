@@ -856,6 +856,16 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Estancia"))
         {
+
+            // Buscamos la tarjeta de identificación de la meta actual
+            MetaNivel infoMeta = collision.GetComponent<MetaNivel>();
+
+            if (infoMeta != null && LevelManager.instance != null)
+            {
+                // Le avisa al jefe invisible que desbloquee el siguiente nivel del reino correspondiente
+                LevelManager.instance.DesbloquearSiguienteNivel(infoMeta.nombreReino, infoMeta.numeroNivelALiberar);
+            }
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
