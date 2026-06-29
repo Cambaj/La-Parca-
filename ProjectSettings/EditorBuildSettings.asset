@@ -77,7 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino 3/3-5.unity
     guid: eae4bd93e6e80cd44abc0a793d33a4d0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Reino 3/3-6.unity
     guid: 3f78dac35f4751f40afde521219b8fa5
   - enabled: 1
@@ -95,7 +95,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino 4/4-5.unity
     guid: 3c5b4ca0f86f80948bdd581e1d43525a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Reino 4/4-6.unity
     guid: ea449e99fa9de1c48b0c941251a693e1
   - enabled: 1
