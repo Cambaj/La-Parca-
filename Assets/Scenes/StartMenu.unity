@@ -422,47 +422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d38136fa07384f4da609c4d5ea0b039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  startKey: 13
-  startScreenScene: StartMenu
-  menuScene: PantallaNiveles
-  reinos:
-  - nombreReino: Hambruna
-    botonesNiveles:
-    - {fileID: 593928179}
-    - {fileID: 211216523}
-    - {fileID: 1112410293}
-    - {fileID: 1118115587}
-    - {fileID: 1488590559}
-    - {fileID: 1126510946}
-  - nombreReino: Guerra
-    botonesNiveles:
-    - {fileID: 1892013146}
-    - {fileID: 1925838922}
-    - {fileID: 1258743311}
-    - {fileID: 1497732800}
-    - {fileID: 1180506821}
-    - {fileID: 645689540}
-  - nombreReino: Peste
-    botonesNiveles:
-    - {fileID: 419490520}
-    - {fileID: 545990604}
-    - {fileID: 729568295}
-    - {fileID: 1152700859}
-    - {fileID: 125485782}
-    - {fileID: 1659333267}
-  - nombreReino: Muerte
-    botonesNiveles:
-    - {fileID: 1330181864}
-    - {fileID: 517948946}
-    - {fileID: 686499832}
-    - {fileID: 987903974}
-    - {fileID: 2083725332}
-    - {fileID: 1517185177}
-    - {fileID: 468053175}
-    - {fileID: 1464438053}
-    - {fileID: 1548696413}
-    - {fileID: 274591935}
-    - {fileID: 1384284331}
+  cheatInmortal: 0
+  cheatSaltarEscenas: 0
+  escenaMenu: MenuPrincipal
+  escenaSelector: SelectorNiveles
 --- !u!4 &96759684
 Transform:
   m_ObjectHideFlags: 0
@@ -12242,55 +12205,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1983347541}
-        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
-        m_MethodName: AbrirSelectorDeNiveles
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1983347541}
-        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
-        m_MethodName: SalirDelJuego
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1983347541}
-        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
-        m_MethodName: CargarEscenaDirecta
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: estancia 1
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1983347541}
-        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
-        m_MethodName: VolverAlMenuDesdeSelector
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1983347541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12303,14 +12218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25faefba7848d9042a3c40c4bf81886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanvasManager
-  pausePanel: {fileID: 0}
-  mainMenuPanel: {fileID: 1459982376}
-  levelSelectorPanel: {fileID: 115188890}
-  optionsPanel: {fileID: 426991079}
-  indicadorVisual: {fileID: 193471248}
-  offsetIndicador: {x: 0, y: 0, z: 0}
-  toggleInmortal: {fileID: 0}
-  toggleSaltar: {fileID: 0}
 --- !u!1 &2047291405
 GameObject:
   m_ObjectHideFlags: 0
