@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     [Header("Movimiento")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -643,7 +644,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Die()
     {
-        if (CanvasManager.CheatInmortal) return;
+        
 
         if (isDead) return;
         isDead = true;
@@ -797,15 +798,17 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (collision.gameObject.CompareTag("Damage"))
         {
-            if (CanvasManager.CheatInmortal) return;
+          //  if (CanvasManager.CheatInmortal) return;
 
             isDead = true;
             rb.gravityScale = 0;
             rb.linearVelocity = new Vector2(0, 0);
             anim.SetTrigger("IsDeath");
         }
+        
 
         if ((isDashing || isGrappling) && collision.gameObject.CompareTag("Bone"))
         {
@@ -873,8 +876,9 @@ public class PlayerMovement : MonoBehaviour
             if (infoMeta != null && LevelManager.instance != null)
             {
                 // Le avisa al jefe invisible que desbloquee el siguiente nivel del reino correspondiente
-                LevelManager.instance.DesbloquearSiguienteNivel(infoMeta.nombreReino, infoMeta.numeroNivelALiberar);
+                //LevelManager.instance.DesbloquearSiguienteNivel(infoMeta.nombreReino, infoMeta.numeroNivelALiberar);
             }
+
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -899,4 +903,6 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawLine(new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z), new Vector3(transform.position.x - 0.35f, transform.position.y - groundCheckDistance, transform.position.z));
         Gizmos.DrawLine(new Vector3(transform.position.x + 0.32f, transform.position.y, transform.position.z), new Vector3(transform.position.x + 0.32f, transform.position.y - groundCheckDistance, transform.position.z));
     }
+   
+
 }
