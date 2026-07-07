@@ -1,0 +1,304 @@
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libFLAC-8.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libjpeg-9.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libmodplug-1.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libmpg123-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libogg-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libopus-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libopusfile-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libpng16-16.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libtiff-5.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libvorbis-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libwebp-7.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2_image.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2_mixer.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2_ttf.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\zlib1.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.exe
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\assets\fondo.png
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\assets\ship.png
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.deps.json
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+C:\Users\p764\Desktop\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libFLAC-8.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libjpeg-9.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libmodplug-1.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libmpg123-0.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libogg-0.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libopus-0.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libopusfile-0.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libpng16-16.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libtiff-5.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libvorbis-0.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\libwebp-7.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\SDL2.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\SDL2_image.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\SDL2_mixer.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\SDL2_ttf.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\zlib1.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.exe
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\assets\fondo.png
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\assets\ship.png
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.deps.json
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+C:\Users\Francisco\Desktop\UADE\ProyectoSDL2\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libFLAC-8.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libjpeg-9.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libmodplug-1.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libmpg123-0.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libogg-0.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libopus-0.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libopusfile-0.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libpng16-16.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libtiff-5.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libvorbis-0.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\libwebp-7.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2_image.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2_mixer.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\SDL2_ttf.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\zlib1.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.exe
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\assets\fondo.png
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\assets\ship.png
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.deps.json
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.pdb
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.pdb
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+D:\Paradigmas de Programacion\ProyectoSDL2\ProyectoSDL2\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libFLAC-8.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libjpeg-9.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libmodplug-1.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libmpg123-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libogg-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libopus-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libopusfile-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libpng16-16.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libtiff-5.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libvorbis-0.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\libwebp-7.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\SDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\SDL2_image.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\SDL2_mixer.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\SDL2_ttf.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\zlib1.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.exe
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\assets\fondo.png
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\assets\ship.png
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.deps.json
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+C:\Users\p764\Desktop\ProyectoSDL2\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+C:\Users\p764\Desktop\ProyectoSDL2\bin\Debug\net9.0\assets\enemy.png
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libFLAC-8.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libjpeg-9.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libmodplug-1.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libmpg123-0.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libogg-0.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libopus-0.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libopusfile-0.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libpng16-16.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libtiff-5.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libvorbis-0.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\libwebp-7.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\SDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\SDL2_image.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\SDL2_mixer.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\SDL2_ttf.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\zlib1.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.exe
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\assets\enemy.png
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\assets\fondo.png
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\assets\ship.png
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.deps.json
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+C:\Users\p764\Downloads\Proyecto clase 3\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 3\bin\Debug\net9.0\assets\bullet.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libFLAC-8.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libjpeg-9.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libmodplug-1.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libmpg123-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libogg-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libopus-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libopusfile-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libpng16-16.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libtiff-5.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libvorbis-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\libwebp-7.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\SDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\SDL2_image.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\SDL2_mixer.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\SDL2_ttf.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\zlib1.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.exe
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\bullet.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\enemy.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\fondo.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\ship.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.deps.json
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\Ship\Idle\0.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\Ship\Idle\1.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\Ship\Idle\2.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 3\bin\Debug\net9.0\assets\Ship\Idle\3.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libFLAC-8.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libjpeg-9.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libmodplug-1.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libmpg123-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libogg-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libopus-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libopusfile-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libpng16-16.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libtiff-5.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libvorbis-0.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\libwebp-7.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\SDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\SDL2_image.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\SDL2_mixer.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\SDL2_ttf.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\zlib1.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\ProyectoSDL2.exe
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\bullet.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\enemy.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\fondo.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\ship.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\Ship\Idle\0.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\Ship\Idle\1.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\Ship\Idle\2.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\assets\Ship\Idle\3.png
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\ProyectoSDL2.deps.json
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.pdb
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\obj\Debug\net9.0\ref\ProyectoSDL2.dll
+C:\Users\p764\Downloads\Proyecto clase 4\Proyecto clase 5\bin\Debug\net9.0\Fonts\arial.ttf
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libFLAC-8.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libjpeg-9.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libmodplug-1.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libmpg123-0.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libogg-0.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libopus-0.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libopusfile-0.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libpng16-16.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libtiff-5.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libvorbis-0.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\libwebp-7.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\SDL2.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\SDL2_image.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\SDL2_mixer.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\SDL2_ttf.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\zlib1.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\ProyectoSDL2.exe
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\arial.ttf
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\bullet.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\enemy\0.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\enemy\1.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\enemy\2.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\enemy\3.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\fondo.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\powerup.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\assets\ship.png
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\Fonts\arial.ttf
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\ProyectoSDL2.deps.json
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\ProyectoSDL2.runtimeconfig.json
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\ProyectoSDL2.pdb
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\bin\Debug\net9.0\Sayers.SDL2.Core.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.csproj.AssemblyReference.cache
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfoInputs.cache
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.AssemblyInfo.cs
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.csproj.CoreCompileInputs.cache
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\Proyecto.EB9C087C.Up2Date
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\refint\ProyectoSDL2.dll
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.pdb
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ProyectoSDL2.genruntimeconfig.cache
+D:\Paradigmas de Programacion\Primer parcial\Proyecto Parcial\obj\Debug\net9.0\ref\ProyectoSDL2.dll

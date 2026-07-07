@@ -85,8 +85,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool BottomLeft;
 
     
-
-
     //Mecanica de granada 
     [Header("Mecanica de Granada")]
     [SerializeField] private  Vector2 granadeLaunchForce = new Vector2(10f, 5f);
@@ -98,7 +96,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject soulBonePrefab;
     [SerializeField] private Transform soulBoneSpawn;
     [SerializeField] private HungrySoul hungrySoul;
-
     [SerializeField] private float soulBoneCooldown = 5f;
 
     private bool hasSoulBone = true;
@@ -109,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float externalLaunchTime;
     [HideInInspector] private float cooldownTP = 0;
     [HideInInspector] public bool canTP = true;
+    [SerializeField] private float horizontalMomentumDecay = 45f;
 
     [Header("Audio")]
     AudioSource audio;
@@ -179,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = coyoteTime;
             wallSlideTime = wallSlideTimeMax;
             canDash = true;
+            if (!canGrapple) audio.PlayOneShot(grappleRecoverSound);
             canGrapple = true;
             hasJumped = false;
         }
@@ -206,7 +205,9 @@ public class PlayerMovement : MonoBehaviour
         // -- WALL SLIDE --
         isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton4);
         
-        if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
+        bool canStartWallSlide = isTouchingWall && wallSlideTime > 0 && isHoldingGrab && (!grounded || vertical > 0);
+
+        if (canStartWallSlide)
         {
             isWallSliding = true;
 
@@ -225,9 +226,7 @@ public class PlayerMovement : MonoBehaviour
 
                 // Flip visual
                 if ((jumpDirectionX > 0 && facingRight) || (jumpDirectionX < 0 && !facingRight))
-                {
                     Flip();
-                }
 
                 // Salir del wall slide
                 isWallSliding = false;
@@ -272,8 +271,14 @@ public class PlayerMovement : MonoBehaviour
         // -- DASH --
         if (unlockedDash == true)
         {
-            if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
+            bool dashInput = Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0);
+            bool hasDirection = horizontal != 0 || vertical != 0;
+            bool canStartDash = canDash && !isGrappling && !isWallSliding && canTP && !isDead;
+
+
+            if (dashInput && hasDirection && canStartDash)
             {
+                if (externalLaunch) externalLaunch = false;
                 canDash = false;
                 isDashing = true;
                 dashTime = dashDuration;
@@ -344,17 +349,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isDashing && !isGrappling && !externalLaunch && !isDead)
         {
-            // Caso 1: Cayendo (Ca�da r�pida y pesada)
+            // Caso 1: Cayendo (Caida rapida y pesada)
             if (rb.linearVelocity.y < 0)
             {
                 rb.gravityScale = normalGravityScale * fallMultiplier;
             }
-            // Caso 2: En el pico del salto (Efecto Suspensi�n / Hover)
+            // Caso 2: En el pico del salto (Efecto Suspension / Hover)
             else if (rb.linearVelocity.y > 0 && Mathf.Abs(rb.linearVelocity.y) < peakHoverThreshold)
             {
                 rb.gravityScale = peakHoverGravity;
             }
-            // Caso 3: Solt� el bot�n de salto antes de tiempo (Corta el salto r�pido)
+            // Caso 3: Solto el boton de salto antes de tiempo (Corta el salto rapido)
             else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.JoystickButton1))
             {
                 rb.gravityScale = normalGravityScale * lowJumpMultiplier;
@@ -405,10 +410,15 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("IsJump", false);
         }
 
+        //-- GRAPPLE --
         if (unlockedGrapple == true)
         {
-            if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6)) && canGrapple && !isDashing && !isGrappling && !isDead)
+            bool grappleInput = Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6);
+            bool canStartGrapple = canUseAbilities && canGrapple && !isDashing && !isGrappling && !isWallSliding;
+
+            if (grappleInput && canStartGrapple)
             {
+                externalLaunch = false;
                 StartGrapple();
             }
 
@@ -432,9 +442,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
-
-        //Input de la granada 
-
+        //Input de la granada
         if (hasGranade && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)))
         {
             ThrowEquippedGranade();
@@ -472,7 +480,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
         // -- DEBUG --
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
@@ -490,10 +497,8 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene(previousScene);
             }
         }
-
         if (isDead) return;
     }
-
 
     private void FixedUpdate()
     {
@@ -528,7 +533,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
         if (isWallJumping)
         {
             wallJumpTimer -= Time.fixedDeltaTime;
@@ -561,12 +565,12 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (!isDead)
             {
-
-                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+                float targetVelocityX = horizontal * speed * Time.fixedDeltaTime;
+                float newVelocityX = Mathf.MoveTowards(rb.linearVelocity.x, targetVelocityX, horizontalMomentumDecay * Time.fixedDeltaTime);
+                rb.linearVelocity = new Vector2(newVelocityX, rb.linearVelocity.y);
             }
             anim.SetBool("IsGrappling", false); 
         }
-
     }
 
     //Aqui sigue la accion de la granada
@@ -574,12 +578,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (equippedGranade == null) return;
         Vector2 throwDirection = Vector2.zero;
-        //Intenter apuntar con el joystick derecho
+        //Intenter apuntar con el stick derecho
         if (controllerAim != Vector2.zero)
         {
             throwDirection = controllerAim;
         }
-        else //Si no hay jostcick apunta con el Mouse 
+        else //Si no hay joystick apunta con el Mouse 
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             throwDirection = (mousePos - (Vector2)transform.position).normalized;
@@ -619,8 +623,7 @@ public class PlayerMovement : MonoBehaviour
 
         audio.PlayOneShot(throwBoneSound);
 
-        SoulBone soulBone =
-            bone.GetComponent<SoulBone>();
+        SoulBone soulBone = bone.GetComponent<SoulBone>();
 
         soulBone.Initialize(hungrySoul);
 
@@ -672,8 +675,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void StartGrapple()
     {
+        if (externalLaunch) return;
         grappleTimer = grappleDuration;
-
         Vector2 direction;
 
         if (controllerAim != Vector2.zero)
@@ -699,6 +702,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, grappleMaxDistance, grappleLayer);
+
+        if (hit.collider != null && hit.collider.CompareTag("Granade"))
+            hit = default;
 
         if (hit.collider != null)
         {
@@ -806,7 +812,7 @@ public class PlayerMovement : MonoBehaviour
             Collider2D playerCollision = GetComponent<Collider2D>();
             Collider2D boneCollision = collision.collider;
 
-            // Ignora la colisi�n inmediatamente
+            // Ignora la colision inmediatamente
             Physics2D.IgnoreCollision(playerCollision, boneCollision, true);
 
             DestroyBoneWall(collision.gameObject);
@@ -818,7 +824,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bone"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bone") || collision.gameObject.CompareTag("DestroyableWall"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
@@ -877,9 +883,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bone"))
-        {
             isTouchingWall = false;
-        }
 
     }
 
@@ -892,10 +896,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
-
         Gizmos.DrawLine(new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z), new Vector3(transform.position.x - 0.35f, transform.position.y - groundCheckDistance, transform.position.z));
-        // Derecho
         Gizmos.DrawLine(new Vector3(transform.position.x + 0.32f, transform.position.y, transform.position.z), new Vector3(transform.position.x + 0.32f, transform.position.y - groundCheckDistance, transform.position.z));
-
     }
 }

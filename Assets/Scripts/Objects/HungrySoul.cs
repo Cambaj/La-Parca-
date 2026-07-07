@@ -123,10 +123,40 @@ public class HungrySoul : MonoBehaviour
             audioSource.loop = true;
             audioSource.Play();
         }
+        if (releaseCoroutine != null) StopCoroutine(releaseCoroutine);
+
+        releaseCoroutine = StartCoroutine(AutoReleaseRoutine());
+    }
+
+    IEnumerator AutoReleaseRoutine()
+    {
+        yield return new WaitForSeconds(autoReleaseTime);
+
+        if (!pinned) yield break;
+
+        if (audioSource && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.loop = false;
+            audioSource.clip = null;
+        }
+
+        pinned = false;
+        canDamagePlayer = true;
+        animator.Play("Orbit");
+
+        if (player != null)
+        {
+            PlayerMovement pm = player.GetComponent<PlayerMovement>();
+            if (pm != null) pm.RecoverSoulBone();
+        }
+        StartCoroutine(DashRoutine());
     }
 
     public void ReleaseSoul()
     {
+        if (releaseCoroutine != null) StopCoroutine(releaseCoroutine);
+
         StartCoroutine(ReleaseRoutine());
     }
 

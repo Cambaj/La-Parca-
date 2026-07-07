@@ -23,6 +23,9 @@ public class Granade : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
 
+    private float armTime = 0.1f;
+    private bool armed = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,7 +41,7 @@ public class Granade : MonoBehaviour
             timer -= Time.deltaTime;
             if (!wasThrown && equippedPlayer != null)
             {
-                transform.position = equippedPlayer.position;
+                transform.position = equippedPlayer.position + new Vector3 (0, 0.8f, 0);
             }
             if (timer <= 0f)
             {
@@ -68,6 +71,10 @@ public class Granade : MonoBehaviour
         wasThrown = true;
 
         Collider2D playerCollider = equippedPlayer != null ? equippedPlayer.GetComponent<Collider2D>() : null;
+
+        if (equippedPlayer != null)
+            transform.position = equippedPlayer.position;
+        
         equippedPlayer = null;
 
         rb.bodyType = RigidbodyType2D.Dynamic;
@@ -76,37 +83,53 @@ public class Granade : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(impulseForce, ForceMode2D.Impulse);
 
+        StartCoroutine(ArmDelay());
+
         if (playerCollider != null)
         {
             StartCoroutine(IgnorePlayerTemporarily(playerCollider));
         }
 
         audioSource.PlayOneShot(throwSound);
+
+        armed = false;
+        StartCoroutine(ArmTimer());
+    }
+
+    private IEnumerator ArmDelay()
+    {
+        col.enabled = false;
+
+        yield return new WaitForFixedUpdate();
+
+        col.enabled = true;
+    }
+    private IEnumerator ArmTimer()
+    {
+        yield return new WaitForSeconds(armTime);
+        armed = true;
     }
 
     public bool WasThrown()
-        {
+    {
         return wasThrown;
     }
 
-    private IEnumerator IgnorePlayerTemporarily(Collider2D playerCol)
+    private IEnumerator IgnorePlayerTemporarily(Collider2D playerCol, float duration)
     {
+        if (col == null || playerCol == null) yield break;
+
         Physics2D.IgnoreCollision(col, playerCol, true);
-        yield return null;
-        /*
-        yield return new WaitForSeconds(0.1f); // Tiempo corto para que se aleje del jugador
+        yield return new WaitForSeconds(duration);
+
         if (col != null && playerCol != null)
-        {
             Physics2D.IgnoreCollision(col, playerCol, false);
-        }
-        */
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (wasThrown)
-        {
-            Explotes();
-        }
+        if (!armed) return;
+        if (wasThrown) Explotes();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -182,4 +205,3 @@ public class Granade : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }
-
