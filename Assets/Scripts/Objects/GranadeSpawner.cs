@@ -28,14 +28,7 @@ public class GranadeSpawner : MonoBehaviour
 
     private void SpawnGranade()
     {
-        GameObject nuevaGranade = Instantiate(granadePrefab, transform.position, Quaternion.identity);
-
-        // el spawner deberia ser intangible para las granadas. Antes, la granada podia chocar contra el collider del spawner y explotar
-        Collider2D spawnerCollider = GetComponent<Collider2D>();
-        Collider2D granadeCollider = nuevaGranade.GetComponent<Collider2D>();
-
-        if (spawnerCollider != null && granadeCollider != null) Physics2D.IgnoreCollision(spawnerCollider, granadeCollider, true);
-
+        Instantiate(granadePrefab, transform.position, Quaternion.identity);
         isAreaOccupied = true;
         cooldownTimer = 0f;
     }
@@ -56,4 +49,5 @@ public class GranadeSpawner : MonoBehaviour
             cooldownTimer = 0f; // Reinicia el timer para que la granada reaparezca inmediatamente
         }
     }
+
 }

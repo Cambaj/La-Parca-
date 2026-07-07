@@ -25,7 +25,6 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!canBeUsed) return;
         Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
 
         if (rb != null && destination != null && player.canTP)
@@ -37,8 +36,7 @@ public class Portal : MonoBehaviour
 
     private IEnumerator TeleportPlayer(Rigidbody2D rb)
     {
-        canBeUsed = false;
-        StartCoroutine(ResetCooldown());
+        player.canTP = false;
 
         if (player != null)
         {
@@ -47,23 +45,22 @@ public class Portal : MonoBehaviour
         }
 
         rb.transform.position = new Vector3(2000f, 2000f, 0f);
+
         yield return new WaitForSeconds(1f);
 
         rb.transform.position = destination.position;
+
         AudioSource.PlayClipAtPoint(exitPortalSound, destination.position);
 
         rb.linearVelocity = Vector2.zero;
-        rb.linearVelocity = launchDirection.normalized * launchSpeed;
+
+        rb.linearVelocity =
+            launchDirection.normalized * launchSpeed;
 
         if (player != null)
         {
             player.externalLaunch = true;
             player.externalLaunchTime = 0.25f;
         }
-    }
-    private IEnumerator ResetCooldown()
-    {
-        yield return new WaitForSeconds(portalCooldown);
-        canBeUsed = true;
     }
 }
