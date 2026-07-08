@@ -58,5 +58,34 @@ public class LevelManager : MonoBehaviour
     Application.Quit();
 #endif
     }
+
+    public string ObtenerPrimerNivelDelReinoActual()
+    {
+        // Obtiene el nombre de la escena que se está jugando ahora mismo (ej: "Nivel_1-3")
+        string nombreEscenaActual = SceneManager.GetActiveScene().name;
+
+        // Buscamos si el nombre sigue el patrón "Nivel_"
+        if (nombreEscenaActual.Contains("Nivel_"))
+        {
+            // Cortamos el nombre para obtener el número de reino. 
+            // Si la escena es "Nivel_1-3", queremos extraer el "1"
+            string[] partes = nombreEscenaActual.Split('_'); // Separa en ["Nivel", "1-3"]
+            if (partes.Length > 1)
+            {
+                string[] subPartes = partes[1].Split('-'); // Separa en ["1", "3"]
+                string numeroReino = subPartes[0]; // Nos quedamos con el "1"
+
+                // Devolvemos el nombre del primer nivel de ese reino (ej: "Nivel_1-1")
+                string escenaPrimerNivel = "Nivel_" + numeroReino + "-1";
+                return escenaPrimerNivel;
+            }
+        }
+
+        // Si estás en una escena con un nombre raro o fuera de la estructura, 
+        // te devuelve al selector por seguridad para no romper el juego
+        return "SelectorNiveles";
+
+    }
+
 }
 

@@ -182,7 +182,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 408530597}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 408530600}
+        m_TargetAssemblyTypeName: CambiarEscenaBoton, Assembly-CSharp
+        m_MethodName: CargarEscena
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &408530597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3105926c7f510cc488d6b98983754651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
-  escenaDestino: OpcionesMenu
+  nombreEscenaDestino: OpcionesMenu
 --- !u!1 &629877435
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +710,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
       - m_Target: {fileID: 1520631242}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: SalirDelJuego
@@ -890,7 +914,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1223189583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1223189586}
+        m_TargetAssemblyTypeName: CambiarEscenaBoton, Assembly-CSharp
+        m_MethodName: CargarEscena
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1223189583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,7 +997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3105926c7f510cc488d6b98983754651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
-  escenaDestino: 1-1
+  nombreEscenaDestino: 1-1
 --- !u!1 &1256411229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1198,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1413122355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1413122358}
+        m_TargetAssemblyTypeName: CambiarEscenaBoton, Assembly-CSharp
+        m_MethodName: CargarEscena
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1413122355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,7 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3105926c7f510cc488d6b98983754651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
-  escenaDestino: SelectorNiveles
+  nombreEscenaDestino: SelectorNiveles
 --- !u!1 &1483216361
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,17 +1,28 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CambiarEscenaBoton : MonoBehaviour
 {
-    [Tooltip("Escribe el nombre exacto de la escena a la que lleva este botón")]
-    [SerializeField] private string escenaDestino;
+    [Header("Configuración de Escena")]
+    [Tooltip("Escribe el nombre exacto de la escena a la que quieres viajar.")]
+    [SerializeField] private string nombreEscenaDestino;
 
-    void Start()
+    /// <dt>MÉTODO PÚBLICO PARA EL ONCLICK</dt>
+    public void CargarEscena()
     {
-        Button btn = GetComponent<Button>();
-        if (btn != null && LevelManager.instance != null)
+        if (!string.IsNullOrEmpty(nombreEscenaDestino))
         {
-            btn.onClick.AddListener(() => LevelManager.instance.CargarEscena(escenaDestino));
+            // ¡EL DETALLE CRUCIAL! 
+            // Restauramos el tiempo del motor a la normalidad por si venimos desde la pausa.
+            Time.timeScale = 1f;
+
+            Debug.Log(" Cargando escena: " + nombreEscenaDestino);
+            SceneManager.LoadScene(nombreEscenaDestino);
+        }
+        else
+        {
+            Debug.LogWarning(" No se asignó ningún nombre de escena en el Inspector de " + gameObject.name);
         }
     }
 }

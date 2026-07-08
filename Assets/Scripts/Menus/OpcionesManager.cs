@@ -19,12 +19,15 @@ public class OpcionesManager : MonoBehaviour
     [Header("Navegación")]
     [SerializeField] private Button botonVolver;
 
-    private GameObject ultimoSeleccionado;
-    private Vector3 ultimaPosicionMouse;
-    private bool usandoMouse = false;
-
     private void Start()
     {
+        // 1. Ocultar por completo las guadañas al iniciar el menú
+        if (indicadorVisual != null)
+        {
+            indicadorVisual.gameObject.SetActive(false);
+        }
+
+        // 2. Cargar trucos desde el LevelManager global si existe
         if (LevelManager.instance != null)
         {
             toggleInmortal.isOn = LevelManager.instance.cheatInmortal;
@@ -33,59 +36,39 @@ public class OpcionesManager : MonoBehaviour
 
         toggleInmortal.onValueChanged.AddListener(SetCheatInmortal);
         toggleSaltarNiveles.onValueChanged.AddListener(SetCheatSaltarNiveles);
-
-        if (sliderMusica != null)
-        {
-            sliderMusica.Select();
-            ultimoSeleccionado = sliderMusica.gameObject;
-        }
-
-        // Guardamos la posición inicial del mouse
-        ultimaPosicionMouse = Input.mousePosition;
     }
 
-    private void Update()
+    // ==========================================
+    // MÉTODOS PÚBLICOS PARA EL EVENT TRIGGER
+    // ==========================================
+
+    // Se llamará cuando el mouse entre al botón Volver
+    public void MostrarGuadañasEnVolver()
     {
-        if (indicadorVisual == null || EventSystem.current == null) return;
+        if (indicadorVisual == null || botonVolver == null) return;
 
-        GameObject seleccionadoActual = EventSystem.current.currentSelectedGameObject;
-
-        // 1. Si el mouse hace clic en el fondo, NO forzamos el foco inmediatamente.
-        // Solo restauramos la selección si el jugador presiona activamente el teclado/mando.
-        if (seleccionadoActual == null)
+        RectTransform botonRect = botonVolver.GetComponent<RectTransform>();
+        if (botonRect != null && botonRect.parent != null)
         {
-            if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
+            indicadorVisual.gameObject.SetActive(true);
+
+            Transform padreBoton = botonRect.parent;
+            Transform padreIndicador = indicadorVisual.parent;
+
+            if (padreIndicador != null)
             {
-                if (ultimoSeleccionado != null && ultimoSeleccionado.activeInHierarchy)
-                {
-                    EventSystem.current.SetSelectedGameObject(ultimoSeleccionado);
-                }
-                else if (sliderMusica != null)
-                {
-                    sliderMusica.Select();
-                }
+                Vector3 posicionFinal = padreIndicador.InverseTransformPoint(padreBoton.TransformPoint(botonRect.localPosition));
+                indicadorVisual.localPosition = posicionFinal + offsetIndicador;
             }
-            return;
         }
+    }
 
-        // 2. Si hay un objeto seleccionado y es distinto al último, movemos las guadañas
-        if (seleccionadoActual != ultimoSeleccionado)
+    // Se llamará cuando el mouse salga del botón Volver
+    public void OcultarGuadañas()
+    {
+        if (indicadorVisual != null)
         {
-            RectTransform elementoRect = seleccionadoActual.GetComponent<RectTransform>();
-
-            if (elementoRect != null && elementoRect.parent != null)
-            {
-                ultimoSeleccionado = seleccionadoActual;
-
-                Transform padreElemento = elementoRect.parent;
-                Transform padreIndicador = indicadorVisual.parent;
-
-                if (padreIndicador != null)
-                {
-                    Vector3 posicionFinal = padreIndicador.InverseTransformPoint(padreElemento.TransformPoint(elementoRect.localPosition));
-                    indicadorVisual.localPosition = posicionFinal + offsetIndicador;
-                }
-            }
+            indicadorVisual.gameObject.SetActive(false);
         }
     }
 
@@ -98,6 +81,6 @@ public class OpcionesManager : MonoBehaviour
     private void SetCheatSaltarNiveles(bool valor)
     {
         if (LevelManager.instance != null) LevelManager.instance.cheatSaltarEscenas = valor;
-        Debug.Log(" Cheat Saltar Niveles: " + valor);
+        Debug.Log("Cheat Saltar Niveles: " + valor);
     }
 }
