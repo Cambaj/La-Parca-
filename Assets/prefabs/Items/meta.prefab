@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5874025405906775169}
   - component: {fileID: 2947251378583763186}
+  - component: {fileID: 4849560855460746212}
   m_Layer: 0
-  m_Name: Meta
+  m_Name: meta
   m_TagString: Estancia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,3 +79,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 5.3567924}
   m_EdgeRadius: 0
+--- !u!114 &4849560855460746212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7316869046731755996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef339199645b1f948b1fa233b56a9ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MetaNivel
+  numeroReino: 1
+  numeroNivelActual: 1
+  totalNivelesEnEsteReino: 6

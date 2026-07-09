@@ -10801,7 +10801,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: meta
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4849560855460746212, guid: f7774560c58a54348bfb228266e77dcd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -10826,8 +10827,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef339199645b1f948b1fa233b56a9ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MetaNivel
-  nombreReino: Peste
-  numeroNivelALiberar: 18
+  numeroReino: 2
+  numeroNivelActual: 6
+  totalNivelesEnEsteReino: 6
 --- !u!1001 &639741438
 PrefabInstance:
   m_ObjectHideFlags: 0

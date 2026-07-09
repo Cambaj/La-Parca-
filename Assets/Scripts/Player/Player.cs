@@ -867,12 +867,14 @@ public class PlayerMovement : MonoBehaviour
             // Buscamos la tarjeta de identificación de la meta actual
             MetaNivel infoMeta = collision.GetComponent<MetaNivel>();
 
-            if (infoMeta != null && LevelManager.instance != null)
+            if (infoMeta != null)
             {
-                // Le avisa al jefe invisible que desbloquee el siguiente nivel del reino correspondiente
-                //LevelManager.instance.DesbloquearSiguienteNivel(infoMeta.nombreReino, infoMeta.numeroNivelALiberar);
-            }
+                // 2. Le ordenamos a la meta que procese y guarde el progreso en PlayerPrefs
+                infoMeta.GuardarProgreso();
 
+                // (Opcional) Si en el futuro usas el LevelManager global, puedes descomentar tu línea:
+                // if (LevelManager.instance != null) { ... }
+            }
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
