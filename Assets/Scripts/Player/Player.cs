@@ -373,34 +373,39 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        // ANIMACIONES y sonido de caminar
-        if (horizontal != 0)
+        if (!isDashing && !isGrappling && !isDead)
         {
-            anim.SetBool("IsWalking", true);
-
-            if (!walkAudio.isPlaying && grounded)
+            // ANIMACIONES y sonido de caminar
+            if (horizontal != 0)
             {
-                walkAudio.PlayOneShot(walkGrassSound);
+                anim.SetBool("IsWalking", true);
+
+                if (!walkAudio.isPlaying && grounded)
+                {
+                    walkAudio.PlayOneShot(walkGrassSound);
+                }
             }
-        }
-        else
-        {
-            anim.SetBool("IsWalking", false);
-        }
-        if (rb.linearVelocity.y > 0)
-        {
-            anim.SetBool("IsJump", true);
-            anim.SetBool("IsFall", false);
-        }
-        if (rb.linearVelocity.y < 0)
-        {
-            anim.SetBool("IsFall", true);
-            anim.SetBool("IsJump", false);
-        }
-        if (rb.linearVelocity.y == 0)
-        {
-            anim.SetBool("IsFall", false);
-            anim.SetBool("IsJump", false);
+            else
+            {
+                anim.SetBool("IsWalking", false);
+            }
+
+            // Animaciones de salto y caída
+            if (rb.linearVelocity.y > 0.1f && !grounded)
+            {
+                anim.SetBool("IsJump", true);
+                anim.SetBool("IsFall", false);
+            }
+            else if (rb.linearVelocity.y < -0.1f && !grounded)
+            {
+                anim.SetBool("IsFall", true);
+                anim.SetBool("IsJump", false);
+            }
+            else if (grounded)
+            {
+                anim.SetBool("IsFall", false);
+                anim.SetBool("IsJump", false);
+            }
         }
 
         if (unlockedGrapple == true)
