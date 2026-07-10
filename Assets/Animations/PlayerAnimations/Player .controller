@@ -242,7 +242,7 @@ AnimatorStateMachine:
     m_Position: {x: 460, y: -310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6308381246302207791}
-    m_Position: {x: 880, y: -310, z: 0}
+    m_Position: {x: 960, y: -310, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 4042240961594546211}
@@ -1070,7 +1070,7 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsDashing
     m_EventTreshold: 0
-  - m_ConditionMode: 3
+  - m_ConditionMode: 6
     m_ConditionEvent: DashType
     m_EventTreshold: 8
   m_DstStateMachine: {fileID: 0}
