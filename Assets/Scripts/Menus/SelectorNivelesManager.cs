@@ -33,6 +33,7 @@ public class SelectorNivelesManager : MonoBehaviour
         // 1. Cargar el estado interactuable de los niveles
         ActualizarBotonesUI();
 
+
         // 2. Limpiar la selección previa
         if (EventSystem.current != null)
         {
@@ -134,14 +135,31 @@ public class SelectorNivelesManager : MonoBehaviour
                 string clave = "Nivel_" + reino.numeroReino + "-" + (i + 1);
                 int estadoDesbloqueado = PlayerPrefs.GetInt(clave, 0);
 
-                // El Reino 1 Nivel 1 siempre se puede jugar
+                bool puedeJugar = false;
+
+                // El Reino 1 Nivel 1 siempre se puede jugar de forma nativa
                 if (reino.numeroReino == 1 && i == 0)
                 {
-                    reino.botonesNiveles[i].interactable = true;
+                    puedeJugar = true;
                 }
                 else
                 {
-                    reino.botonesNiveles[i].interactable = (estadoDesbloqueado == 1);
+                    puedeJugar = (estadoDesbloqueado == 1);
+                }
+
+                // Asignar estado lógico de interacción
+                reino.botonesNiveles[i].interactable = puedeJugar;
+
+                // --- FEEDBACK VISUAL LIMPIO ---
+                // Forzamos un cambio de color directo en la imagen del botón para que el jugador
+                // note inmediatamente qué nivel está disponible y cuál bloqueado.
+                if (reino.botonesNiveles[i].image != null)
+                {
+                    // Si puede jugar: Color normal (Blanco puro). 
+                    // Si está bloqueado: Oscuro y semitransparente.
+                    reino.botonesNiveles[i].image.color = puedeJugar
+                        ? Color.white
+                        : new Color(0.2f, 0.2f, 0.2f, 0.6f);
                 }
             }
         }
