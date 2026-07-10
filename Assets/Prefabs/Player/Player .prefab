@@ -264,6 +264,7 @@ MonoBehaviour:
   externalLaunch: 0
   externalLaunchTime: 0
   canTP: 0
+  sfxAudioSource: {fileID: 2843806753709554438}
   walkAudio: {fileID: 8144122554586509392}
   jumpSound: {fileID: 8300000, guid: 13404797f5b6b7b43a29c1c723fa1737, type: 3}
   grappleLaunchSound: {fileID: 8300000, guid: 8dc91a8a08af1fe40b52b3c6f0099e83, type: 3}

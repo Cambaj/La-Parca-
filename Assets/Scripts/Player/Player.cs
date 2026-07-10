@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+
     [Header("Movimiento")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -85,8 +85,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool BottomRight;
     [SerializeField] private bool BottomLeft;
 
-    
-
 
     //Mecanica de granada 
     [Header("Mecanica de Granada")]
@@ -112,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool canTP = true;
 
     [Header("Audio")]
-    AudioSource audio;
+    [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioSource walkAudio;
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip grappleLaunchSound;
@@ -138,7 +136,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         //spawnPoint = GameObject.Find("SpawnPoint").transform;
@@ -201,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
             hasJumped = true;
             jumpBufferCounter = 0;
             coyoteTimeCounter = 0;
-            audio.PlayOneShot(jumpSound);
+            if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(jumpSound);
         }
 
         // -- WALL SLIDE --
@@ -241,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
                 isWallJumping = true;
                 wallJumpTimer = wallJumpDuration;
 
-                audio.PlayOneShot(jumpSound);
+                if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(jumpSound);
 
                 return;
             }
@@ -323,7 +320,7 @@ public class PlayerMovement : MonoBehaviour
 
                 rb.linearVelocity = dashVelocity;
 
-                audio.PlayOneShot(dashSound);
+                if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(dashSound);
             }
             if (isDashing)
             {
@@ -618,7 +615,7 @@ public class PlayerMovement : MonoBehaviour
                 soulBoneSpawn.position,
                 Quaternion.identity);
 
-        audio.PlayOneShot(throwBoneSound);
+        if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(throwBoneSound);
 
         SoulBone soulBone =
             bone.GetComponent<SoulBone>();
@@ -636,18 +633,18 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
         canGrapple = true;
 
-        audio.PlayOneShot(grappleRecoverSound);
+        if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleRecoverSound);
     }
 
     public void Die()
     {
-        
+        if (OpcionesManager.CheatInmortalidad || (LevelManager.instance != null && LevelManager.instance.cheatInmortal)) return;
 
         if (isDead) return;
         isDead = true;
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(0, 0);
-        audio.PlayOneShot(dieSound);
+        if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(dieSound); 
         anim.SetTrigger("IsDeath");
     }
 
@@ -704,12 +701,12 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider != null)
         {
             grapplePoint = hit.point;
-            audio.PlayOneShot(grappleHookSound);
+            if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleHookSound);
         }
         else
         {
             grapplePoint = (Vector2)transform.position + direction * grappleMaxDistance;
-            audio.PlayOneShot(grappleLaunchSound);
+            if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleLaunchSound);
         }
 
         isGrappling = true;
@@ -850,7 +847,7 @@ public class PlayerMovement : MonoBehaviour
 
                 equippedGranade.PickUp(transform);
 
-                audio.PlayOneShot(grappleRecoverSound);
+                if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleRecoverSound);
             }
         }
 
@@ -858,7 +855,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = true;
             canGrapple = true;
-            audio.PlayOneShot(grappleRecoverSound);
+            if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleRecoverSound);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Estancia"))
