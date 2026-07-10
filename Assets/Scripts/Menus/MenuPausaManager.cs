@@ -15,6 +15,10 @@ public class MenuPausaManager : MonoBehaviour
     [Header("Primer Botón Seleccionado")]
     [SerializeField] private Button botonReanudar;
 
+    [Header("Configuración del Reino Actual")]
+    [Tooltip("Nombre exacto de la escena del Nivel 1 de este reino (ej: Nivel_1-1 o Muerte_1).")]
+    [SerializeField] private string escenaPrimerNivelDelReino;
+
     private GameObject ultimoSeleccionado;
     private bool juegoPausado = false;
 
@@ -128,20 +132,19 @@ public class MenuPausaManager : MonoBehaviour
     }
     public void ReiniciarReino()
     {
-        Time.timeScale = 1f; // Restauramos el tiempo del juego
+        // Aseguramos que el tiempo del juego vuelva a la normalidad antes de cambiar de escena
+        Time.timeScale = 1f;
 
-        // Aquí le pedimos al LevelManager global que nos diga cuál es el nivel inicial del reino actual
-        if (LevelManager.instance != null)
+        if (!string.IsNullOrEmpty(escenaPrimerNivelDelReino))
         {
-            // Supongamos que tu LevelManager maneja una función o variable con el nombre de la escena inicial
-            string escenaPrimerNivel = LevelManager.instance.ObtenerPrimerNivelDelReinoActual();
-            SceneManager.LoadScene(escenaPrimerNivel);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(escenaPrimerNivelDelReino);
+            Debug.Log(" Reiniciando Reino: Cargando " + escenaPrimerNivelDelReino);
         }
         else
         {
-            // Opción B (Temporal): Si no tienes esa lógica en el LevelManager, 
-            // puedes hacer que por defecto regrese al Selector de Niveles para que elija desde dónde reiniciar.
-            SceneManager.LoadScene("SelectorNiveles");
+            Debug.LogWarning(" No asignaste el nombre del primer nivel del reino en el CerebroPausa.");
+            // Respaldo por si se queda vacío: te manda al selector
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SelectorNiveles");
         }
 
     }

@@ -37934,6 +37934,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1357040646906846960, guid: aff9b9c68a358114991e33b2bd62621e, type: 3}
+      propertyPath: escenaPrimerNivelDelReino
+      value: 1-1
+      objectReference: {fileID: 0}
     - target: {fileID: 3606076283740224960, guid: aff9b9c68a358114991e33b2bd62621e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
