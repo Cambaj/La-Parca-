@@ -114,7 +114,7 @@ public class OpcionesManager : MonoBehaviour
     //  SECCIÓN DE TRUCOS (CHEATS)
     // ==========================================
 
-    private void SetCheatInmortal(bool valor)
+    public void SetCheatInmortal(bool valor)
     {
         if (LevelManager.instance != null) LevelManager.instance.cheatInmortal = valor;
         CheatInmortalidad = valor;
@@ -124,7 +124,7 @@ public class OpcionesManager : MonoBehaviour
         Debug.Log(" Cheat Inmortal: " + valor);
     }
 
-    private void SetCheatSaltarNiveles(bool valor)
+    public void SetCheatSaltarNiveles(bool valor)
     {
         if (LevelManager.instance != null) LevelManager.instance.cheatSaltarEscenas = valor;
 
