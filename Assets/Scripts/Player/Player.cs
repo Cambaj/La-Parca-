@@ -203,7 +203,7 @@ public class PlayerMovement : MonoBehaviour
 
         // -- WALL SLIDE --
         isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton4);
-        
+
         if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
         {
             isWallSliding = true;
@@ -251,17 +251,17 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed);
             }
-            else 
+            else
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, -wallSlideSpeed * 0);
             }
-           wallSlideTime -= Time.deltaTime;
+            wallSlideTime -= Time.deltaTime;
         }
         else
         {
             isWallSliding = false;
         }
-        
+
         if (isDashing)
         {
             isWallSliding = false;
@@ -434,7 +434,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        
+
 
         //Input de la granada 
 
@@ -476,25 +476,35 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        // -- DEBUG --
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (OpcionesManager.PermisoSaltarEscena)
         {
-            // Siguiente escena
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            // Escena anterior
-            int previousScene = SceneManager.GetActiveScene().buildIndex - 1;
-
-            if (previousScene >= 0)
+            //  AVANZAR NIVEL: Enter del teclado numérico o Botón X del mando
+            if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.JoystickButton3))
             {
-                SceneManager.LoadScene(previousScene);
+                int siguienteIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                if (siguienteIndex < SceneManager.sceneCountInBuildSettings)
+                {
+                    Time.timeScale = 1f;
+                    SceneManager.LoadScene(siguienteIndex);
+                    Debug.Log(" [CHEAT PLAYER] Saltando al siguiente nivel de forma lineal.");
+                }
+            }
+
+            //  RETROCEDER NIVEL: Tecla Retroceso (Backspace) o Botón Y del mando
+            if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                int anteriorIndex = SceneManager.GetActiveScene().buildIndex - 1;
+                if (anteriorIndex >= 0)
+                {
+                    Time.timeScale = 1f;
+                    SceneManager.LoadScene(anteriorIndex);
+                    Debug.Log(" [CHEAT PLAYER] Volviendo al nivel anterior.");
+                }
             }
         }
 
         if (isDead) return;
+
     }
 
 
@@ -643,13 +653,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void Die()
     {
-        if (OpcionesManager.CheatInmortalidad || (LevelManager.instance != null && LevelManager.instance.cheatInmortal)) return;
+        //  ESCUDO COMPLETO TRUCO INMORTALIDAD (Sincronizado con PlayerPrefs y managers estáticos)
+        if (PlayerPrefs.GetInt("SaveInmortal", 0) == 1 || OpcionesManager.CheatInmortalidad || (LevelManager.instance != null && LevelManager.instance.cheatInmortal)) return;
 
         if (isDead) return;
         isDead = true;
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(0, 0);
-        if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(dieSound); 
+        if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(dieSound);
         anim.SetTrigger("IsDeath");
     }
 
@@ -794,29 +805,26 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("Damage"))
         {
-          //  if (CanvasManager.CheatInmortal) return;
+            // ESCUDO COMPLETO TRUCO INMORTALIDAD (Colisiones)
+            if (PlayerPrefs.GetInt("SaveInmortal", 0) == 1 || OpcionesManager.CheatInmortalidad || (LevelManager.instance != null && LevelManager.instance.cheatInmortal)) return;
 
             isDead = true;
             rb.gravityScale = 0;
             rb.linearVelocity = new Vector2(0, 0);
             anim.SetTrigger("IsDeath");
         }
-        
 
         if ((isDashing || isGrappling) && collision.gameObject.CompareTag("Bone"))
         {
             Collider2D playerCollision = GetComponent<Collider2D>();
             Collider2D boneCollision = collision.collider;
 
-            // Ignora la colisi�n inmediatamente
             Physics2D.IgnoreCollision(playerCollision, boneCollision, true);
-
             DestroyBoneWall(collision.gameObject);
             rb.linearVelocity = dashVelocity;
-
         }
 
     }

@@ -20,11 +20,14 @@ public class OpcionesManager : MonoBehaviour
     [SerializeField] private Toggle toggleSaltarNiveles;
     [SerializeField] private Button botonSaltarEscenaDirecto; //  Arrastrá el botón físico para saltear escena aquí
 
+    public static bool CheatInmortalidad { get; private set; }
+    public static bool PermisoSaltarEscena { get; private set; }
+
     [Header("Navegación")]
     [SerializeField] private Button botonVolver;
 
     // Propiedad estática global para acceso rápido y limpio desde el PlayerMovement
-    public static bool CheatInmortalidad { get; private set; }
+    
 
     private void Start()
     {
@@ -47,6 +50,27 @@ public class OpcionesManager : MonoBehaviour
 
         // 5. Escuchar el clic del botón de saltear escena
         if (botonSaltarEscenaDirecto != null) botonSaltarEscenaDirecto.onClick.AddListener(CheatSaltearEscena);
+        
+    }
+
+    private void Update()
+    {
+        // CONTROL GLOBAL DE CAMBIO DE ESCENAS (Teclado y Mando)
+        // Solo funciona si el toggle de "Saltar Niveles" fue activado previamente
+        if (PermisoSaltarEscena)
+        {
+            //  AVANZAR ESCENA: Enter del teclado numérico o Botón 3 del mando (X en Xbox)
+            if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton3))
+            {
+                CheatSaltearEscena();
+            }
+
+            //  RETROCEDER ESCENA: Tecla Retroceso (Backspace) o Botón 2 del mando (X en PlayStation / Y en Xbox)
+            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                CheatVolverEscenaAtras();
+            }
+        }
     }
 
     // ==========================================
@@ -127,6 +151,7 @@ public class OpcionesManager : MonoBehaviour
     public void SetCheatSaltarNiveles(bool valor)
     {
         if (LevelManager.instance != null) LevelManager.instance.cheatSaltarEscenas = valor;
+        PermisoSaltarEscena = valor;
 
         // Prendemos o apagamos el botón físico de saltear según el Toggle general de trucos
         if (botonSaltarEscenaDirecto != null)
@@ -158,6 +183,25 @@ public class OpcionesManager : MonoBehaviour
         }
     }
 
+    public void CheatVolverEscenaAtras()
+    {
+        if (LevelManager.instance != null && !LevelManager.instance.cheatSaltarEscenas) return;
+
+        int anteriorIndex = SceneManager.GetActiveScene().buildIndex - 1;
+
+        // Protegemos el índice para no intentar cargar escenas negativas fuera de rango
+        if (anteriorIndex >= 0)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(anteriorIndex);
+            Debug.Log(" [CHEAT ACTIVADO] Regresando a la escena lineal anterior.");
+        }
+        else
+        {
+            Debug.LogWarning(" Estás en la escena inicial del build. No se puede ir más atrás.");
+        }
+    }
+
     // ==========================================
     //  CARGA Y PERSISTENCIA DE CONFIGURACIONES
     // ==========================================
@@ -174,26 +218,25 @@ public class OpcionesManager : MonoBehaviour
         if (sliderSFX != null) sliderSFX.value = sfxGuardado;
         SetVolumenSFX(sfxGuardado);
 
+        bool inmortal = PlayerPrefs.GetInt("SaveInmortal", 0) == 1;
+        bool saltar = PlayerPrefs.GetInt("SaveSaltarNiveles", 0) == 1;
+
+        CheatInmortalidad = inmortal;
+        PermisoSaltarEscena = saltar;
+
+        if (toggleInmortal != null) toggleInmortal.isOn = inmortal;
+        if (toggleSaltarNiveles != null) toggleSaltarNiveles.isOn = saltar;
+
+        if (botonSaltarEscenaDirecto != null)
+        {
+            botonSaltarEscenaDirecto.gameObject.SetActive(saltar);
+        }
+
         // 3. Sincronizar Trucos con el LevelManager y PlayerPrefs
         if (LevelManager.instance != null)
         {
-            // Cargamos lo que el archivo recuerde o lo que ya tenga el LevelManager
-            bool inmortal = PlayerPrefs.GetInt("SaveInmortal", LevelManager.instance.cheatInmortal ? 1 : 0) == 1;
-            bool saltar = PlayerPrefs.GetInt("SaveSaltarNiveles", LevelManager.instance.cheatSaltarEscenas ? 1 : 0) == 1;
-
             LevelManager.instance.cheatInmortal = inmortal;
             LevelManager.instance.cheatSaltarEscenas = saltar;
-
-            if (toggleInmortal != null) toggleInmortal.isOn = inmortal;
-            if (toggleSaltarNiveles != null) toggleSaltarNiveles.isOn = saltar;
-
-            CheatInmortalidad = inmortal;
-
-            // Mostrar u ocultar el botón de salto directo al arrancar la escena de opciones
-            if (botonSaltarEscenaDirecto != null)
-            {
-                botonSaltarEscenaDirecto.gameObject.SetActive(saltar);
-            }
         }
     }
 }
