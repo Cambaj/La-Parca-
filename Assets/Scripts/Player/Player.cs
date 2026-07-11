@@ -410,7 +410,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (unlockedGrapple == true)
         {
-            if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6)) && canGrapple && !isDashing && !isGrappling && !isDead)
+            if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6) || Input.GetKeyDown(KeyCode.JoystickButton7)) && canGrapple && !isDashing && !isGrappling && !isDead)
             {
                 StartGrapple();
             }
@@ -438,13 +438,13 @@ public class PlayerMovement : MonoBehaviour
 
         //Input de la granada 
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)) && hasGranade)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton5)) && hasGranade)
         {
             ThrowEquippedGranade();
         }
 
         //Soul bone
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)) && !hasGranade)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton5)) && !hasGranade)
         {
             ThrowSoulBone();
         }
