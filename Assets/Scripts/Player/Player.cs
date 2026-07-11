@@ -149,8 +149,8 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        horizontalRightStick = Input.GetAxisRaw("RightStickHorizontal");
-        verticalRightStick = Input.GetAxisRaw("RightStickVertical");
+        horizontalRightStick = Input.GetAxisRaw("Horizontal"); //Stick izquierdo en realidad. Para usar stick derecho "RightStickHorizontal"
+        verticalRightStick = Input.GetAxisRaw("Vertical");// Stick izquierdo en realidad: Para usar stick derecho: "RightStickVertical"
 
         controllerAim = new Vector2(horizontalRightStick, verticalRightStick);
 
@@ -438,13 +438,13 @@ public class PlayerMovement : MonoBehaviour
 
         //Input de la granada 
 
-        if (hasGranade && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)))
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)) && hasGranade)
         {
             ThrowEquippedGranade();
         }
 
         //Soul bone
-        if (Input.GetMouseButtonDown(0) && !hasGranade)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton3)) && !hasGranade)
         {
             ThrowSoulBone();
         }
