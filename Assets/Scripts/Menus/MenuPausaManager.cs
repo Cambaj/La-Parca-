@@ -35,7 +35,7 @@ public class MenuPausaManager : MonoBehaviour
     private void Update()
     {
         // Escuchar el input de Pausa (Escape o la tecla que definas)
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton9))
         {
             if (juegoPausado)
             {
