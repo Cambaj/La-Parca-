@@ -270,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
         // -- DASH --
         if (unlockedDash == true)
         {
-            if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
+            if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
             {
                 canDash = false;
                 isDashing = true;
@@ -410,7 +410,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (unlockedGrapple == true)
         {
-            if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton6) || Input.GetKeyDown(KeyCode.JoystickButton7)) && canGrapple && !isDashing && !isGrappling && !isDead)
+            if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton5)) && canGrapple && !isDashing && !isGrappling && !isDead)
             {
                 StartGrapple();
             }
@@ -438,13 +438,13 @@ public class PlayerMovement : MonoBehaviour
 
         //Input de la granada 
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton5)) && hasGranade)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton7)) && hasGranade)
         {
             ThrowEquippedGranade();
         }
 
         //Soul bone
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton5)) && !hasGranade)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton7)) && !hasGranade)
         {
             ThrowSoulBone();
         }
