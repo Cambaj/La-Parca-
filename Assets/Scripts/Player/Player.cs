@@ -479,7 +479,7 @@ public class PlayerMovement : MonoBehaviour
         if (OpcionesManager.PermisoSaltarEscena)
         {
             //  AVANZAR NIVEL: Enter del teclado numérico o Botón X del mando
-            if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.JoystickButton10))
+            if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.JoystickButton11))
             {
                 int siguienteIndex = SceneManager.GetActiveScene().buildIndex + 1;
                 if (siguienteIndex < SceneManager.sceneCountInBuildSettings)
@@ -491,7 +491,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //  RETROCEDER NIVEL: Tecla Retroceso (Backspace) o Botón Y del mando
-            if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.JoystickButton11))
+            if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.JoystickButton10))
             {
                 int anteriorIndex = SceneManager.GetActiveScene().buildIndex - 1;
                 if (anteriorIndex >= 0)
