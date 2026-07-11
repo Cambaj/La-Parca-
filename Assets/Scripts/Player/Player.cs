@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpForceY = 10f;
     private bool isWallJumping;
     private float wallJumpTimer;
-    [SerializeField] private float wallJumpDuration = 0.2f;
+    [SerializeField] private float wallJumpDuration = 0.25f;
 
     [Header("Dash")]
     [SerializeField] private bool unlockedDash;
@@ -204,7 +204,7 @@ public class PlayerMovement : MonoBehaviour
         // -- WALL SLIDE --
         isHoldingGrab = Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton4);
 
-        if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab)
+        if (isTouchingWall && !grounded && wallSlideTime > 0 && isHoldingGrab && !isWallJumping)
         {
             isWallSliding = true;
 
@@ -550,8 +550,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 isWallJumping = false;
             }
-
-            return;
         }
 
         if (isDashing) return;
@@ -574,10 +572,31 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (!isDead)
             {
+                if (isWallJumping)
+                {
+                    // Dejamos que la fuerza del impulso físico trabaje sola en el Rigidbody
+                }
+                else
+                {
+                    // 🛹 CONTROL DE INERCIA EN EL AIRE
+                    // Si el jugador está volando (por ejemplo, después del Wall Jump),
+                    // la velocidad horizontal se suaviza en lugar de cortarse a 0 inmediatamente.
+                    if (!grounded)
+                    {
+                        float targetVelocityX = horizontal * speed * Time.fixedDeltaTime;
 
-                rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+                        // El valor '5f' controla qué tan rápido recuperas la respuesta en el aire.
+                        // Puedes subirlo a 7f o 8f si prefieres un control más rígido tras los 3 tiles.
+                        rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, targetVelocityX, Time.fixedDeltaTime * 5f), rb.linearVelocity.y);
+                    }
+                    else
+                    {
+                        // Movimiento responsivo e instantáneo normal cuando pisas el suelo
+                        rb.linearVelocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, rb.linearVelocity.y);
+                    }
+                }
             }
-            anim.SetBool("IsGrappling", false); 
+            anim.SetBool("IsGrappling", false);
         }
 
     }
@@ -681,6 +700,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoJump(Vector2 direction)
     {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+
         rb.AddForce(direction * jumpForce, ForceMode2D.Impulse);
     }
 
@@ -831,6 +852,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (isWallJumping) return; 
+
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Bone"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
