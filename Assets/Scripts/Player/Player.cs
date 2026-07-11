@@ -35,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LineRenderer grappleline;
     [SerializeField] private GameObject grappleObject;
 
+    //guadana animacion grapple
+    [SerializeField] private GameObject grappleLaunchSprite;
+    [SerializeField] private GameObject grappleThreadSprite;
+    [SerializeField] private GameObject grapplePointSprite;
+    private bool isPreparingGrapple = false;
+
     private Vector2 grapplePoint;
     private bool isGrappling = false;
 
@@ -140,6 +146,22 @@ public class PlayerMovement : MonoBehaviour
         originalColor = spriteRenderer.color;
         //spawnPoint = GameObject.Find("SpawnPoint").transform;
         canTP = true;
+
+        if (grapplePointSprite != null)
+        {
+            grapplePointSprite.transform.SetParent(null);
+            grapplePointSprite.SetActive(false);
+        }
+        if (grappleLaunchSprite != null)
+        {
+            grappleLaunchSprite.transform.SetParent(null);
+            grappleLaunchSprite.SetActive(false);
+        }
+        if (grappleThreadSprite != null)
+        {
+            grappleThreadSprite.transform.SetParent(null);
+            grappleThreadSprite.SetActive(false);
+        }
     }
 
     void Update()
@@ -149,8 +171,8 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        horizontalRightStick = Input.GetAxisRaw("Horizontal"); //Stick izquierdo en realidad. Para usar stick derecho "RightStickHorizontal"
-        verticalRightStick = Input.GetAxisRaw("Vertical");// Stick izquierdo en realidad: Para usar stick derecho: "RightStickVertical"
+        horizontalRightStick = Input.GetAxisRaw("LeftStickHorizontal"); //Stick izquierdo en realidad. Para usar stick derecho "RightStickHorizontal"
+        verticalRightStick = Input.GetAxisRaw("LeftStickVertical");// Stick izquierdo en realidad: Para usar stick derecho: "RightStickVertical"
 
         controllerAim = new Vector2(horizontalRightStick, verticalRightStick);
 
@@ -270,7 +292,7 @@ public class PlayerMovement : MonoBehaviour
         // -- DASH --
         if (unlockedDash == true)
         {
-            if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isDead)
+            if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton2)) && canDash && !isGrappling && (horizontal != 0 || vertical != 0) && !isPreparingGrapple && !isDead)
             {
                 canDash = false;
                 isDashing = true;
@@ -340,7 +362,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (!isDashing && !isGrappling && !externalLaunch && !isDead)
+        if (!isDashing && !isGrappling && !isPreparingGrapple && !externalLaunch && !isDead)
         {
             // Caso 1: Cayendo (Ca�da r�pida y pesada)
             if (rb.linearVelocity.y < 0)
@@ -427,6 +449,23 @@ public class PlayerMovement : MonoBehaviour
 
                 grappleline.SetPosition(0, new Vector3(transform.position.x, transform.position.y, 0));
                 grappleline.SetPosition(1, new Vector3(grapplePoint.x, grapplePoint.y, 0));
+
+                if (grapplePointSprite != null)
+                {
+                    grapplePointSprite.SetActive(true);
+                    grapplePointSprite.transform.position = new Vector3(grapplePoint.x, grapplePoint.y, 0f);
+                }
+
+                if (grappleThreadSprite != null && grappleThreadSprite.activeSelf)
+                {
+                    // Mantiene el hilo en el punto medio exacto entre el jugador y el objetivo
+                    grappleThreadSprite.transform.position = ((Vector2)transform.position + grapplePoint) / 2f;
+                }
+
+                if (Vector2.Distance(transform.position, grapplePoint) < 2f)
+                {
+                    grappleThreadSprite.SetActive(false);
+                }
 
                 if (Vector2.Distance(transform.position, grapplePoint) < 0.7f)
                 {
@@ -707,8 +746,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void StartGrapple()
     {
-        grappleTimer = grappleDuration;
-
         Vector2 direction;
 
         if (controllerAim != Vector2.zero)
@@ -746,17 +783,90 @@ public class PlayerMovement : MonoBehaviour
             if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleLaunchSound);
         }
 
-        isGrappling = true;
-        grappleline.enabled = true;
-        canGrapple = false;
+        float rotAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        StartCoroutine(GrappleAnimationSequence(rotAngle));
     }
 
     public void StopGrapple()
     {
         isGrappling = false;
         grappleline.enabled = false;
+
+        if (grapplePointSprite != null) grapplePointSprite.SetActive(false);
+        if (grappleLaunchSprite != null) grappleLaunchSprite.SetActive(false);
+        if (grappleThreadSprite != null) grappleThreadSprite.SetActive(false);
+
         rb.linearVelocity = new Vector2(0, 0);
         rb.gravityScale = 1;
+    }
+
+    private System.Collections.IEnumerator GrappleAnimationSequence(float rotAngle)
+    {
+        // --- INICIO DE PREPARACIÓN ---
+        isPreparingGrapple = true;
+        canGrapple = false;
+
+        // Jugador en Gravedad 0 e inmóvil
+        rb.gravityScale = 0;
+        rb.linearVelocity = Vector2.zero;
+
+        // Fase 1: Aparece el objeto de lanzamiento
+        if (grappleLaunchSprite != null)
+        {
+            grappleLaunchSprite.SetActive(true);
+
+            float offsetDistance = 2f; // Cambia este valor para alejarlo más o menos
+
+            // Calculamos la dirección unitaria basada en el ángulo
+            Vector2 launchDirection = new Vector2(Mathf.Cos(rotAngle * Mathf.Deg2Rad), Mathf.Sin(rotAngle * Mathf.Deg2Rad));
+
+            // Posicionamos el objeto sumando el desfase a la posición del jugador
+            grappleLaunchSprite.transform.position = (Vector2)transform.position + (launchDirection * offsetDistance);
+            // ---------------------------------------
+
+            grappleLaunchSprite.transform.rotation = Quaternion.Euler(0, 0, rotAngle);
+        }
+
+        // Esperamos exactamente 3 frames
+        yield return null;
+        if (isDead) yield break; // Seguridad por si muere durante la animación
+        yield return null;
+        yield return null;
+
+        // Fase 2: Aparece el hilo entre el jugador y el punto
+        if (grappleThreadSprite != null)
+        {
+            grappleThreadSprite.SetActive(true);
+
+            // Si el pivot (centro) de tu sprite está en la base (donde toca al jugador):
+            grappleThreadSprite.transform.position = ((Vector2)transform.position + grapplePoint) / 2f;
+
+            grappleThreadSprite.transform.rotation = Quaternion.Euler(0, 0, rotAngle);
+        }
+        // --- FASE 3: INICIA EL GRAPPLE REAL ---
+        isPreparingGrapple = false;
+        isGrappling = true;
+        grappleTimer = grappleDuration;
+        canGrapple = false;
+        grappleline.enabled = false;
+
+        if (grapplePointSprite != null)
+        {
+            grapplePointSprite.SetActive(true);
+            grapplePointSprite.transform.position = new Vector3(grapplePoint.x, grapplePoint.y, 0f);
+            grapplePointSprite.transform.rotation = Quaternion.Euler(0, 0, rotAngle);
+        }
+
+        // Esperamos 3 frames más
+        yield return null;
+        if (isDead) yield break;
+        yield return null;
+        if (grappleLaunchSprite != null)
+        {
+            grappleLaunchSprite.SetActive(false);
+        }
+        yield return null;
     }
 
     //Usada por Portal
