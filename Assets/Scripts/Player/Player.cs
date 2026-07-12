@@ -35,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LineRenderer grappleline;
     [SerializeField] private GameObject grappleObject;
 
+    private SpriteRenderer grappleObjectRenderer;
+    [Header("Sprites de la Guadaña")]
+    [SerializeField] private Sprite spriteGuadaniaLista; //Guadaña flotando 
+    [SerializeField] private Sprite spriteGuadaniaRecargando; //Guadaña reconstruyendose
+
     //guadana animacion grapple
     [SerializeField] private GameObject grappleLaunchSprite;
     [SerializeField] private GameObject grappleThreadSprite;
@@ -147,6 +152,10 @@ public class PlayerMovement : MonoBehaviour
         //spawnPoint = GameObject.Find("SpawnPoint").transform;
         canTP = true;
 
+        if (grappleObject != null)
+        {
+            grappleObjectRenderer = grappleObject.GetComponent<SpriteRenderer>();
+        }
         if (grapplePointSprite != null)
         {
             grapplePointSprite.transform.SetParent(null);
@@ -199,7 +208,12 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = coyoteTime;
             wallSlideTime = wallSlideTimeMax;
             canDash = true;
-            canGrapple = true;
+
+            if (!canGrapple)
+            {
+                canGrapple = true;
+                ActualizarVisualGuadaniaEspalda();
+            }
             hasJumped = false;
         }
         else
@@ -506,14 +520,6 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.color = originalColor;
         }
 
-        if (unlockedGrapple == true)
-        {
-            if (grappleObject != null)
-            {
-                grappleObject.SetActive(canGrapple);
-            }
-        }
-
 
         if (OpcionesManager.PermisoSaltarEscena)
         {
@@ -785,6 +791,11 @@ public class PlayerMovement : MonoBehaviour
 
         float rotAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
+        if (grappleObject != null)
+        {
+            grappleObject.SetActive(false);
+        }
+
         StartCoroutine(GrappleAnimationSequence(rotAngle));
     }
 
@@ -799,6 +810,8 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector2(0, 0);
         rb.gravityScale = 1;
+
+        ActualizarVisualGuadaniaEspalda();
     }
 
     private System.Collections.IEnumerator GrappleAnimationSequence(float rotAngle)
@@ -867,6 +880,24 @@ public class PlayerMovement : MonoBehaviour
             grappleLaunchSprite.SetActive(false);
         }
         yield return null;
+    }
+
+    private void ActualizarVisualGuadaniaEspalda()
+    {
+        if (grappleObject == null || grappleObjectRenderer == null) return;
+
+        if (canGrapple)
+        {
+            // FASE 5 (QUINTA IMAGEN): Lista para usarse, brilla en su color original.
+            grappleObject.SetActive(true);
+            grappleObjectRenderer.sprite = spriteGuadaniaLista;
+        }
+        else
+        {
+            // FASE 4 (CUARTA IMAGEN): Reaparece apagada en la espalda esperando tocar suelo.
+            grappleObject.SetActive(true);
+            grappleObjectRenderer.sprite = spriteGuadaniaRecargando;
+        }
     }
 
     //Usada por Portal
@@ -1001,6 +1032,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = true;
             canGrapple = true;
+            ActualizarVisualGuadaniaEspalda();
             if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleRecoverSound);
             Destroy(collision.gameObject);
         }

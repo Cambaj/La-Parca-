@@ -247,6 +247,8 @@ MonoBehaviour:
     m_Bits: 265
   grappleline: {fileID: 3464255328292084296}
   grappleObject: {fileID: 5820072371427939446}
+  spriteGuadaniaLista: {fileID: 0}
+  spriteGuadaniaRecargando: {fileID: 0}
   grappleLaunchSprite: {fileID: 7829391779495197449}
   grappleThreadSprite: {fileID: 274803177514026605}
   grapplePointSprite: {fileID: 8664077727074376342}
@@ -692,6 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222420498636816304}
   - component: {fileID: 2655270144307068521}
+  - component: {fileID: 6464529993197560769}
   m_Layer: 0
   m_Name: Grapple
   m_TagString: Untagged
@@ -773,6 +776,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &6464529993197560769
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5820072371427939446}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ad8ad1bebb02c14a910eb5b5ba51768, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7841714577886650817
 GameObject:
   m_ObjectHideFlags: 0

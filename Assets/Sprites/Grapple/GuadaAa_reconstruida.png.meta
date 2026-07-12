@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: dbe034bacbc9cbe4ca425a9652febf43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2472816660644817573
+    second: GuadaAa_reconstruida_0
+  - first:
+      213: 3705802055232246488
+    second: GuadaAa_reconstruida_1
+  - first:
+      213: -8153418115148035971
+    second: GuadaAa_reconstruida_2
+  - first:
+      213: 8216649359060900172
+    second: GuadaAa_reconstruida_3
+  - first:
+      213: -656547263845697850
+    second: GuadaAa_reconstruida_4
+  - first:
+      213: -3467287233069559622
+    second: GuadaAa_reconstruida_5
+  - first:
+      213: 5537783353769437997
+    second: GuadaAa_reconstruida_6
+  - first:
+      213: 1867771281134862951
+    second: GuadaAa_reconstruida_7
+  - first:
+      213: 8046671738641965905
+    second: GuadaAa_reconstruida_8
+  - first:
+      213: -2834748979162640587
+    second: GuadaAa_reconstruida_9
+  - first:
+      213: 4938383121313831248
+    second: GuadaAa_reconstruida_10
+  - first:
+      213: -8743011267894397374
+    second: GuadaAa_reconstruida_11
+  - first:
+      213: -8173721256230517262
+    second: GuadaAa_reconstruida_12
+  - first:
+      213: -1900570149285011651
+    second: GuadaAa_reconstruida_13
+  - first:
+      213: -5251486243589317404
+    second: GuadaAa_reconstruida_14
+  - first:
+      213: -8436264968344547841
+    second: GuadaAa_reconstruida_15
+  - first:
+      213: 7498729386355018590
+    second: GuadaAa_reconstruida_16
+  - first:
+      213: 5106920275489021615
+    second: GuadaAa_reconstruida_17
+  - first:
+      213: -2438219844174001268
+    second: GuadaAa_reconstruida_18
+  - first:
+      213: -2617091300449090292
+    second: GuadaAa_reconstruida_19
+  - first:
+      213: 1801140040089204697
+    second: GuadaAa_reconstruida_20
+  - first:
+      213: 5161043711534287273
+    second: GuadaAa_reconstruida_21
+  - first:
+      213: -6092744710110536643
+    second: GuadaAa_reconstruida_22
+  - first:
+      213: 124829473383143234
+    second: GuadaAa_reconstruida_23
+  - first:
+      213: 1673767109199741936
+    second: GuadaAa_reconstruida_24
+  - first:
+      213: -5230376415081989507
+    second: GuadaAa_reconstruida_25
+  - first:
+      213: 3166166882239716177
+    second: GuadaAa_reconstruida_26
+  - first:
+      213: 6545558003628897131
+    second: GuadaAa_reconstruida_27
+  - first:
+      213: 2614509047123628052
+    second: GuadaAa_reconstruida_28
+  - first:
+      213: -2385334479687347538
+    second: GuadaAa_reconstruida_29
+  - first:
+      213: -2530509519961353495
+    second: GuadaAa_reconstruida_30
+  - first:
+      213: -3858628531224432580
+    second: GuadaAa_reconstruida_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 831
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aae66cb6a5315220800000000000000
+      internalID: 2472816660644817573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2d706c557ad6330800000000000000
+      internalID: 3705802055232246488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 773
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78cd554c6d39de80800000000000000
+      internalID: -8153418115148035971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 745
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4914c2fe07670270800000000000000
+      internalID: 8216649359060900172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 716
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6f838fdb973e6f0800000000000000
+      internalID: -656547263845697850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_5
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 686
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab054aac1a8b1efc0800000000000000
+      internalID: -3467287233069559622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 657
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2baf7cae982adc40800000000000000
+      internalID: 5537783353769437997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 628
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76248b59518abe910800000000000000
+      internalID: 1867771281134862951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 598
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153eded20558baf60800000000000000
+      internalID: 8046671738641965905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 565
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f0c9592d2f8a8d0800000000000000
+      internalID: -2834748979162640587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 531
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05912beb849a88440800000000000000
+      internalID: 4938383121313831248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_11
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 497
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246bae503959aa680800000000000000
+      internalID: -8743011267894397374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 464
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5025dd2db119e80800000000000000
+      internalID: -8173721256230517262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_13
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 430
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fd725d481df95e0800000000000000
+      internalID: -1900570149285011651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_14
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 397
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec1204c519fe17b0800000000000000
+      internalID: -5251486243589317404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 363
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd40c265bd5cea80800000000000000
+      internalID: -8436264968344547841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 329
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b497c95a6d01860800000000000000
+      internalID: 7498729386355018590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_17
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 302
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae53c4deec6fd640800000000000000
+      internalID: 5106920275489021615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 292
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b43bf48f3b92ed0800000000000000
+      internalID: -2438219844174001268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_19
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 268
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0587f304593eabd0800000000000000
+      internalID: -2617091300449090292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 260
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7ff38d25feef810800000000000000
+      internalID: 1801140040089204697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 236
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9c34849e5bf9740800000000000000
+      internalID: 5161043711534287273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_22
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 228
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c98b687f8327ba0800000000000000
+      internalID: -6092744710110536643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 204
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2475082aebb7bb100800000000000000
+      internalID: 124829473383143234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_24
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 196
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3459c515a6a3710800000000000000
+      internalID: 1673767109199741936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_25
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 172
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7af479bc58f967b0800000000000000
+      internalID: -5230376415081989507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_26
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 164
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b118b110c70fb20800000000000000
+      internalID: 3166166882239716177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_27
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 132
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63f30f035e76da50800000000000000
+      internalID: 6545558003628897131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 100
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41059d7402a984420800000000000000
+      internalID: 2614509047123628052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_29
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 68
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea29eb3cde695eed0800000000000000
+      internalID: -2385334479687347538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 36
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e295f1bff2d1ecd0800000000000000
+      internalID: -2530509519961353495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_reconstruida_31
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c303e247bc5637ac0800000000000000
+      internalID: -3858628531224432580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GuadaAa_reconstruida_0: 2472816660644817573
+      GuadaAa_reconstruida_1: 3705802055232246488
+      GuadaAa_reconstruida_10: 4938383121313831248
+      GuadaAa_reconstruida_11: -8743011267894397374
+      GuadaAa_reconstruida_12: -8173721256230517262
+      GuadaAa_reconstruida_13: -1900570149285011651
+      GuadaAa_reconstruida_14: -5251486243589317404
+      GuadaAa_reconstruida_15: -8436264968344547841
+      GuadaAa_reconstruida_16: 7498729386355018590
+      GuadaAa_reconstruida_17: 5106920275489021615
+      GuadaAa_reconstruida_18: -2438219844174001268
+      GuadaAa_reconstruida_19: -2617091300449090292
+      GuadaAa_reconstruida_2: -8153418115148035971
+      GuadaAa_reconstruida_20: 1801140040089204697
+      GuadaAa_reconstruida_21: 5161043711534287273
+      GuadaAa_reconstruida_22: -6092744710110536643
+      GuadaAa_reconstruida_23: 124829473383143234
+      GuadaAa_reconstruida_24: 1673767109199741936
+      GuadaAa_reconstruida_25: -5230376415081989507
+      GuadaAa_reconstruida_26: 3166166882239716177
+      GuadaAa_reconstruida_27: 6545558003628897131
+      GuadaAa_reconstruida_28: 2614509047123628052
+      GuadaAa_reconstruida_29: -2385334479687347538
+      GuadaAa_reconstruida_3: 8216649359060900172
+      GuadaAa_reconstruida_30: -2530509519961353495
+      GuadaAa_reconstruida_31: -3858628531224432580
+      GuadaAa_reconstruida_4: -656547263845697850
+      GuadaAa_reconstruida_5: -3467287233069559622
+      GuadaAa_reconstruida_6: 5537783353769437997
+      GuadaAa_reconstruida_7: 1867771281134862951
+      GuadaAa_reconstruida_8: 8046671738641965905
+      GuadaAa_reconstruida_9: -2834748979162640587
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

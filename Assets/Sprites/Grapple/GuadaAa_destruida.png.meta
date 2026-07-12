@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: cc2ab675056a25749bb9d131cfeb8dfd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3771315170240606814
+    second: GuadaAa_destruida_0
+  - first:
+      213: -8000804156382929264
+    second: GuadaAa_destruida_1
+  - first:
+      213: 1814669713149606579
+    second: GuadaAa_destruida_2
+  - first:
+      213: -5975346298179515187
+    second: GuadaAa_destruida_3
+  - first:
+      213: 4226353343991936171
+    second: GuadaAa_destruida_4
+  - first:
+      213: 6283845863032931015
+    second: GuadaAa_destruida_5
+  - first:
+      213: -359460435563375559
+    second: GuadaAa_destruida_6
+  - first:
+      213: -2459405262616918534
+    second: GuadaAa_destruida_7
+  - first:
+      213: 4555550314120315556
+    second: GuadaAa_destruida_8
+  - first:
+      213: 531838921337663359
+    second: GuadaAa_destruida_9
+  - first:
+      213: 7616988015704240964
+    second: GuadaAa_destruida_10
+  - first:
+      213: -5013183706856677657
+    second: GuadaAa_destruida_11
+  - first:
+      213: 2586957726456558720
+    second: GuadaAa_destruida_12
+  - first:
+      213: -9048062783243550525
+    second: GuadaAa_destruida_13
+  - first:
+      213: 7497991438180593035
+    second: GuadaAa_destruida_14
+  - first:
+      213: 5112430477752930645
+    second: GuadaAa_destruida_15
+  - first:
+      213: -3493988451347585332
+    second: GuadaAa_destruida_16
+  - first:
+      213: 4235173593673509959
+    second: GuadaAa_destruida_17
+  - first:
+      213: -5876544536067956246
+    second: GuadaAa_destruida_18
+  - first:
+      213: -3325081598812992582
+    second: GuadaAa_destruida_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GuadaAa_destruida_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 612
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52bb328a27665430800000000000000
+      internalID: 3771315170240606814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 580
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e9355820f67f090800000000000000
+      internalID: -8000804156382929264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 548
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba31f45d700f2910800000000000000
+      internalID: 1814669713149606579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 516
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc8017533e431da0800000000000000
+      internalID: -5975346298179515187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 484
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba47ce369f507aa30800000000000000
+      internalID: 4226353343991936171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 453
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2c269e484b43750800000000000000
+      internalID: 6283845863032931015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 422
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934107b63a0f20bf0800000000000000
+      internalID: -359460435563375559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 392
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af50ef2b1ff6eddd0800000000000000
+      internalID: -2459405262616918534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 363
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a28f85dfd0983f30800000000000000
+      internalID: 4555550314120315556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_9
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 336
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fee006ea8716700800000000000000
+      internalID: 531838921337663359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 308
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44375766e3af4b960800000000000000
+      internalID: 7616988015704240964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_11
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 278
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee1807caf79d6ab0800000000000000
+      internalID: -5013183706856677657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 246
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084356e8858b6e320800000000000000
+      internalID: 2586957726456558720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 214
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0065b56d2de6280800000000000000
+      internalID: -9048062783243550525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 179
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8daca9ac773e0860800000000000000
+      internalID: 7497991438180593035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 142
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5511855ce6003f640800000000000000
+      internalID: 5112430477752930645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 105
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc62c14f30cd28fc0800000000000000
+      internalID: -3493988451347585332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_17
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 70
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c260dc1fb56ca30800000000000000
+      internalID: 4235173593673509959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae128e431e1527ea0800000000000000
+      internalID: -5876544536067956246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuadaAa_destruida_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb409527efead1d0800000000000000
+      internalID: -3325081598812992582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GuadaAa_destruida_0: 3771315170240606814
+      GuadaAa_destruida_1: -8000804156382929264
+      GuadaAa_destruida_10: 7616988015704240964
+      GuadaAa_destruida_11: -5013183706856677657
+      GuadaAa_destruida_12: 2586957726456558720
+      GuadaAa_destruida_13: -9048062783243550525
+      GuadaAa_destruida_14: 7497991438180593035
+      GuadaAa_destruida_15: 5112430477752930645
+      GuadaAa_destruida_16: -3493988451347585332
+      GuadaAa_destruida_17: 4235173593673509959
+      GuadaAa_destruida_18: -5876544536067956246
+      GuadaAa_destruida_19: -3325081598812992582
+      GuadaAa_destruida_2: 1814669713149606579
+      GuadaAa_destruida_3: -5975346298179515187
+      GuadaAa_destruida_4: 4226353343991936171
+      GuadaAa_destruida_5: 6283845863032931015
+      GuadaAa_destruida_6: -359460435563375559
+      GuadaAa_destruida_7: -2459405262616918534
+      GuadaAa_destruida_8: 4555550314120315556
+      GuadaAa_destruida_9: 531838921337663359
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
