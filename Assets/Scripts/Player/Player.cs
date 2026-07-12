@@ -171,8 +171,8 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        horizontalRightStick = Input.GetAxisRaw("LeftStickHorizontal"); //Stick izquierdo en realidad. Para usar stick derecho "RightStickHorizontal"
-        verticalRightStick = Input.GetAxisRaw("LeftStickVertical");// Stick izquierdo en realidad: Para usar stick derecho: "RightStickVertical"
+       // horizontalRightStick = Input.GetAxisRaw("LeftStickHorizontal"); //Stick izquierdo en realidad. Para usar stick derecho "RightStickHorizontal"
+       // verticalRightStick = Input.GetAxisRaw("LeftStickVertical");// Stick izquierdo en realidad: Para usar stick derecho: "RightStickVertical"
 
         controllerAim = new Vector2(horizontalRightStick, verticalRightStick);
 
