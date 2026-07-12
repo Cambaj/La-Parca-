@@ -17,6 +17,109 @@ public class SelectorNivelesManager : MonoBehaviour
     [Header("Progreso de Reinos")]
     [SerializeField] private ReinoConfig[] reinos;
 
+    [Header("Botones Extra Inferiores")]
+    [SerializeField] private Button botonVolver;
+    [SerializeField] private Button botonBorrarProgreso;
+
+    private System.Collections.IEnumerator Start()
+    {
+        // 1. Cargar el progreso lógico de los niveles (Desbloquear / Bloquear)
+        ActualizarBotonesUI();
+
+        // 2. Limpiar cualquier selección residual en el EventSystem
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        // 3. ESPERAR UN FRAME: Esto le da tiempo a Unity para renderizar la UI 
+        // y que el foco inicial responda perfectamente.
+        yield return new WaitForEndOfFrame();
+
+        // 4. Forzar la selección del primer nivel para que inicie resaltado en amarillo
+        if (botonNivel1 != null)
+        {
+            botonNivel1.Select();
+        }
+        else
+        {
+            EnfocarPrimerBoton();
+        }
+    }
+
+    private void ActualizarBotonesUI()
+    {
+        if (reinos == null || reinos.Length == 0) return;
+
+        foreach (var reino in reinos)
+        {
+            for (int i = 0; i < reino.botonesNiveles.Length; i++)
+            {
+                if (reino.botonesNiveles[i] == null) continue;
+
+                // Nomenclatura dinámica perfecta: Nivel_1-1, Nivel_1-2...
+                string clave = "Nivel_" + reino.numeroReino + "-" + (i + 1);
+
+                // Si el truco de saltear escenas está activo en el OpcionesManager, forzamos que devuelva 1 (Desbloqueado)
+                int estadoDesbloqueado = OpcionesManager.PermisoSaltarEscena ? 1 : PlayerPrefs.GetInt(clave, 0);
+
+                bool puedeJugar = false;
+
+                // El Reino 1 Nivel 1 siempre se puede jugar de forma nativa
+                if (reino.numeroReino == 1 && i == 0)
+                {
+                    puedeJugar = true;
+                }
+                else
+                {
+                    puedeJugar = (estadoDesbloqueado == 1);
+                }
+
+                // .interactable = false aplica automáticamente tu "Disabled Sprite" (Bloqueado)
+                // .interactable = true habilita el camino para que use tus estados Normal/Selected/Highlighted (Amarillo)
+                reino.botonesNiveles[i].interactable = puedeJugar;
+            }
+        }
+    }
+
+    private void EnfocarPrimerBoton()
+    {
+        if (reinos == null || reinos.Length == 0) return;
+
+        foreach (var reino in reinos)
+        {
+            if (reino.numeroReino == 1 && reino.botonesNiveles.Length > 0 && reino.botonesNiveles[0] != null)
+            {
+                reino.botonesNiveles[0].Select();
+                break;
+            }
+        }
+    }
+
+    public void ResetearTodoElProgreso()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+
+        Debug.Log("¡Progreso de La Parca eliminado por completo!");
+
+        ActualizarBotonesUI();
+        EnfocarPrimerBoton();
+    }
+    /*
+    [Header("Primer Botón")]
+    [SerializeField] private Button botonNivel1;
+
+    [System.Serializable]
+    public struct ReinoConfig
+    {
+        public int numeroReino;
+        public Button[] botonesNiveles;
+    }
+
+    [Header("Progreso de Reinos")]
+    [SerializeField] private ReinoConfig[] reinos;
+
     [Header("Indicador Visual (Guadañas)")]
     [SerializeField] private RectTransform indicadorVisual;
     [SerializeField] private Vector3 offsetIndicador = Vector3.zero;
@@ -197,5 +300,6 @@ public class SelectorNivelesManager : MonoBehaviour
         ActualizarBotonesUI();
         EnfocarPrimerBoton();
     }
+    */
 
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ccf6bdcb26d3ea44a929b4b54f67cb51
+guid: 514534c9c11975041baf7373707a5824
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7806560563507454216
-    second: BOTON_reino_4_1_0
+      213: -8270991622083055806
+    second: BOTON_reino_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BOTON_reino_4_1_0
+      name: BOTON_reino_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fe9096478689a390800000000000000
-      internalID: -7806560563507454216
+      spriteID: 24fe189f0f8873d80800000000000000
+      internalID: -8270991622083055806
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BOTON_reino_4_1_0: -7806560563507454216
+      BOTON_reino_2_0: -8270991622083055806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

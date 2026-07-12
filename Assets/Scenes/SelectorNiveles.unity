@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 41492421}
   - component: {fileID: 41492420}
   - component: {fileID: 41492423}
+  - component: {fileID: 41492424}
   m_Layer: 5
   m_Name: Muerte_2
   m_TagString: Untagged
@@ -317,7 +318,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 599979984}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -325,9 +326,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -403,6 +404,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-2
+--- !u!114 &41492424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41492418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &82361943
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +703,7 @@ GameObject:
   - component: {fileID: 214375161}
   - component: {fileID: 214375160}
   - component: {fileID: 214375163}
+  - component: {fileID: 214375164}
   m_Layer: 5
   m_Name: Muerte_11
   m_TagString: Untagged
@@ -738,7 +752,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -746,9 +760,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -824,6 +838,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-11
+--- !u!114 &214375164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214375158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &299569654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1137,7 @@ GameObject:
   - component: {fileID: 316984114}
   - component: {fileID: 316984113}
   - component: {fileID: 316984116}
+  - component: {fileID: 316984117}
   m_Layer: 5
   m_Name: Guerra_5
   m_TagString: Untagged
@@ -1159,7 +1186,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 431643553}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1245,6 +1272,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 3-5
+--- !u!114 &316984117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316984111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &318233109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1571,7 @@ GameObject:
   - component: {fileID: 334683500}
   - component: {fileID: 334683499}
   - component: {fileID: 334683502}
+  - component: {fileID: 334683503}
   m_Layer: 5
   m_Name: Hambruna_5
   m_TagString: Untagged
@@ -1580,7 +1620,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 844075964}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1588,9 +1628,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1666,6 +1706,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 4-5
+--- !u!114 &334683503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334683497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &380181266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1731,7 @@ GameObject:
   - component: {fileID: 380181269}
   - component: {fileID: 380181268}
   - component: {fileID: 380181271}
+  - component: {fileID: 380181272}
   m_Layer: 5
   m_Name: Muerte_6
   m_TagString: Untagged
@@ -1727,7 +1780,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1807441398}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -1735,9 +1788,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1813,6 +1866,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-6
+--- !u!114 &380181272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380181266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &401298615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +1891,7 @@ GameObject:
   - component: {fileID: 401298618}
   - component: {fileID: 401298617}
   - component: {fileID: 401298620}
+  - component: {fileID: 401298621}
   m_Layer: 5
   m_Name: Hambruna_3
   m_TagString: Untagged
@@ -1874,7 +1940,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1899431416}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1882,9 +1948,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1960,6 +2026,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 4-3
+--- !u!114 &401298621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401298615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &409911033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,6 +2126,7 @@ GameObject:
   - component: {fileID: 431643554}
   - component: {fileID: 431643553}
   - component: {fileID: 431643556}
+  - component: {fileID: 431643557}
   m_Layer: 5
   m_Name: Guerra_6
   m_TagString: Untagged
@@ -2096,7 +2175,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2182,6 +2261,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 3-6
+--- !u!114 &431643557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431643551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &433952972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2286,7 @@ GameObject:
   - component: {fileID: 433952975}
   - component: {fileID: 433952974}
   - component: {fileID: 433952977}
+  - component: {fileID: 433952978}
   m_Layer: 5
   m_Name: Peste_3
   m_TagString: Untagged
@@ -2243,7 +2335,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1154036622}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2251,9 +2343,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2329,6 +2421,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 2-3
+--- !u!114 &433952978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433952972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &493110275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,6 +2720,7 @@ GameObject:
   - component: {fileID: 532068650}
   - component: {fileID: 532068649}
   - component: {fileID: 532068652}
+  - component: {fileID: 532068653}
   m_Layer: 5
   m_Name: Guerra_3
   m_TagString: Untagged
@@ -2664,7 +2769,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1654807521}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2750,6 +2855,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 3-3
+--- !u!114 &532068653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532068647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &536557359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &585813388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2936,6 +3053,7 @@ GameObject:
   - component: {fileID: 599979985}
   - component: {fileID: 599979984}
   - component: {fileID: 599979987}
+  - component: {fileID: 599979988}
   m_Layer: 5
   m_Name: Muerte_3
   m_TagString: Untagged
@@ -2984,7 +3102,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1065325050}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -2992,9 +3110,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3070,6 +3188,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-3
+--- !u!114 &599979988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599979982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &617385459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,6 +3943,7 @@ GameObject:
   - component: {fileID: 802820153}
   - component: {fileID: 802820152}
   - component: {fileID: 802820155}
+  - component: {fileID: 802820156}
   m_Layer: 5
   m_Name: Peste_6
   m_TagString: Untagged
@@ -3861,7 +3992,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3869,9 +4000,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3947,6 +4078,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 2-6
+--- !u!114 &802820156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802820150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &815814019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,6 +4103,7 @@ GameObject:
   - component: {fileID: 815814022}
   - component: {fileID: 815814021}
   - component: {fileID: 815814024}
+  - component: {fileID: 815814025}
   m_Layer: 5
   m_Name: Muerte_1
   m_TagString: Untagged
@@ -4008,7 +4152,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 41492420}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -4016,9 +4160,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4094,6 +4238,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-1
+--- !u!114 &815814025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815814019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &844075962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4107,6 +4263,7 @@ GameObject:
   - component: {fileID: 844075965}
   - component: {fileID: 844075964}
   - component: {fileID: 844075967}
+  - component: {fileID: 844075968}
   m_Layer: 5
   m_Name: Hambruna_6
   m_TagString: Untagged
@@ -4155,7 +4312,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4163,9 +4320,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4241,6 +4398,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 4-6
+--- !u!114 &844075968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844075962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &847696131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,8 +4478,6 @@ MonoBehaviour:
     - {fileID: 1899431416}
     - {fileID: 334683499}
     - {fileID: 844075964}
-  indicadorVisual: {fileID: 585813388}
-  offsetIndicador: {x: 0, y: 0, z: 0}
   botonVolver: {fileID: 0}
   botonBorrarProgreso: {fileID: 0}
 --- !u!4 &847696133
@@ -4341,6 +4508,7 @@ GameObject:
   - component: {fileID: 977188533}
   - component: {fileID: 977188532}
   - component: {fileID: 977188535}
+  - component: {fileID: 977188536}
   m_Layer: 5
   m_Name: Guerra_2
   m_TagString: Untagged
@@ -4389,7 +4557,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 532068649}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4475,6 +4643,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 3-2
+--- !u!114 &977188536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977188530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1005440871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4625,6 +4805,7 @@ GameObject:
   - component: {fileID: 1027850329}
   - component: {fileID: 1027850328}
   - component: {fileID: 1027850331}
+  - component: {fileID: 1027850332}
   m_Layer: 5
   m_Name: Muerte_5
   m_TagString: Untagged
@@ -4673,7 +4854,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 380181268}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -4681,9 +4862,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4759,6 +4940,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-5
+--- !u!114 &1027850332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027850326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1030586919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,6 +4965,7 @@ GameObject:
   - component: {fileID: 1030586922}
   - component: {fileID: 1030586921}
   - component: {fileID: 1030586924}
+  - component: {fileID: 1030586925}
   m_Layer: 5
   m_Name: Hambruna_2
   m_TagString: Untagged
@@ -4820,7 +5014,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 401298617}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4828,9 +5022,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4906,6 +5100,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 4-1
+--- !u!114 &1030586925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030586919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1065325048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,6 +5125,7 @@ GameObject:
   - component: {fileID: 1065325051}
   - component: {fileID: 1065325050}
   - component: {fileID: 1065325053}
+  - component: {fileID: 1065325054}
   m_Layer: 5
   m_Name: Muerte_4
   m_TagString: Untagged
@@ -4967,7 +5174,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1027850328}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -4975,9 +5182,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -5053,6 +5260,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-4
+--- !u!114 &1065325054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065325048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1068037297
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,6 +5638,7 @@ GameObject:
   - component: {fileID: 1095169342}
   - component: {fileID: 1095169341}
   - component: {fileID: 1095169344}
+  - component: {fileID: 1095169345}
   m_Layer: 5
   m_Name: Peste_2
   m_TagString: Untagged
@@ -5467,7 +5687,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 433952974}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5475,9 +5695,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -5553,6 +5773,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 2-2
+--- !u!114 &1095169345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095169339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1103799890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5703,6 +5935,7 @@ GameObject:
   - component: {fileID: 1154036623}
   - component: {fileID: 1154036622}
   - component: {fileID: 1154036625}
+  - component: {fileID: 1154036626}
   m_Layer: 5
   m_Name: Peste_4
   m_TagString: Untagged
@@ -5751,7 +5984,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1569190219}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5759,9 +5992,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -5837,6 +6070,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 2-4
+--- !u!114 &1154036626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154036620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1175726405
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,6 +6095,7 @@ GameObject:
   - component: {fileID: 1175726408}
   - component: {fileID: 1175726407}
   - component: {fileID: 1175726410}
+  - component: {fileID: 1175726411}
   m_Layer: 5
   m_Name: Guerra_1
   m_TagString: Untagged
@@ -5898,7 +6144,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 977188532}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5984,6 +6230,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 3-1
+--- !u!114 &1175726411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175726405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1237541212
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,6 +6846,7 @@ GameObject:
   - component: {fileID: 1300473336}
   - component: {fileID: 1300473335}
   - component: {fileID: 1300473334}
+  - component: {fileID: 1300473337}
   m_Layer: 5
   m_Name: Button_Reset_Progreso
   m_TagString: Untagged
@@ -6636,7 +6895,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1902416367}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -6709,6 +6968,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300473332}
   m_CullTransparentMesh: 1
+--- !u!114 &1300473337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300473332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1354729796
 GameObject:
   m_ObjectHideFlags: 0
@@ -7407,6 +7678,7 @@ GameObject:
   - component: {fileID: 1558536333}
   - component: {fileID: 1558536332}
   - component: {fileID: 1558536335}
+  - component: {fileID: 1558536336}
   m_Layer: 5
   m_Name: Hambruna_1
   m_TagString: Untagged
@@ -7455,7 +7727,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -7463,9 +7735,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -7541,6 +7813,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 4-1
+--- !u!114 &1558536336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558536330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1569190217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7554,6 +7838,7 @@ GameObject:
   - component: {fileID: 1569190220}
   - component: {fileID: 1569190219}
   - component: {fileID: 1569190222}
+  - component: {fileID: 1569190223}
   m_Layer: 5
   m_Name: Peste_5
   m_TagString: Untagged
@@ -7602,7 +7887,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 802820152}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -7610,9 +7895,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -7688,6 +7973,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 2-5
+--- !u!114 &1569190223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569190217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1592447102
 GameObject:
   m_ObjectHideFlags: 0
@@ -7701,6 +7998,7 @@ GameObject:
   - component: {fileID: 1592447105}
   - component: {fileID: 1592447104}
   - component: {fileID: 1592447107}
+  - component: {fileID: 1592447108}
   m_Layer: 5
   m_Name: Peste_1
   m_TagString: Untagged
@@ -7749,7 +8047,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1095169341}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -7757,9 +8055,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -8270991622083055806, guid: 9c2aeb485bf7d9a4da7507826f06fcd8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -7835,6 +8133,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 2-1
+--- !u!114 &1592447108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592447102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1602484699
 GameObject:
   m_ObjectHideFlags: 0
@@ -7848,6 +8158,7 @@ GameObject:
   - component: {fileID: 1602484702}
   - component: {fileID: 1602484701}
   - component: {fileID: 1602484704}
+  - component: {fileID: 1602484705}
   m_Layer: 5
   m_Name: Muerte_9
   m_TagString: Untagged
@@ -7896,7 +8207,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1792611346}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -7904,9 +8215,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -7982,6 +8293,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-9
+--- !u!114 &1602484705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602484699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1641047899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8132,6 +8455,7 @@ GameObject:
   - component: {fileID: 1654807522}
   - component: {fileID: 1654807521}
   - component: {fileID: 1654807524}
+  - component: {fileID: 1654807525}
   m_Layer: 5
   m_Name: Guerra_4
   m_TagString: Untagged
@@ -8180,7 +8504,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 316984113}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8266,6 +8590,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 3-4
+--- !u!114 &1654807525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654807519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1704776710
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,6 +8713,7 @@ GameObject:
   - component: {fileID: 1792611347}
   - component: {fileID: 1792611346}
   - component: {fileID: 1792611349}
+  - component: {fileID: 1792611350}
   m_Layer: 5
   m_Name: Muerte_10
   m_TagString: Untagged
@@ -8425,7 +8762,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 214375160}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -8433,9 +8770,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -8511,6 +8848,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-10
+--- !u!114 &1792611350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792611344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1797738211
 GameObject:
   m_ObjectHideFlags: 0
@@ -8661,6 +9010,7 @@ GameObject:
   - component: {fileID: 1807441399}
   - component: {fileID: 1807441398}
   - component: {fileID: 1807441401}
+  - component: {fileID: 1807441402}
   m_Layer: 5
   m_Name: Muerte_7
   m_TagString: Untagged
@@ -8709,7 +9059,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 2050440605}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -8717,9 +9067,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -8795,6 +9145,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-7
+--- !u!114 &1807441402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807441396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1816255083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9219,6 +9581,7 @@ GameObject:
   - component: {fileID: 1899431417}
   - component: {fileID: 1899431416}
   - component: {fileID: 1899431419}
+  - component: {fileID: 1899431420}
   m_Layer: 5
   m_Name: Hambruna_4
   m_TagString: Untagged
@@ -9267,7 +9630,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 334683499}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -9275,9 +9638,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: -7319124543339311368, guid: f74174fc9f21d8246968acda48617a08, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -9353,6 +9716,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 4-4
+--- !u!114 &1899431420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899431414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1902416365
 GameObject:
   m_ObjectHideFlags: 0
@@ -9366,6 +9741,7 @@ GameObject:
   - component: {fileID: 1902416368}
   - component: {fileID: 1902416367}
   - component: {fileID: 1902416370}
+  - component: {fileID: 1902416371}
   m_Layer: 5
   m_Name: Button Volver
   m_TagString: Untagged
@@ -9414,7 +9790,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -9500,6 +9876,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: MenuPrincipal
+--- !u!114 &1902416371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902416365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &1958486515
 GameObject:
   m_ObjectHideFlags: 0
@@ -9650,6 +10038,7 @@ GameObject:
   - component: {fileID: 2050440606}
   - component: {fileID: 2050440605}
   - component: {fileID: 2050440608}
+  - component: {fileID: 2050440609}
   m_Layer: 5
   m_Name: Muerte_8
   m_TagString: Untagged
@@ -9698,7 +10087,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 1602484701}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -9706,9 +10095,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 289396116486852358, guid: 50ca3f33e2ecc1b4c930187a59ada36e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -9784,6 +10173,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambiarEscenaBoton
   nombreEscenaDestino: 1-8
+--- !u!114 &2050440609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050440603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7456eed870fc9e84eb308c125d5f2f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISelectionFix
 --- !u!1 &2052777236
 GameObject:
   m_ObjectHideFlags: 0
