@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sprites de la Guadaña")]
     [SerializeField] private Sprite spriteGuadaniaLista; //Guadaña flotando 
     [SerializeField] private Sprite spriteGuadaniaRecargando; //Guadaña reconstruyendose
+    private Animator guadaniaAnimator;
 
     //guadana animacion grapple
     [SerializeField] private GameObject grappleLaunchSprite;
@@ -154,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (grappleObject != null)
         {
-            grappleObjectRenderer = grappleObject.GetComponent<SpriteRenderer>();
+            guadaniaAnimator = grappleObject.GetComponent<Animator>();
         }
         if (grapplePointSprite != null)
         {
@@ -712,6 +713,8 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
         canGrapple = true;
 
+        ActualizarVisualGuadaniaEspalda();
+
         if (sfxAudioSource != null) sfxAudioSource.PlayOneShot(grappleRecoverSound);
     }
 
@@ -791,10 +794,7 @@ public class PlayerMovement : MonoBehaviour
 
         float rotAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (grappleObject != null)
-        {
-            grappleObject.SetActive(false);
-        }
+        ActualizarVisualGuadaniaEspalda();
 
         StartCoroutine(GrappleAnimationSequence(rotAngle));
     }
@@ -884,19 +884,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void ActualizarVisualGuadaniaEspalda()
     {
-        if (grappleObject == null || grappleObjectRenderer == null) return;
-
+        if (guadaniaAnimator == null) 
+        {
+            Debug.LogError(" ¡ALERTA! El script PlayerMovement no encuentra ningún Animator en el grappleObject.");
+            return;
+        }
         if (canGrapple)
         {
-            // FASE 5 (QUINTA IMAGEN): Lista para usarse, brilla en su color original.
-            grappleObject.SetActive(true);
-            grappleObjectRenderer.sprite = spriteGuadaniaLista;
+            // Lanza la animación de reconstrucción y destello desde el principio
+            guadaniaAnimator.Play("Guadania_Reaparecer", 0, 0f);
         }
         else
         {
-            // FASE 4 (CUARTA IMAGEN): Reaparece apagada en la espalda esperando tocar suelo.
-            grappleObject.SetActive(true);
-            grappleObjectRenderer.sprite = spriteGuadaniaRecargando;
+            // Lanza la animación de desintegración inmediatamente
+            guadaniaAnimator.Play("Guadania_Desaparecer", 0, 0f);
         }
     }
 
