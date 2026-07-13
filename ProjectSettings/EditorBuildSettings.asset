@@ -122,5 +122,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino 4/4-6.unity
     guid: ea449e99fa9de1c48b0c941251a693e1
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 8f1540c50276877478509960adf39022
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

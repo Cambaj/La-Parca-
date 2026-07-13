@@ -36,7 +36,8 @@ public class SceneTransition : MonoBehaviour
         }
         else
         {
-            Debug.Log("No hay una siguiente escena en el Build Settings.");
+            Debug.Log("No hay una siguiente escena en el Build Settings. Se vuelve al menu (Escena 1)");
+            SceneManager.LoadScene(1);
         }
     }
 }
