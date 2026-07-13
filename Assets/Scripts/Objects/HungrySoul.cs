@@ -188,6 +188,7 @@ public class HungrySoul : MonoBehaviour
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         dashing = false;
+        animator.Play("Orbit");
     }
 
     IEnumerator ReleaseRoutine()
