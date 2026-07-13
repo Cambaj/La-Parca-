@@ -148,7 +148,7 @@ MonoBehaviour:
   destroyableLayer:
     serializedVersion: 2
     m_Bits: 256
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 5352683378677795670, guid: 7fd9ff1d51945e34a8e07569ba96e576, type: 3}
   audioSource: {fileID: -8512592213258907031}
   pickUpSound: {fileID: 8300000, guid: 2be755a5851156243b74d0acc90e3615, type: 3}
   throwSound: {fileID: 8300000, guid: 8f12bd36b5d7d634585ad4bf21573479, type: 3}
