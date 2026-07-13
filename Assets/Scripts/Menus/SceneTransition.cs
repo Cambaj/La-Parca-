@@ -11,10 +11,22 @@ public class SceneTransition : MonoBehaviour
         StartCoroutine(ChangeSceneAfterCountdown());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton9))
+        {
+            LoadNextScene();
+        }
+    }
+
     private IEnumerator ChangeSceneAfterCountdown()
     {
         yield return new WaitForSeconds(countdownTillNextScene);
+        LoadNextScene();
+    }
 
+    private void LoadNextScene()
+    {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = currentScene + 1;
 
